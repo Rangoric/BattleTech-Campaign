@@ -1,12 +1,11 @@
 # Company Designation - Company Name
 
 ```mermaid
-flowchart TD
+flowchart LR
   co["Jasmine Or'lient (CO)\nRANGORIC"]
-  cs["Command Support"]
   xo["Starr Icetoff (XO)\nKOA"]
   ct["Ulam - Chief Tech\nALOE"]
-  l["Lance"]
+  l["Mech Lance"]
   ll["Lance Leader"]
   lxo["Lance Executive Officer"]
   l1["Lance Member"]
@@ -21,22 +20,21 @@ flowchart TD
   ixo["Infantry XO"]
   i1["Squad Member"]
   i2["Squad Member"]
-  co --> cs
-  cs --> xo
-  cs --> ct
-  co ---> l
-  co ---> a
-  co ---> i
+  co --> xo
+  co --> ct
+  co --> l
+  co --> a
+  co --> i
   l --> ll
   ll --> lxo
-  ll ----> l1
-  ll ----> l2
+  ll ---> l1
+  ll ---> l2
   a --> al
   al --> axo
-  al ----> a1
-  al ----> a2
+  al ---> a1
+  al ---> a2
   i --> il
   il --> ixo
-  il ----> i1
-  il ----> i2
+  il ---> i1
+  il ---> i2
 ```
