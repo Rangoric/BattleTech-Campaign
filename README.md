@@ -2,24 +2,24 @@
 
 ```mermaid
 flowchart LR
-  co["Jasmine Or'lient (CO)\nRANGORIC"]
-  xo["Starr Icetoff (XO)\nKOA"]
-  ct["Ulam - Chief Tech\nALOE"]
-  l["Mech Lance"]
-  ll["Lance Leader"]
-  lxo["Lance Executive Officer"]
-  l1["Lance Member"]
-  l2["Lance Member"]
-  a["Armoured Squad"]
-  al["Armoured Leader"]
-  axo["Armoured XO"]
-  a1["Squad Member"]
-  a2["Squad Member"]
-  i["Intantry Squad"]
-  il["Infantry Leader"]
-  ixo["Infantry XO"]
-  i1["Squad Member"]
-  i2["Squad Member"]
+  co("Jasmine Or'lient (CO)\nRANGORIC")
+  xo("Starr Icetoff (XO)")
+  ct("Ulam (Chief Tech)")
+  l("Mech Lance")
+  ll("Ambrosia (LL)")
+  lxo("(XO)")
+  l1("Lance Member")
+  l2("Lance Member")
+  a("Armoured Squad")
+  al("(AL)")
+  axo("(XO)")
+  a1("Armoured Squad Member")
+  a2("Armoured Squad Member")
+  i("Intantry Squad")
+  il("(IL)")
+  ixo("(XO)")
+  i1("Infantry Squad Member")
+  i2("Infantry Squad Member")
   co --> xo
   co --> ct
   co --> l
@@ -38,3 +38,18 @@ flowchart LR
   il ---> i1
   il ---> i2
 ```
+
+## Or'Lient Family
+
+Jasmine - Matriarch of the Family
+
+- Ambrosia - Twin Sister
+  - Arima Kazutomo - Husband
+  - Akira - Son
+  - Orchid - Daughter
+- Daisy - Mother
+- Alphonse Barbeau - Father
+- Rose - Aunt on Daisy's side
+  - Iris - Daughter
+  - Amber - Daughter
+  - Clover - Son
