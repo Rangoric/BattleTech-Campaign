@@ -2,23 +2,37 @@
 
 ```mermaid
 flowchart LR
-  co("Jasmine Or'lient (CO)")
-  xo("Kem (XO)")
-  ct("Ulam (Chief Tech)")
-  ll("Ambrosia (Lance Leader)")
-  lxo("Orchid (XO)")
-  al("Arima (Armoured Platoon Leader)")
-  axo("Akira (XO)")
-  il("Iris (Infantry Platoon Leader)")
-  ixo("Amber (XO)")
+  co("Jasmine (CO)\n'RANGORIC' MAD-3D")
+  xo("Kem (XO)\n'' Manteuffel")
+  ct("Ulam (Chief Tech)\n'HEL' LRM Carrier")
+  ll("Ambrosia (Lance Leader)\n'INANNA' BJ2-OB")
+  lm1("\n'' ABS-3L")
+  lxo("Orchid (XO)\n'' RVN-4LC")
+  al("Arima (Armoured Platoon Leader)\n'MARDUK' Ajax B")
+  axo("Akira (XO)"\n'' Yellow Jacket)
+  il("Iris (Infantry Platoon Leader)"\n'' Cavalry)
+  im1("\n'' Karnov")
+  im2("\n'' Bandit")
+  isnco("Starr (Senior NCO)\n'' Ying Long attached to BJ2-OB")
+  iyl1("Tryna\n'' Ying Long attached to Ajax")
+  iyl2("Ragnar\n'' Ying Long attached to Manteuffel")
+  iyl3("Kareth\n'' Ying Long attached to Bandit")
+  ixo("Amber (XO)\n'' Maxim")
   co --> xo
   co --> ct
   co --> ll
   co --> al
   co --> il
   ll --> lxo
+  ll ---> lm1
   al --> axo
   il --> ixo
+  il ---> isnco
+  il --> im1
+  il --> im2
+  isnco --> iyl1
+  isnco --> iyl2
+  isnco --> iyl3
 ```
 
 ## Or'lient Family
@@ -40,7 +54,7 @@ Jasmine - Matriarch
   - Tryna Icetoff - Wife
   - Kem Icetoff - Daughter
   - Ragnar Icetoff - Son
-    - Karenth Icetoff - Wife
+    - Kareth Icetoff - Wife
 
 Mechs:
 
