@@ -72,7 +72,7 @@ Infantry
 - Maxim I Heavy Hover Transport
   - Tag Spotter Infantry Platoon (3t)
   - Heavy LRM Infantry Platoon (3t)
-  - Foot Balistic Rifle Infantry (3t)
+  - Foot Ballistic Rifle Infantry (3t)
   - Scout Infantry Platoon (3t)
 - Bandit Hovercraft H
   - Fenrir ERML (8t)
