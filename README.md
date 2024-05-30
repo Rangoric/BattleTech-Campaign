@@ -23,7 +23,7 @@ flowchart LR
 
 ## Or'lient Family
 
-Jasmine - Matriarch of the Family
+Jasmine - Matriarch
 
 - Ambrosia - Twin Sister
   - Arima Kazutomo - Husband
