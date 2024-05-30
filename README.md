@@ -5,25 +5,19 @@ flowchart LR
   co("Jasmine Or'lient (CO)")
   xo("Kem (XO)")
   ct("Ulam (Chief Tech)")
-  l("Lance")
-  ll("Ambrosia (PL)")
+  ll("Ambrosia (Lance Leader)")
   lxo("Orchid (XO)")
-  a("Armoured Squad")
-  al("Arima (PL)")
+  al("Arima (Armoured Platoon Leader)")
   axo("Akira (XO)")
-  i("Intantry Squad")
-  il("Iris (PL)")
+  il("Iris (Infantry Platoon Leader)")
   ixo("Amber (XO)")
   co --> xo
   co --> ct
-  co --> l
-  co --> a
-  co --> i
-  l --> ll
+  co --> ll
+  co --> al
+  co --> il
   ll --> lxo
-  a --> al
   al --> axo
-  i --> il
   il --> ixo
 ```
 
@@ -41,11 +35,12 @@ Jasmine - Matriarch of the Family
   - Iris - Daughter
   - Amber - Daughter
   - Clover - Son
-- Ulam - Chief Tech
-- Starr Icetoff - XO
+- Ulam - Tech Since being personal tech
+- Starr Icetoff
   - Tryna Icetoff - Wife
   - Kem Icetoff - Daughter
   - Ragnar Icetoff - Son
+    - Karenth Icetoff - Wife
 
 Mechs:
 
