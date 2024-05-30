@@ -3,21 +3,21 @@
 ```mermaid
 flowchart LR
   co("Jasmine (CO)\n'RANGORIC' MAD-3D")
-  xo("Kem (XO)\n'' Manteuffel")
+  xo("Kem (XO)\n'ARTEMIS' Manteuffel")
   ct("Ulam (Chief Tech)\n'HEL' LRM Carrier")
   ll("Ambrosia (Lance Leader)\n'INANNA' BJ2-OB")
-  lm1("\n'' ABS-3L")
-  lxo("Orchid (XO)\n'' RVN-4LC")
+  lm1("Marceau\n'AMUN' ABS-3L")
+  lxo("Orchid (XO)\n'VESTA' RVN-4LC")
   al("Arima (Armoured Platoon Leader)\n'MARDUK' Ajax B")
-  axo("Akira (XO)"\n'' Yellow Jacket)
-  il("Iris (Infantry Platoon Leader)"\n'' Cavalry)
-  im1("\n'' Karnov")
-  im2("\n'' Bandit")
-  isnco("Starr (Senior NCO)\n'' Ying Long attached to BJ2-OB")
-  iyl1("Tryna\n'' Ying Long attached to Ajax")
-  iyl2("Ragnar\n'' Ying Long attached to Manteuffel")
-  iyl3("Kareth\n'' Ying Long attached to Bandit")
-  ixo("Amber (XO)\n'' Maxim")
+  axo("Akira (XO)"\n'VULCAN' Yellow Jacket)
+  il("Iris (Infantry Platoon Leader)"\n'BABA YAGA' Cavalry)
+  im1("Indigo\n'APOLLO' Karnov")
+  im2("Alphonse\n'MARS' Bandit")
+  isnco("Starr (Senior NCO)\n'ODIN' Ying Long attached to BJ2-OB")
+  iyl1("Tryna\n'FRIGG' Ying Long attached to Ajax")
+  iyl2("Ragnar\n'GERI' Ying Long attached to Manteuffel")
+  iyl3("Kareth\n'FREKI' Ying Long attached to Bandit")
+  ixo("Amber (XO)\n'HERMES' Maxim")
   co --> xo
   co --> ct
   co --> ll
@@ -43,8 +43,11 @@ Jasmine - Matriarch
   - Arima Kazutomo - Husband
   - Akira - Son
   - Orchid - Daughter
+- Indigo - Younger Brother
 - Daisy - Mother
 - Alphonse Barbeau - Father
+- Marceau Barbeau - Uncle, Father's older brother
+  - Irene Barbeau - Wife
 - Rose - Aunt, Daisy's younger sister
   - Iris - Daughter
   - Amber - Daughter
@@ -55,6 +58,10 @@ Jasmine - Matriarch
   - Kem Icetoff - Daughter
   - Ragnar Icetoff - Son
     - Kareth Icetoff - Wife
+
+Veteren - Jasmine
+
+Regular+ - Ambrosia
 
 Mechs:
 
