@@ -4,6 +4,8 @@ The Or'lient family has been a member of Rasalhague for centries starting on Ras
 
 At the time Daisy was the one to have actually taken part, and after that Jasmine and Ambrosia joined up with the Rasalhague military, and due to their mother's connections, ended up working for Comstar as Rasalhague representatives. With the Clan Bear & Clan Wolf invasion, they left their work for Comstar to help the Rasalhague military, mostly getting refugees and others that wanted out of under the Clans off world.
 
+Jasmine and Ambrosia were born to Daisy and Alphonse in the year 3030.
+
 ## 3050s
 
 Jasmine and Ambrosia participated in early battles against the Clans and saw the writing on the wall. Their commander was KIA in one of the battles and Jasmine focused on getting the rest of the unit out. With so much of Rasalhague in disarray, Jasmine tried to regroup with other units, but ended up moving refugees off world where she could. She was promoted and given her own command with an unspoken mission of evacuation. If she was assigned to a planet or battle, she would be in charge of clearing a path and getting people off world. By 3052, Jasmine has resettled her family on Ueda, and Ambrosia was taking some time off to be with her children.
