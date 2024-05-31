@@ -2,7 +2,7 @@
 
 ```mermaid
 flowchart LR
-  co("Jasmine (CO)\n'RANGORIC' MAD-3D")
+  co("Jasmine (CO)\n'RANGORIC' MAD-5S")
   xo("Kem (XO)\n'ARTEMIS' Manteuffel")
   ct("Ulam (Chief Tech)\n'HEL' LRM Carrier")
   ll("Ambrosia (Lance Leader)\n'INANNA' BJ2-OB")
@@ -66,13 +66,12 @@ Regular+ - Ambrosia
 Mechs:
 
 - Heavy
-  - Marauder MAD-3D
+  - Marauder MAD-5S
 - Medium
-  - Blackjack BJ2-OB
-    - Ying Long Plasma
+  - Griffin GRF-6S
 - Light
-  - Raven RVN-4LC
-  - Anubis ABS-3L
+  - Wolfhound WLF-2
+  - Hermes HER-4S
 
 Combat Vehicles
 
@@ -101,9 +100,9 @@ Infantry
 
 References
 
-- Marauder MAD-3D 3039 p497
-- Blackjack BJ2-OB 3058 p232
-- Raven RVN-4LC 3050 p63
+- Marauder MAD-5S 3085 Phoenix p180
+- Griffin GRF-6S 3085 Phoenix p68
+- Wolfhound WLF-2 3050 Inner Sphere p66
 - Anubis ABS-3L 3067 p70
 - Ying Long Plasma (BA) 3075 p50
 - LRM Carrier 3039 p123
