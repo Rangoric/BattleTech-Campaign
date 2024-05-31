@@ -85,7 +85,7 @@ She has, by far, the most experience in charge of an infantry unit than anyone e
 
 Husband died in a skirmish with bandits, while driving a truck that was attacked by some bandits. Their son, Clem, is an accountant.
 
-## Amber - Infantry Platoon XO & Younger Daughter of Iris
+## Amber - Infantry Platoon XO & Younger Sister of Iris
 
 Just like Jasmine and Ambrosia are very different, Iris and Amber have a similar difference.
 
