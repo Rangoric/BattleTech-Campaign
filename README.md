@@ -66,21 +66,21 @@ Regular+ - Ambrosia
 Mechs:
 
 - Heavy
-  - Marauder MAD-5S - (Rasalhague)
+  - Marauder MAD-5S - (Rasalhague 3051)
 - Medium
-  - Blackjack BJ2-0B - (General)
+  - Blackjack BJ2-0B - (General 3057)
     - BA Slot
 - Light
-  - Wolfhound WLF-2 (Rasalhague)
-  - Hermes HER-4S (Rasalhague)
+  - Wolfhound WLF-2 (Rasalhague 3052)
+  - Hermes HER-4S (Rasalhague 3057)
 
 Combat Vehicles
 
-- Schiltron Prime (Rasalhague)
+- Schiltron Prime (Rasalhague 3059)
   - BA Slot
-- Sturmfeur Heavy Tank (Rasalhague)
-- Yellow Jacket RAC (General)
-- LRM Carrier (3055 Upgrade) - (General)
+- Sturmfeur Heavy Tank (Rasalhague 3018)
+- Yellow Jacket RAC (General 3066)
+- LRM Carrier (3055 Upgrade) - (General 2470)
 
 Infantry
 
