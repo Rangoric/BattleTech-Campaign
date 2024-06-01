@@ -66,30 +66,30 @@ Regular+ - Ambrosia
 Mechs:
 
 - Heavy
-  - Marauder MAD-5S
+  - Marauder MAD-5S - (Rasalhague)
 - Medium
-  - Griffin GRF-6S
+  - Blackjack BJ2-0B - (General)
+    - BA Slot
 - Light
-  - Wolfhound WLF-2
-  - Hermes HER-4S
+  - Wolfhound WLF-2 (Rasalhague)
+  - Hermes HER-4S (Rasalhague)
 
 Combat Vehicles
 
-- LRM Carrier
-- Manteuffel Attack Tank Prime
-  - Ying Long Plasma
-- Ajax Attack Tank B
-  - Ying Long Plasma
-- Yellow Jacket Arrow IV or RAC/5
+- Schiltron Prime (Rasalhague)
+  - BA Slot
+- Sturmfeur Heavy Tank (Rasalhague)
+- Yellow Jacket RAC (General)
+- LRM Carrier (3055 Upgrade) - (General)
 
 Infantry
 
-- Karnov UR Transport BA
+- Karnov UR Transport BA (General)
   - IS Standard LRR (4t)
   - IS Standard MG (4t)
-- Cavalry Attack Helicopter Infantry
+- Cavalry Attack Helicopter Infantry (General)
   - Infiltrator Mk II Sensor (4t)
-- Maxim I Heavy Hover Transport
+- Maxim I Heavy Hover Transport - (General)
   - Tag Spotter Infantry Platoon (3t)
   - Heavy LRM Infantry Platoon (3t)
   - Foot Ballistic Rifle Infantry (3t)
@@ -101,13 +101,13 @@ Infantry
 References
 
 - Marauder MAD-5S 3085 Phoenix p180
-- Griffin GRF-6S 3085 Phoenix p68
+- Blackjack BJ2-OB 3058 p232
 - Wolfhound WLF-2 3050 Inner Sphere p66
+- Hermes HER-4K 3050 Clan p235
 - Anubis ABS-3L 3067 p70
 - Ying Long Plasma (BA) 3075 p50
-- LRM Carrier 3039 p123
-- Manteuffel Attack Tank Prime 3067 p26
-- Ajax Attack Tank B 3067 p38
+- LRM Carrier (3055 Upgrade) 3058 IS p132
+- Schiltron Prime (3060 p45)
 - Yellow Jacket Arrow IV or RAC/5 3058 p63
 - Karnov UR Transport BA 3058 p56
 - IS Standard 3058 p40
