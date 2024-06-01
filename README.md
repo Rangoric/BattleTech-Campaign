@@ -80,7 +80,7 @@ Combat Vehicles
   - BA Slot
 - Sturmfeur Heavy Tank (Rasalhague 3018)
 - Yellow Jacket RAC (General 3066)
-- LRM Carrier (3055 Upgrade) - (General 2470)
+- LRM Carrier (3055 Upgrade) - (General 2470/3055)
 
 Infantry
 
