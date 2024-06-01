@@ -84,19 +84,17 @@ Combat Vehicles
 
 Infantry
 
-- Karnov UR Transport BA (General)
+- Karnov UR Transport BA (8t) (General 3063)
   - IS Standard LRR (4t)
   - IS Standard MG (4t)
-- Cavalry Attack Helicopter Infantry (General)
+- Cavalry Attack Helicopter Infantry (4t) (General 3063)
   - Infiltrator Mk II Sensor (4t)
-- Maxim I Heavy Hover Transport - (General)
+- Maxim I Heavy Hover Transport (12t) (General 3060)
   - Tag Spotter Infantry Platoon (3t)
   - Heavy LRM Infantry Platoon (3t)
   - Foot Ballistic Rifle Infantry (3t)
   - Scout Infantry Platoon (3t)
-- Bandit Hovercraft H
-  - Fenrir ERML (8t)
-  - Ying Long Plasma (Outside)
+- Daimyo HQ 67-K (4t) (Rasalhague 2781)
 
 References
 
