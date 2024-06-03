@@ -108,15 +108,18 @@ References
 | Maruader          | Gauss Rifle            | 7/15/22 |
 | Movement 4/6      | ER PPC x2              | 7/14/23 |
 |                   | Medium Pulse Laser x2  | 2/4/6   |
+|                   |                        |         |
 | BJ2-OB            | Gauss Rifle            | 7/15/22 |
 | Movement 4/6/4    | LRM 10 w/Artemis       | 7/14/21 |
 |                   | Small Laser            | 1/2/3   |
 |                   | C3 Slave               |
+|                   |                        |         |
 | Schiltron Prime   | Arrow IV x2            | 1/2/8   |
 | Movement 3/5      | Medium Laser x2        | 3/6/9   |
 |                   | Small Laser x4         | 1/2/3   |
 |                   | Guardian ECM Suite     | 6       |
 |                   | C3 Master (Tag)        | 5/10/15 |
+|                   |                        |         |
 | SturmFeur         | LRM 20 x2              | 7/14/21 |
 | Movement: 3/5     | Machine Gun            | 1/2/3   |
 |                   |                        |         |
