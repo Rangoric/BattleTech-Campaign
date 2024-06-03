@@ -79,21 +79,14 @@ Combat Vehicles
 - Schiltron Prime (Rasalhague 3059)
   - BA Slot
 - Sturmfeur Heavy Tank (Rasalhague 3018)
-- Yellow Jacket RAC (General 3066)
-- LRM Carrier (3055 Upgrade) - (General 2470/3055)
+- Hawk Moth Gunship (Armour) (Merc 3060)
+- Puma Assault Tank PAT-005b (General 2751)
 
 Infantry
 
 - Karnov UR Transport BA (8t) (General 3063)
-  - IS Standard LRR (4t)
-  - IS Standard MG (4t)
 - Cavalry Attack Helicopter Infantry (4t) (General 3063)
-  - Infiltrator Mk II Sensor (4t)
 - Maxim I Heavy Hover Transport (12t) (General 3060)
-  - Tag Spotter Infantry Platoon (3t)
-  - Heavy LRM Infantry Platoon (3t)
-  - Foot Ballistic Rifle Infantry (3t)
-  - Scout Infantry Platoon (3t)
 - Daimyo HQ 67-K (4t) (Rasalhague 2781)
 
 References
@@ -102,17 +95,34 @@ References
 - Blackjack BJ2-OB 3058 p232
 - Wolfhound WLF-2 3050 Inner Sphere p66
 - Hermes HER-4K 3050 Clan p235
-- Anubis ABS-3L 3067 p70
-- Ying Long Plasma (BA) 3075 p50
 - LRM Carrier (3055 Upgrade) 3058 IS p132
 - Schiltron Prime (3060 p45)
+- Sturmfuer (3039 p148)
 - Yellow Jacket Arrow IV or RAC/5 3058 p63
 - Karnov UR Transport BA 3058 p56
-- IS Standard 3058 p40
 - Cavalry Attack Helicopter Infantry 3058 p21
-- Infiltrator Mk II Sensor 3058 p37
 - Maxim I Heavy Hover Transport 3058 p112
-- Heavy LRM Infantry Platoon 3085 Cutting Edge p329
-- Tag Spotter Infantry Platoon 3085 Cutting Edge p329
-- Bandit Hovercraft H 3058 p99
-- Fenrir ERML 3058 Clan p62
+
+| Name              | Equipment              | Ranges  |
+| ----------------- | ---------------------- | ------- |
+| Maruader          | Gauss Rifle            | 7/15/22 |
+| Movement 4/6      | ER PPC x2              | 7/14/23 |
+|                   | Medium Pulse Laser x2  | 2/4/6   |
+| BJ2-OB            | Gauss Rifle            | 7/15/22 |
+| Movement 4/6/4    | LRM 10 w/Artemis       | 7/14/21 |
+|                   | Small Laser            | 1/2/3   |
+|                   | C3 Slave               |
+| Schiltron Prime   | Arrow IV x2            | 1/2/8   |
+| Movement 3/5      | Medium Laser x2        | 3/6/9   |
+|                   | Small Laser x4         | 1/2/3   |
+|                   | Guardian ECM Suite     | 6       |
+|                   | C3 Master (Tag)        | 5/10/15 |
+| SturmFeur         | LRM 20 x2              | 7/14/21 |
+| Movement: 3/5     | Machine Gun            | 1/2/3   |
+|                   |                        |         |
+| Puma Assault Tank | Medium Laser x2        | 3/6/9   |
+| Movement 3/5      | Stream SRM 2 x2        | 3/6/9   |
+|                   | ER PPC                 | 7/14/23 |
+|                   | LRM 20 w/Artemis IV x2 | 7/14/21 |
+|                   | Small Pulse Laser      | 1/2/3   |
+|                   | Flamer                 | 1/2/3   |
