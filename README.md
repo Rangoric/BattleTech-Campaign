@@ -3,35 +3,39 @@
 ```mermaid
 flowchart LR
   co("Jasmine (CO)\n'RANGORIC' MAD-5S")
-  xo("Kem (XO)\n'ARTEMIS' Manteuffel")
-  ct("Ulam (Chief Tech)\n'HEL' LRM Carrier")
+  xo("Kem (XO)\n'ARTEMIS' Schiltron")
+  ct("Ulam (Chief Tech)")
+  smo("Starr (Sr. Medical Officer)")
+  dp("Daisy (Diplomat)")
   ll("Ambrosia (Lance Leader)\n'INANNA' BJ2-OB")
-  lm1("Marceau\n'AMUN' ABS-3L")
-  lxo("Orchid (XO)\n'VESTA' RVN-4LC")
-  al("Arima (Armoured Platoon Leader)\n'MARDUK' Ajax B")
-  axo("Akira (XO)"\n'VULCAN' Yellow Jacket)
+  lm1("Marceau\n'AMUN' HER-4K")
+  lxo("Orchid (XO)\n'VESTA' OW-1D")
+  al("Arima (Armoured Platoon Leader)\n'MARDUK' Puma")
+  axo("Akira (XO)"\n'VULCAN' Hawk Moth)
+  am1("Marceau\n'MARS' SturmFeur")
   il("Iris (Infantry Platoon Leader)"\n'BABA YAGA' Cavalry)
   im1("Indigo\n'APOLLO' Karnov")
-  im2("Alphonse\n'MARS' Bandit")
-  isnco("Starr (Senior NCO)\n'ODIN' Ying Long attached to BJ2-OB")
-  iyl1("Tryna\n'FRIGG' Ying Long attached to Ajax")
-  iyl2("Ragnar\n'GERI' Ying Long attached to Manteuffel")
-  iyl3("Kareth\n'FREKI' Ying Long attached to Bandit")
+  im2("Alphonse\n'ATHENA' Daimyo")
+  isnco("Ragnar (Senior NCO)\n'ODIN' Gray Death attached to BJ2-OB")
+  iyl1("Tryna\n'GERI' Gray Death attached to OW-1D")
+  iyl3("Kareth\n'FREKI' Gray Death attached to Schiltron")
   ixo("Amber (XO)\n'HERMES' Maxim")
   co --> xo
   co --> ct
+  co --> smo
+  co --> dp
   co --> ll
   co --> al
   co --> il
   ll --> lxo
   ll ---> lm1
   al --> axo
+  al ---> am1
   il --> ixo
   il ---> isnco
   il --> im1
   il --> im2
   isnco --> iyl1
-  isnco --> iyl2
   isnco --> iyl3
 ```
 
