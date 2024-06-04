@@ -51,7 +51,7 @@ While Jasmine projects her personality as a protector and leader of the family, 
 
 Best way to describe this miscreant is with a quote.
 
-"Ulam has been my technician since I joined the military. He was never high ranked, or interested in raising his rank, but always had a grander plan for each person's mech. His main fault would be that, to him, mechs are personal, and shouldn't ever 'just' have something replaced. He'll do it, because the enemy won't wait, but will always come up with a holistic plan and reasoning for any changes. Once I had my own command and could pick a chief tech, I put him in the position. He grumbled about it and still does, but he does like how he can come up with a plan and not have to do all the work. When he does end up in the field, he'll pilot the LRM Carrier because we're afraid of what he'd do if he saw what we put these mechs through up close." - Jasmine
+"Ulam has been my technician since I joined the military. He was never high ranked, or interested in raising his rank, but always had a grander plan for each person's mech. His main fault would be that, to him, mechs are personal, and shouldn't ever 'just' have something replaced. He'll do it, because the enemy won't wait, but will always come up with a holistic plan and reasoning for any changes. Once I had my own command and could pick a chief tech, I put him in the position. He grumbled about it and still does, but he does like how he can come up with a plan and not have to do all the work." - Jasmine
 
 ## Ambrosia - Lance Leader & Older Twin Sister
 
