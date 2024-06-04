@@ -97,9 +97,7 @@ So Amber, aside from being XO, is basically the moral officer on the ship. She k
 
 She travels with the Maxim, and it's 4 squads of infantry.
 
-## Starr Icetoff - Senior NCO & Father of Kem
-
-Aside from Kem who now drives a tank (bleh), Starr comes from a long line of infantry army brats. Became a huge Fan of the Ying Long Battle Armor the first time he saw it in action, or didn't see it, which he thought was amazing. So now him, and his family, make up the OMNI BA platoon for Jasmine. It's all Ying Long for now, as they are brand new.
+## Starr Icetoff - Sr. Medic & Father of Kem
 
 ## Indigo - Younger Brother
 
