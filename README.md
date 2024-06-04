@@ -69,25 +69,34 @@ Mechs:
   - Marauder MAD-5S - (Rasalhague 3051)
 - Medium
   - Blackjack BJ2-0B - (General 3057)
-    - BA Slot
+    - Gray Death Standard (Flamer) (4t)
 - Light
-  - Wolfhound WLF-2 (Rasalhague 3052)
+  - Owens OW-1D (Merc)
+    - Gray Death Standard (Flamer) (4t)
   - Hermes HER-4S (Rasalhague 3057)
 
 Combat Vehicles
 
 - Schiltron Prime (Rasalhague 3059)
-  - BA Slot
+  - Gray Death Standard (Flamer) (4t)
 - Sturmfeur Heavy Tank (Rasalhague 3018)
-- Hawk Moth Gunship (Armour) (Merc 3060)
 - Puma Assault Tank PAT-005b (General 2751)
+- Hawk Moth Gunship (Armour) (Merc 3060)
 
 Infantry
 
 - Karnov UR Transport BA (8t) (General 3063)
+  - Gray Death Standard (MG) (4t)
+  - Gray Death Standard (LRR) (4t)
 - Cavalry Attack Helicopter Infantry (4t) (General 3063)
+  - TAG Spotter Infantry Platoon (3t)
 - Maxim I Heavy Hover Transport (12t) (General 3060)
+  - TAG Spotter Infantry Platoon (3t)
+  - Conventional Infantry w/SRM (3t)
+  - Conventional Infantry w/Flamer (3t)
+  - Xenoplanetary Infantry (3t)
 - Daimyo HQ 67-K (4t) (Rasalhague 2781)
+  - Gray Death Standard (SRM) (4t)
 
 References
 
@@ -98,7 +107,8 @@ References
 - LRM Carrier (3055 Upgrade) 3058 IS p132
 - Schiltron Prime (3060 p45)
 - Sturmfuer (3039 p148)
-- Yellow Jacket Arrow IV or RAC/5 3058 p63
+- Puma Assault Tank PAT-005b (3075 Age of War p14)
+- Hawk Moth Gunship (Armour) (3060 p29)
 - Karnov UR Transport BA 3058 p56
 - Cavalry Attack Helicopter Infantry 3058 p21
 - Maxim I Heavy Hover Transport 3058 p112
