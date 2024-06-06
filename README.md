@@ -8,18 +8,18 @@ flowchart LR
   smo("Starr (Sr. Medical Officer)")
   dp("Daisy (Diplomat)")
   ll("Ambrosia (Lance Leader)\n'INANNA' BJ2-OB")
-  lm1("Marceau\n'AMUN' HER-4K")
-  lxo("Orchid (XO)\n'VESTA' OW-1D")
-  al("Arima (Armoured Platoon Leader)\n'MARDUK' Puma")
-  axo("Akira (XO)"\n'VULCAN' Hawk Moth)
-  am1("Marceau\n'MARS' SturmFeur")
-  il("Iris (Infantry Platoon Leader)"\n'BABA YAGA' Cavalry)
-  im1("Indigo\n'APOLLO' Karnov")
+  lm1("Marceau\nHER-4K")
+  lxo("Orchid (XO)\nOW-1D")
+  al("Arima (Armoured Platoon Leader)\nPuma")
+  axo("Akira (XO)"\nHawk Moth)
+  am1("Marceau\nSturmFeur")
+  il("Iris (Infantry Platoon Leader)"\nCavalry)
+  im1("Indigo\nKarnov")
   im2("Alphonse\n'ATHENA' Daimyo")
   isnco("Ragnar (Senior NCO)\n'ODIN' Gray Death attached to BJ2-OB")
   iyl1("Tryna\n'GERI' Gray Death attached to OW-1D")
   iyl3("Kareth\n'FREKI' Gray Death attached to Schiltron")
-  ixo("Amber (XO)\n'HERMES' Maxim")
+  ixo("Amber (XO)\nMaxim")
   co --> xo
   co --> ct
   co --> smo
@@ -39,53 +39,214 @@ flowchart LR
   isnco --> iyl3
 ```
 
-## Or'lient Family
+## Officer List
 
-Jasmine - Matriarch
+### Unit Commanders
 
-- Ambrosia - Twin Sister
-  - Arima Kazutomo - Husband
-  - Akira - Son
-  - Orchid - Daughter
-- Indigo - Younger Brother
-- Daisy - Mother
-- Alphonse Barbeau - Father
-- Marceau Barbeau - Uncle, Father's older brother
-  - Irene Barbeau - Wife
-- Rose - Aunt, Daisy's younger sister
-  - Iris - Daughter
-  - Amber - Daughter
-  - Clover - Son
-- Ulam - Tech Since being personal tech
-- Starr Icetoff
-  - Tryna Icetoff - Wife
-  - Kem Icetoff - Daughter
-  - Ragnar Icetoff - Son
-    - Kareth Icetoff - Wife
+- CO: Jasmine Or'lient (Veteran)
+- XO: Kem Icetoff
 
-Veteren - Jasmine
+### Senior Officers
 
-Regular+ - Ambrosia
+- Chief Technician: Ulam
+- Sr. Medical Officer: Starr Icetoff
+- Communications & Diplomatic Contact: Daisy Or'lient
+- Senior NCO: Ragnar Icetoff
 
-Mechs:
+### Platoon Leaders
 
-- Heavy
-  - Marauder MAD-5S - (Rasalhague 3051)
-- Medium
-  - Blackjack BJ2-0B - (General 3057)
-    - Gray Death Standard (Flamer) (4t)
-- Light
-  - Owens OW-1D (Merc)
-    - Gray Death Standard (Flamer) (4t)
-  - Hermes HER-4S (Rasalhague 3057)
+- Lance Platoon Leader: Ambrosia Or'lient (Regular+)
+- Lance Platoon XO: Orchid Or'lient
+- Armoured Platoon Leader: Arima Kazutomo
+- Armoured Platoon XO: Akira Or'lient
+- Infantry Platoon Leader: Iris Or'lient
+- Infantry Platoon XO: Amber Or'lient
 
-Combat Vehicles
+## Mechs
 
-- Schiltron Prime (Rasalhague 3059)
-  - Gray Death Standard (Flamer) (4t)
-- Sturmfeur Heavy Tank (Rasalhague 3018)
-- Puma Assault Tank PAT-005b (General 2751)
-- Hawk Moth Gunship (Armour) (Merc 3060)
+### Marauder MAD-5S (Heavy)
+
+Rasalhague (3051)
+
+(Book: RS 3085 Phoenix p180)
+
+#### Weapons
+
+| Name                  | Heat | Damage | Ranges    | Ammo |
+| --------------------- | ---- | ------ | --------- | ---- |
+| Gauss Rifle           | 1    | 15     | 2/7/15/22 | 8    |
+| ER PPC x2             | 15   | 10     | -/7-14-23 | --   |
+| Medium Pulse Laser x2 | 4    | 6      | /2/4/6    | --   |
+
+### Blackjack BJ2-0B (Medium)
+
+General (3057)
+
+(Book: RS 3058 Inner Sphere p232)
+
+#### Equipment
+
+C3 Slave
+
+#### Weapons
+
+| Name             | Heat | Damage | Ranges    | Ammo |
+| ---------------- | ---- | ------ | --------- | ---- |
+| Gauss Rifle      | 1    | 15     | 2/7/15/22 | 16   |
+| LRM 10 w/Artemis | 4    | 1/msi  | 6/7/14/21 | 24   |
+| Small Laser      | 1    | 3      | -/1/2/3   | --   |
+
+#### OMNI Mounted Battle Armour
+
+##### Gray Death Standard (Flamer)
+
+Merc (3052)
+
+(Book: RS 3058 Clan p31)
+
+###### Weapons & Equipment
+
+| Name             | Damage | Ranges  | Ammo |
+| ---------------- | ------ | ------- | ---- |
+| Battle Claw      |
+| Flamer           | 2      | -/1/2/3 |
+| Improved Sensors |        | 2       |
+
+### Owens OW-1D (Light)
+
+Merc (3056)
+
+(Book: RS 3058 Inner Sphere p206)
+
+#### Equipment
+
+C3 Slave
+
+Beagle Active Probe (4)
+
+#### Weapons
+
+| Name  | Heat | Damage | Ranges    | Ammo    |
+| ----- | ---- | ------ | --------- | ------- |
+| TAG   | 0    | 0      | -/5-10-15 |
+| Narc  | 0    | 0      | -/3/6/9   | 6       |
+| SRM-4 | 3    | 2/msi  | -/3/6/9   | Narc 25 |
+
+#### OMNI Mounted Battle Armour
+
+##### Gray Death Standard (Flamer)
+
+Merc (3052)
+
+(Book: RS 3058 Clan p31)
+
+###### Weapons & Equipment
+
+| Name             | Damage | Ranges  | Ammo |
+| ---------------- | ------ | ------- | ---- |
+| Battle Claw      |
+| Flamer           | 2      | -/1/2/3 |
+| Improved Sensors |        | 2       |
+
+### Hermes HER-4S
+
+Rasalhague (3057)
+
+(Book: RS 3050 Clan p235)
+
+#### Equipment
+
+Guardian ECM Suite (6)
+
+#### Weapons
+
+| Name                  | Heat | Damage | Ranges | Ammo |
+| --------------------- | ---- | ------ | ------ | ---- |
+| Medium Pulse Laser x2 | 4    | 6      | /2/4/6 | --   |
+
+## Armoured Platoon Vehicles
+
+### Schiltron Prime
+
+Rasalhague (3059)
+
+(Book: RS 3060 p45)
+
+#### Equipment
+
+C3 Master
+
+Guardian ECM Suite (6)
+
+#### Weapons
+
+| Name         | Damage | Ranges    | Ammo       |
+| ------------ | ------ | --------- | ---------- |
+| Arrow IV x2  | 20     | -/1/2/8   | 20 Homing  |
+|              |        |           | 20 Regular |
+| TAG          | 0      | -/5/10/15 |
+| Medium Laser | 5      | -/3/6/9   |
+| Small Laser  | 3      | -/1/2/3   |
+
+#### OMNI Mounted Battle Armour
+
+##### Gray Death Standard (Flamer)
+
+Merc (3052)
+
+(Book: RS 3058 Clan p31)
+
+###### Weapons & Equipment
+
+| Name             | Damage | Ranges  | Ammo |
+| ---------------- | ------ | ------- | ---- |
+| Battle Claw      |
+| Flamer           | 2      | -/1/2/3 |
+| Improved Sensors |        | 2       |
+
+### Sturmfeur Heavy Tank
+
+Rasalhague 3018
+
+(Book: RS 3039 p148)
+
+#### Weapons
+
+| Name        | Damage | Ranges    | Ammo |
+| ----------- | ------ | --------- | ---- |
+| LRM 20      | 1/msi  | 6/7/14/21 | 18   |
+| Machine Gun | 2      | -/1/2/3   | 200  |
+
+### Puma Assault Tank PAT-005b
+
+General (2751)
+
+(Book: RS 3075 Age of War p14)
+
+#### Weapons
+
+| Name                | Damage | Ranges    | Ammo |
+| ------------------- | ------ | --------- | ---- |
+| ER PPC              | 10     | -/7/14/23 |
+| LRM 20 x2 w/Artemis | 1/msi  | 6/7/14/21 | 24   |
+| Medium Laser        | 5      | -/3/6/9   |
+| Small Pulse Laser   | 3      | -/1/2/3   |
+| Streak SRM-2        | 2/msi  | -/3/6/9   | 50   |
+| Vehicle Flamer      | 2      | -/1/2/3   | 20   |
+
+### Hawk Moth Gunship (Armour)
+
+Merc (3060)
+
+(Book: RS 3060 p29)
+
+#### Weapons
+
+| Name              | Damage | Ranges    | Ammo |
+| ----------------- | ------ | --------- | ---- |
+| Light Gauss Rifle | 8      | 3/8/17/25 | 16   |
+
+## Infantry Platoon
 
 Infantry
 
@@ -104,30 +265,12 @@ Infantry
 
 References
 
-- Marauder MAD-5S 3085 Phoenix p180
-- Blackjack BJ2-OB 3058 p232
-- Wolfhound WLF-2 3050 Inner Sphere p66
-- Hermes HER-4K 3050 Clan p235
-- LRM Carrier (3055 Upgrade) 3058 IS p132
-- Schiltron Prime (3060 p45)
-- Sturmfuer (3039 p148)
-- Puma Assault Tank PAT-005b (3075 Age of War p14)
-- Hawk Moth Gunship (Armour) (3060 p29)
 - Karnov UR Transport BA 3058 p56
 - Cavalry Attack Helicopter Infantry 3058 p21
 - Maxim I Heavy Hover Transport 3058 p112
 
-| Name              | Equipment              | Ranges  |
-| ----------------- | ---------------------- | ------- |
-| Maruader          | Gauss Rifle            | 7/15/22 |
-| Movement 4/6      | ER PPC x2              | 7/14/23 |
-|                   | Medium Pulse Laser x2  | 2/4/6   |
-|                   |                        |         |
-| BJ2-OB            | Gauss Rifle            | 7/15/22 |
-| Movement 4/6/4    | LRM 10 w/Artemis       | 7/14/21 |
-|                   | Small Laser            | 1/2/3   |
-|                   | C3 Slave               |
-|                   |                        |         |
+| Name              | Heat                   | Damage  | Ranges | Ammo |
+| ----------------- | ---------------------- | ------- | ------ | ---- |
 | Schiltron Prime   | Arrow IV x2            | 1/2/8   |
 | Movement 3/5      | Medium Laser x2        | 3/6/9   |
 |                   | Small Laser x4         | 1/2/3   |

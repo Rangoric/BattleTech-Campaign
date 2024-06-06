@@ -1,3 +1,27 @@
+# Family Tree
+
+Jasmine - Matriarch
+
+- Ambrosia - Twin Sister
+  - Arima Kazutomo - Husband
+  - Akira - Son
+  - Orchid - Daughter
+- Indigo - Younger Brother
+- Daisy - Mother
+- Alphonse Barbeau - Father
+- Marceau Barbeau - Uncle, Father's older brother
+  - Irene Barbeau - Wife
+- Rose - Aunt, Daisy's younger sister
+  - Iris - Daughter
+  - Amber - Daughter
+  - Clover - Son
+- Ulam - Tech Since being personal tech
+- Starr Icetoff
+  - Tryna Icetoff - Wife
+  - Kem Icetoff - Daughter
+  - Ragnar Icetoff - Son
+    - Kareth Icetoff - Wife
+
 # Or'lient Family History
 
 The Or'lient family has been a member of Rasalhague for centries starting on Rasalhague itself. They have suffered oppression under Draconis Combine, and took part in talks for the Free Rasalhague Republic to form, dealing with local diplomats on various planets.
