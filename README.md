@@ -148,7 +148,7 @@ Merc (3052)
 | Flamer           | 2      | -/1/2/3 |
 | Improved Sensors |        | 2       |
 
-### Hermes HER-4S
+### Hermes HER-4S (Light)
 
 Rasalhague (3057)
 
@@ -162,7 +162,7 @@ Guardian ECM Suite (6)
 
 | Name                  | Heat | Damage | Ranges | Ammo |
 | --------------------- | ---- | ------ | ------ | ---- |
-| Medium Pulse Laser x2 | 4    | 6      | /2/4/6 | --   |
+| Medium Pulse Laser x3 | 4    | 6      | /2/4/6 | --   |
 
 ## Armoured Platoon Vehicles
 
@@ -268,21 +268,3 @@ References
 - Karnov UR Transport BA 3058 p56
 - Cavalry Attack Helicopter Infantry 3058 p21
 - Maxim I Heavy Hover Transport 3058 p112
-
-| Name              | Heat                   | Damage  | Ranges | Ammo |
-| ----------------- | ---------------------- | ------- | ------ | ---- |
-| Schiltron Prime   | Arrow IV x2            | 1/2/8   |
-| Movement 3/5      | Medium Laser x2        | 3/6/9   |
-|                   | Small Laser x4         | 1/2/3   |
-|                   | Guardian ECM Suite     | 6       |
-|                   | C3 Master (Tag)        | 5/10/15 |
-|                   |                        |         |
-| SturmFeur         | LRM 20 x2              | 7/14/21 |
-| Movement: 3/5     | Machine Gun            | 1/2/3   |
-|                   |                        |         |
-| Puma Assault Tank | Medium Laser x2        | 3/6/9   |
-| Movement 3/5      | Stream SRM 2 x2        | 3/6/9   |
-|                   | ER PPC                 | 7/14/23 |
-|                   | LRM 20 w/Artemis IV x2 | 7/14/21 |
-|                   | Small Pulse Laser      | 1/2/3   |
-|                   | Flamer                 | 1/2/3   |
