@@ -66,10 +66,6 @@ flowchart LR
 
 ### Marauder MAD-5S (Heavy)
 
-Rasalhague (3051)
-
-(Book: RS 3085 Phoenix p180)
-
 #### Weapons
 
 | Name                  | Heat | Damage | Ranges    | Ammo |
@@ -80,14 +76,6 @@ Rasalhague (3051)
 
 ### Blackjack BJ2-0B (Medium)
 
-General (3057)
-
-(Book: RS 3058 Inner Sphere p232)
-
-#### Equipment
-
-C3 Slave
-
 #### Weapons
 
 | Name             | Heat | Damage | Ranges    | Ammo |
@@ -95,14 +83,11 @@ C3 Slave
 | Gauss Rifle      | 1    | 15     | 2/7/15/22 | 16   |
 | LRM 10 w/Artemis | 4    | 1/msi  | 6/7/14/21 | 24   |
 | Small Laser      | 1    | 3      | -/1/2/3   | --   |
+| C3 Slave         |
 
 #### OMNI Mounted Battle Armour
 
 ##### Gray Death Standard (Flamer)
-
-Merc (3052)
-
-(Book: RS 3058 Clan p31)
 
 ###### Weapons & Equipment
 
@@ -114,31 +99,19 @@ Merc (3052)
 
 ### Owens OW-1D (Light)
 
-Merc (3056)
-
-(Book: RS 3058 Inner Sphere p206)
-
-#### Equipment
-
-C3 Slave
-
-Beagle Active Probe (4)
-
 #### Weapons
 
-| Name  | Heat | Damage | Ranges    | Ammo    |
-| ----- | ---- | ------ | --------- | ------- |
-| TAG   | 0    | 0      | -/5-10-15 |
-| Narc  | 0    | 0      | -/3/6/9   | 6       |
-| SRM-4 | 3    | 2/msi  | -/3/6/9   | Narc 25 |
+| Name                | Heat | Damage | Ranges    | Ammo    |
+| ------------------- | ---- | ------ | --------- | ------- |
+| TAG                 | 0    | 0      | -/5-10-15 |
+| Narc                | 0    | 0      | -/3/6/9   | 6       |
+| SRM-4               | 3    | 2/msi  | -/3/6/9   | Narc 25 |
+| C3 Slave            |
+| Beagle Active Probe |      |        | 4         |
 
 #### OMNI Mounted Battle Armour
 
 ##### Gray Death Standard (Flamer)
-
-Merc (3052)
-
-(Book: RS 3058 Clan p31)
 
 ###### Weapons & Equipment
 
@@ -150,51 +123,31 @@ Merc (3052)
 
 ### Hermes HER-4S (Light)
 
-Rasalhague (3057)
-
-(Book: RS 3050 Clan p235)
-
-#### Equipment
-
-Guardian ECM Suite (6)
-
 #### Weapons
 
 | Name                  | Heat | Damage | Ranges | Ammo |
 | --------------------- | ---- | ------ | ------ | ---- |
 | Medium Pulse Laser x3 | 4    | 6      | /2/4/6 | --   |
+| Guardian ECM Suite    |      |        | 6      |
 
 ## Armoured Platoon Vehicles
 
 ### Schiltron Prime
 
-Rasalhague (3059)
-
-(Book: RS 3060 p45)
-
-#### Equipment
-
-C3 Master
-
-Guardian ECM Suite (6)
-
 #### Weapons
 
-| Name         | Damage | Ranges    | Ammo       |
-| ------------ | ------ | --------- | ---------- |
-| Arrow IV x2  | 20     | -/1/2/8   | 20 Homing  |
-|              |        |           | 20 Regular |
-| TAG          | 0      | -/5/10/15 |
-| Medium Laser | 5      | -/3/6/9   |
-| Small Laser  | 3      | -/1/2/3   |
+| Name               | Damage | Ranges    | Ammo       |
+| ------------------ | ------ | --------- | ---------- |
+| Arrow IV x2        | 20     | -/1/2/8   | 20 Homing  |
+|                    |        |           | 20 Regular |
+| C3 Master (TAG)    | 0      | -/5/10/15 |
+| Medium Laser       | 5      | -/3/6/9   |
+| Small Laser        | 3      | -/1/2/3   |
+| Guardian ECM Suite |        | 6         |
 
 #### OMNI Mounted Battle Armour
 
 ##### Gray Death Standard (Flamer)
-
-Merc (3052)
-
-(Book: RS 3058 Clan p31)
 
 ###### Weapons & Equipment
 
@@ -206,10 +159,6 @@ Merc (3052)
 
 ### Sturmfeur Heavy Tank
 
-Rasalhague 3018
-
-(Book: RS 3039 p148)
-
 #### Weapons
 
 | Name        | Damage | Ranges    | Ammo |
@@ -218,10 +167,6 @@ Rasalhague 3018
 | Machine Gun | 2      | -/1/2/3   | 200  |
 
 ### Puma Assault Tank PAT-005b
-
-General (2751)
-
-(Book: RS 3075 Age of War p14)
 
 #### Weapons
 
@@ -236,10 +181,6 @@ General (2751)
 
 ### Hawk Moth Gunship (Armour)
 
-Merc (3060)
-
-(Book: RS 3060 p29)
-
 #### Weapons
 
 | Name              | Damage | Ranges    | Ammo |
@@ -247,6 +188,26 @@ Merc (3060)
 | Light Gauss Rifle | 8      | 3/8/17/25 | 16   |
 
 ## Infantry Platoon
+
+### Karnor UR Transport BA (8t)
+
+## Availability and References
+
+| Name                       | List       | Availability | Book                      |
+| -------------------------- | ---------- | ------------ | ------------------------- |
+| Marauder MAD-5S            | Rasalhague | 3051         | RS 3085 Phoenix p180      |
+| Blackjack BJ2-0B           | General    | 3057         | RS 3058 Inner Sphere p232 |
+| Owens OW-1D                | Mercenary  | 3056         | RS 3058 Inner Sphere p206 |
+| Hermes HER-4S              | Rasalhague | 3057         | RS 3050 Clan p235         |
+| Schiltron Prime            | Rasalhague | 3059         | RS 3060 p45               |
+| Sturmfeur                  | Rasalhague | 3018         | RS 3039 p148              |
+| Puma Assault Tank PAT-005b | General    | 2751         | RS 3075 Age of War p14    |
+| Harm Moth Gunship (Armour) | Mercenary  | 3060         | RS 3060 p29               |
+| Gray Death Standard (All)  | Mercenary  | 3052         | RS 3058 Clan p31          |
+
+Rasalhague (3057)
+
+(Book: RS 3050 Clan p235)
 
 Infantry
 
