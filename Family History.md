@@ -1,4 +1,33 @@
-# Family Tree
+# Family Trees
+
+```mermaid
+flowchart
+  Hibiscus --> |Married| Morgan("Morgan Lindgren")
+  hmchildren("Children")
+  Hibiscus --> hmchildren
+  Morgan --> hmchildren
+  Daisy
+  hmchildren --> Daisy
+  Alphonse("Alphonse Barbeau")
+  Daisy -->|Married| Alphonse
+  daChildren("Children")
+  Alphonse --> daChildren
+  Daisy --> daChildren
+  daChildren --> Jasmine
+  daChildren --> Ambrosia
+  Jasmine --> |Married| Kem("Kem Icetoff")
+  Ambrosia --> |Married| Arima("Arima Kazutomo")
+  Ambrosia --> aaChildren("Children")
+  Arima --> aaChildren
+  aaChildren --> Akira
+  aaChildren --> Orchid
+  Rose
+  hmchildren --> Rose
+  Rose --> rChildren("Children")
+  rChildren --> Iris
+  rChildren --> Amber
+  rChildren --> Clover
+```
 
 Jasmine - Matriarch
 
@@ -95,7 +124,7 @@ Orchid really looks up to both her mother and Jasmine for what they've done. Amb
 
 ## Arima Kazutomo - Armoured Platoon Leader & Husband of Ambrosia
 
-Was an officer for the Draconis Combine for years before fighting to a draw with Ambrosia. After getting a permanent leg injury (playing soccer with Akira & Orchid, not in a battle to his chagrin), he was put on desk duty. With Jasmine scooping up his family he retired, and Jasmine put him in the AJAX B, which while still without good use of his leg, can still command it effectively.
+Was an officer for the Draconis Combine for years before fighting to a draw with Ambrosia. After getting a permanent leg injury (playing soccer with Akira & Orchid, not in a battle to his chagrin), he was put on desk duty. With Jasmine scooping up his family, he retired, and Jasmine put him in the Sturmfeur, which while still without good use of his leg, can still command it effectively.
 
 ## Akira - Armoured Platoon XO & Son of Ambrosia & Arima
 
