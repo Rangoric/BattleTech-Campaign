@@ -9,17 +9,17 @@ flowchart LR
   dp("Daisy (Diplomat)")
   ll("Ambrosia (Lance Leader)\n'INANNA' BJ2-OB")
   lm1("Clover\n'HERMES' HER-4K")
-  lxo("Orchid (XO)\nOW-1D")
+  lxo("Orchid (XO)\n'Saraswati' OW-1D")
   al("Arima (Armoured Platoon Leader)\n'MARS' Puma")
-  axo("Akira (XO)"\nHawk Moth)
-  am1("Marceau\nSturmFeur")
-  il("Iris (Infantry Platoon Leader)"\nCavalry)
-  im1("Indigo\nKarnov")
+  axo("Akira (XO)"\n'Nyyrikki' Hawk Moth)
+  am1("Marceau\n'SET' SturmFeur")
+  il("Iris (Infantry Platoon Leader)"\n'SAVITR' Cavalry)
+  im1("Indigo\n'AETHER' Karnov")
   im2("Alphonse\n'ATHENA' Daimyo")
   isnco("Ragnar (Senior NCO)\n'ODIN' Gray Death attached to BJ2-OB")
   iyl1("Tryna\n'GERI' Gray Death attached to OW-1D")
   iyl3("Kareth\n'FREKI' Gray Death attached to Schiltron")
-  ixo("Amber (XO)\nMaxim")
+  ixo("Amber (XO)\n'LOFN' Maxim")
   co --> xo
   co --> ct
   co --> smo
