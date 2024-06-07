@@ -1,4 +1,4 @@
-# Company Designation - Company Name
+# Valkyries of Hanakotoba
 
 ```mermaid
 flowchart LR
