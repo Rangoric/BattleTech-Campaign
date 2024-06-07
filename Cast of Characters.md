@@ -3,9 +3,9 @@
 ```mermaid
 flowchart
   Hibiscus("Hibiscus (86)")
-  Morgan("Morgan Lindgren 86")
-  Alphonse("Alphonse Barbeau 64")
-  Daisy("Daisy (65)")
+  Morgan("Morgan Lindgren (86)")
+  Alphonse("Alphonse Barbeau (53)")
+  Daisy("Daisy (54)")
   Indigo("Indigo (35)")
   Ambrosia("Ambrosia (37)")
   Arima("Arima Kazutomo 40")
@@ -18,7 +18,7 @@ flowchart
   Starr("Starr Icetoff (55)")
   Tryna("Tryna Icetoff (57)")
   Ragnar("Ragnar Icetoff (35)")
-  Rose("Rose (59)")
+  Rose("Rose (53)")
   Kareth("Kareth Icetoff (24)")
   hmMarried("Married")
   hmChildren("Children")
