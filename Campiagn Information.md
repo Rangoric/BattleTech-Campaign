@@ -2,6 +2,6 @@
 
 Now being stationed on Nejiro. Welcomed by Julia Sato.
 
-The Chiji is an unknown, sounds like a an organization or person representing such.
+Chiji is the Governor.
 
 At Camp Haken with The Hands of the Goddess, IronBorn and Loyalty Forsaken.
