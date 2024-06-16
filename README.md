@@ -145,7 +145,7 @@ flowchart LR
 
 | Name        | Damage | Ranges    | Ammo |
 | ----------- | ------ | --------- | ---- |
-| LRM 20      | 1/msi  | 6/7/14/21 | 18   |
+| LRM 20 x2   | 1/msi  | 6/7/14/21 | 18   |
 | Machine Gun | 2      | -/1/2/3   | 200  |
 
 ### Puma Assault Tank PAT-005b
