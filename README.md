@@ -87,9 +87,9 @@ flowchart LR
 
 #### OMNI Infantry Loaded
 
-| Name                | Weapon      | Weight |
-| ------------------- | ----------- | ------ |
-| Gray Death Standard | Machine Gun | 4t     |
+| Name                | Weapon | Weight |
+| ------------------- | ------ | ------ |
+| Gray Death Standard | Flamer | 4t     |
 
 ### Owens OW-1D (Light)
 
@@ -105,9 +105,9 @@ flowchart LR
 
 #### OMNI Infantry Loaded
 
-| Name                | Weapon      | Weight |
-| ------------------- | ----------- | ------ |
-| Gray Death Standard | Machine Gun | 4t     |
+| Name                | Weapon | Weight |
+| ------------------- | ------ | ------ |
+| Gray Death Standard | Flamer | 4t     |
 
 ### Hermes HER-4S (Light)
 
@@ -135,9 +135,9 @@ flowchart LR
 
 #### OMNI Infantry Loaded
 
-| Name                | Weapon      | Weight |
-| ------------------- | ----------- | ------ |
-| Gray Death Standard | Machine Gun | 4t     |
+| Name                | Weapon | Weight |
+| ------------------- | ------ | ------ |
+| Gray Death Standard | Flamer | 4t     |
 
 ### Sturmfeur Heavy Tank
 
