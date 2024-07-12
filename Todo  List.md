@@ -13,5 +13,6 @@ Schiltron
 
 ## Net New Looking For
 
-- Inferno missiles for LRM / SRM / Arrow IV (Added after mission 90)
+- Inferno missiles for SRM/Arrow IV (Added after mission 90)
+- Magpulse missiles for LRM/SRM (Added after mission 90)
 - Plasma Rifles & Ammo (Added after mission 90)
