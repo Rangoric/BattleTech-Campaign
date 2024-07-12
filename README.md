@@ -20,6 +20,7 @@ flowchart LR
   iyl1("Tryna\n'GERI' Gray Death attached to OW-1D")
   iyl3("Kareth\n'FREKI' Gray Death attached to Schiltron")
   ixo("Amber (XO)\n'LOFN' Maxim")
+  ilm("Brant\n'RUNDAS'")
   co --> xo
   co --> ct
   co --> smo
@@ -37,6 +38,7 @@ flowchart LR
   il --> im2
   isnco --> iyl1
   isnco --> iyl3
+  il --> ilm
 ```
 
 ## Officer List
@@ -85,6 +87,10 @@ flowchart LR
 | Small Laser      | 1    | 3      | -/1/2/3   | --   |
 | C3 Slave         |
 
+Spent Ammo:
+
+- 1 Gauss Round
+
 #### OMNI Infantry Loaded
 
 | Name                | Weapon | Weight |
@@ -102,6 +108,10 @@ flowchart LR
 | SRM-4               | 3    | 2/msi  | -/3/6/9   | Narc 25 |
 | C3 Slave            |
 | Beagle Active Probe |      |        | 4         |
+
+Spent Ammo
+
+- 1 Narc
 
 #### OMNI Infantry Loaded
 
@@ -132,6 +142,15 @@ flowchart LR
 | Medium Laser       | 5      | -/3/6/9   |
 | Small Laser        | 3      | -/1/2/3   |
 | Guardian ECM Suite |        | 6         |
+
+Spent Ammo
+
+- 2 Regular Arrow IV
+
+Damage
+
+- 15 to Turret
+- Fused Turret
 
 #### OMNI Infantry Loaded
 

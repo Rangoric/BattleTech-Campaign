@@ -1,0 +1,97 @@
+# June of 3069 (Mission 90)
+
+## Commander
+
+Bully Roads - Commander of Road's Warriors
+
+## Committed Units
+
+### Eagle's Tears
+
+- Hawk Moth
+- Schiltron
+- Wolverine
+- Eagle
+
+### Hands of the Goddess
+
+- Ostsol
+- Firestarter
+- Vedette
+- Karnov Alpha
+
+### Hammers
+
+- Trebuchet
+- Manteuffell
+- Bandit Hovercraft
+- Dragon
+
+### Ironborn
+
+Unknown
+
+### Valkyries of Hanakotoba
+
+- BJ2-OB Blackjack 'INANNA'
+  - OMNI Mounted Gray Death Standard 'ODIN'
+- OW-1D Owens 'SARASWARTI'
+  - OMNI Mounted Gray Death Standard 'GERI'
+- Schiltron Prime 'ARTEMIS'
+  - OMNI Mounted Gray Death Standard 'FREKI'
+- Cavalry Attack Chopper 'SAVITR'
+  - TAG Spotter Infantry Platoon
+
+## Highlights
+
+- Archer blown up.
+- Demon Tank blown up.
+- Schiltron took a hit.
+
+## Post Action Party Call
+
+Informal tradition of the Valkyries of Hanakotoba is that after a mission there is a dinner 'party' for those that participated. Instead of a formal after action report, a transcript of that conversation is used. Individuals will, of course, have their individual reports, but this 'party' is more about looking at the mission from many angles and providing feedback. It tries to be blame free, but missing the ass end of an Atlas from 30 meters away _will always be your fault_.
+
+Conversation is on a secure link, but was shared with other GSF deployed on this mission so they can listen in or add commentary.
+
+Kem `Artemis`: "Since we are rolling right into the next AO, so instead of it being over dinner, we are going to quickly go over this mission over the radio."
+
+Ambrosia `Inanna`: "Bullshit, I turned off some heat sinks while we are running and am cooking up some chicken. ODIN, I'll let you know when it's ready"
+
+Kem `Artemis`: "I don't know why you'd have chicken. But I'm not that surprised. Moving on. Today was our first mission working with the GSF. Some are _here_ with us, and might add a bit, since apparently most of us were too busy checking out the equipment we had riding with us."
+
+Orchid `Saraswarti`: "I'd like to point out that I was getting a nice view of a lot of asses as they ran from us faster than any of you could go."
+
+Kem `Artemis`: "Let's start there, our opening deployment getting off the drop ship was a bit of an issue."
+
+Ragnar `ODIN`: "We deployed too far away. We completely misjudged the opening distance. The maps we got didn't have units and I realized real fast that we where about 50% further away from the target than we thought we would be. Inanna got off one round, then was out of range the rest of the time."
+
+Ambrosia `Inanna`: "Yeah, and that one round fell short of being able to hit at all."
+
+Orchid `Saraswarti`: "Not that it mattered. It's head was blown off and the whole thing just exploded. We will have to figure out ways to stop that nonsense."
+
+Iris `Savitr`: "Inferno and tasers maybe? Shut down mechs can't really do much."
+
+Kem `Artemis`: "Noted as things for Ulam to start working on. Rangoric loves her energy weapons though, so will have to investigate something for her."
+
+Ambrosia `Inanna`: "At least one of use still needs to be able to blow a hole in things. I wouldn't worry about it"
+
+Kem `Artemis`: "Ok, moving on, the next big thing was that cop that showed up."
+
+Kareth `Freki`: "Don't give me that, you didn't even know it was there. You thought an artillery round misfired.
+
+Iris `Savitr`: "That's where I messed up. Inanna said she was going to cover you, so I should have kept on task. I got there too late to mark some of the targets. All the screaming about how could we misfire a round on our first mission did not help."
+
+Ambrosia `Inanna`: "Also some of the GSF turned that way to help. The damn thing ran off as fast as it could, but I agree, Savitr should have stayed on task, _however_ none of us mentioned it, and the only command from higher up was in regards to a target you where not on."
+
+Kem `Artemis`: "Hard agree on that. It was a mistake, but only with hindsight and with seeing how the rest of the GSF reacts to things. However, we are now at a highlight."
+
+Iris `Savitr`: "Damn right. The lone kill shot from us was on a Demon Tank. The _spotter_ leader is Brant Crowley. Y'all gonna have to up your game if our _spotters_ are the only ones able to take something down."
+
+Orchid `Saraswarti`: "Yeah that was a great shot, good position. If you guys had been there sooner, there was a few mechs and things that passed by that hill also that you might have been able to light up some."
+
+Kem `Artemis`: "And so it is decided, Brant Crowley and his unit will be given a call sign of Rundas, god of the hunt and good fortune. I swear that if it does happen again, we'll trade. I'm the one that supposed to be blowing targets up."
+
+Brant `Rundas`: "Thank you ma'am. Glad to hear there is a clear path to career advancement."
+
+<< Laughter breaks out, but the main part is over, the rest is talk about who did what exactly for themselves and the GSF. Some then got to have some field meals, while some had chicken. >>
