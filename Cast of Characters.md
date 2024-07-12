@@ -155,3 +155,9 @@ Daisy has been a coordinator and diplomat since an early age because she has a n
 Daisy serves as the communications expert and diplomat for the unit. While out and about, she has no issue deferring to Jasmine on goals and such, but Jasmine trusts Daisy to do the right thing by the family.
 
 If contacting the unit in general, Daisy is the first to be contacted, but won't force it when someone is looking for the Unit Leader instead.
+
+## Brant Crowley - Leader of the TAG Spotter Platoon
+
+Languages: Swedish, Japanese, Swedenese
+
+Given a permanent call sign after getting the only hit and kill for the team in it's first mission with the GSF.
