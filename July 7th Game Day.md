@@ -74,7 +74,7 @@ Iris `Savitr`: "Inferno and tasers maybe? Shut down mechs can't really do much."
 
 Kem `Artemis`: "Noted as things for Ulam to start working on. Rangoric loves her energy weapons though, so will have to investigate something for her."
 
-Ambrosia `Inanna`: "At least one of use still needs to be able to blow a hole in things. I wouldn't worry about it"
+Ambrosia `Inanna`: "At least one of us still needs to be able to blow a hole in things. I wouldn't worry about it"
 
 Kem `Artemis`: "Ok, moving on, the next big thing was that cop that showed up."
 
