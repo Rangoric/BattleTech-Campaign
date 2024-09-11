@@ -1,9 +1,8 @@
 ## Repairs
 
-Schiltron
-
-- 15 Damage to Turret (Added after mission 90)
-- Fused Turret (Added after mission 90)
+- Schiltron
+  - 15 Damage to Turret (Added after mission 90)
+  - Fused Turret (Added after mission 90)
 
 ## Ammo Replacement
 
