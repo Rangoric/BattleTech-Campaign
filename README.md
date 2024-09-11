@@ -45,7 +45,7 @@ flowchart LR
 
 ### Unit Commanders
 
-- CO: Jasmine Or'lient (Veteran)
+- CO: Jasmine Or'lient
 - XO: Kem Icetoff
 
 ### Senior Officers
@@ -55,228 +55,82 @@ flowchart LR
 - Communications & Diplomatic Contact: Daisy Or'lient
 - Senior NCO: Ragnar Icetoff
 
-### Platoon Leaders
+## Mech Units
 
 - Lance Platoon Leader: Ambrosia Or'lient (Regular+)
 - Lance Platoon XO: Orchid Or'lient
+
+| Name                         | Unit                  | Stats | Missions | Notes                                | Book              |
+| ---------------------------- | --------------------- | ----- | -------- | ------------------------------------ | ----------------- |
+| `RANGORIC` Jasmine Or'lient  | MAD-5S                | 3/4   | 91       | Stock                                | 3085 Phoenix p180 |
+| `INANNA` Ambrosia Or'lient   | BJ2-OB                | 3/5   | 90       | OMNI, FRR C3 Slave                   | 3058 IS p233      |
+|                              | BJ2-OD Pod            |       |          | OMNI                                 | 3058 IS p235      |
+| `ODIN` Ragnar Icetoff        | Gray Death Std Flamer | 4     | 90       | Mounted on BJ2-OB                    | 3058 Clan p31     |
+| `SARASWARTI` Orchid Or'lient | OW-1D                 | 4/5   | 90       | OMNI, FRR C3 Slave, TAG, Probe, Narc | 3058 IS p206      |
+| `GERI` Tryna Icetoff         | Gray Death Std Flamer | 4     | 90       | Mounted on OW-1D                     | 3058 Clan p31     |
+| `HERMES` Clover Or'lient     | HER-4S                | 4/5   |          | ECM                                  | 3050 Clan p237    |
+
+## Armoured Units
+
 - Armoured Platoon Leader: Arima Kazutomo
 - Armoured Platoon XO: Akira Or'lient
+
+| Name                      | Unit                  | Stats | Missions | Notes                    | Book          |
+| ------------------------- | --------------------- | ----- | -------- | ------------------------ | ------------- |
+| `ARTEMIS` Kem Icetoff     | Schiltron Prime       | 4/5   | 90       | OMNI, FRR C3 Master, ECM | 3060 p45      |
+|                           | Schiltron B           |       |          | OMNI, FRR C3 Master, ECM | 3060 p47      |
+| `FREK` Karenth Icetoff    | Gray Death Std Flamer | 4     | 90       | Mounted on Schiltron     | 3058 Clan p31 |
+| `SET` Marceau             | Sturmfeur             | 4/5   | 91       |                          | 3039 p148     |
+| `MARS` Armia Kazutomo     | PAT-005b              | 4/5   |          |                          | 3075 AoW p14  |
+| `NYYRIKKI` Akira Or'lient | Hawk Moth Gunship     | 4/5   | 91       |                          | 3060 p29      |
+
+## Infantry Units
+
 - Infantry Platoon Leader: Iris Or'lient
 - Infantry Platoon XO: Amber Or'lient
 
-## Mechs
+| Name                      | Unit                           | Stats | Missions | Notes                   | Book          |
+| ------------------------- | ------------------------------ | ----- | -------- | ----------------------- | ------------- |
+| `AETHER` Indigo           | Karnov BA Transport            | 4/5   |          |                         | 3058 IS p56   |
+|                           | Gray Death Std MG              | 4     |          | Mounted on Karnov       | 3058 Clan p33 |
+|                           | Gray Death Std LRR             | 4     |          | Mounted on Karnov       | 3058 Clan p34 |
+| `SAVITR` Iris Or'lient    | Cavalry Attack Heli (BA)       | 4/5   | 90       |                         | 3058 p21      |
+| `RUNDAS` Brant Crowley    | Infantry Platoon TAG           | 4     | 90       | Mounted on Cavalry      | 3085 CE p330  |
+| `LOFN` Amber Or'lient     | Maxim Heavy Transport          | 4/5   |          |                         | 3058 p123     |
+|                           | Infantry Platoon TAG           | 4     |          | Mounted on Maxim        | 3085 CE p330  |
+|                           | Infantry Platoon Heavy LRM     | 4     |          | Mounted on Maxim        | 3085 CE p329  |
+|                           | Infantry Platoon Flamer        | 4     |          | Mounted on Maxim        |
+|                           | Infantry Platoon Xenoplanetary | 4     |          | Mounted on Maxim        | 3085 CE p284  |
+| `ATHENA` Alphonse Barbaue | HQ 67-K Daimyo                 | 4/5   | 91       | +2 Initiative           | 3075 AoW p92  |
+|                           | Gray Death Std SRM             | 4     | 91       | Mounted on HQ 67-Daimyo | 3058 Clan p35 |
 
-### Marauder MAD-5S (Heavy)
+## Extra Gear
 
-#### Weapons
+| Name                | Count | Ton Each | Total Tonnage | Notes     |
+| ------------------- | ----- | -------- | ------------- | --------- |
+| Ferro Fibrous Armor | 5.5   | 1        | 5.5           | 99 Points |
 
-| Name                  | Heat | Damage | Ranges    | Ammo |
-| --------------------- | ---- | ------ | --------- | ---- |
-| Gauss Rifle           | 1    | 15     | 2/7/15/22 | 8    |
-| ER PPC x2             | 15   | 10     | -/7-14-23 | --   |
-| Medium Pulse Laser x2 | 4    | 6      | /2/4/6    | --   |
+## Inner Sphere Supplier
 
-### Blackjack BJ2-0B (Medium)
+| Name                 | Count | Ton Each | Total Tonnage | Notes               |
+| -------------------- | ----- | -------- | ------------- | ------------------- |
+| Ferro Fibrous Armor  | 5.5   | 1        | 5.5           | 99 Points           |
+| Arrow IV Homing Ammo | 2     | 1        | 2             | 10 Rounds           |
+| Arrow IV Homing Ammo | 5     | 1        | 5             | 25 Rounds           |
+| Arrow IV Homing Ammo | 1     | 1        | 1             | 05 Rounds           |
+| LRM Artemis IV Ammo  | 6     | 1        | 6             | 144/76/48/36 Rounds |
+| LRM Semi-Guided Ammo | 2     | 1        | 2             | 48/24/16/12 Rounds  |
+| LRM Thunder Ammo     | 2     | 1        | 2             | 48/24/16/12 Rounds  |
+| SRM Tear Gas         | 1     | 1        | 1             | 50 Rounds           |
 
-#### Weapons
-
-| Name             | Heat | Damage | Ranges    | Ammo |
-| ---------------- | ---- | ------ | --------- | ---- |
-| Gauss Rifle      | 1    | 15     | 2/7/15/22 | 16   |
-| LRM 10 w/Artemis | 4    | 1/msi  | 6/7/14/21 | 24   |
-| Small Laser      | 1    | 3      | -/1/2/3   | --   |
-| C3 Slave         |
-
-Spent Ammo:
+## Spent Ammo
 
 - 1 Gauss Round
-
-#### OMNI Infantry Loaded
-
-| Name                | Weapon | Weight |
-| ------------------- | ------ | ------ |
-| Gray Death Standard | Flamer | 4t     |
-
-### Owens OW-1D (Light)
-
-#### Weapons
-
-| Name                | Heat | Damage | Ranges    | Ammo    |
-| ------------------- | ---- | ------ | --------- | ------- |
-| TAG                 | 0    | 0      | -/5-10-15 |
-| Narc                | 0    | 0      | -/3/6/9   | 6       |
-| SRM-4               | 3    | 2/msi  | -/3/6/9   | Narc 25 |
-| C3 Slave            |
-| Beagle Active Probe |      |        | 4         |
-
-Spent Ammo
-
 - 1 Narc
-
-#### OMNI Infantry Loaded
-
-| Name                | Weapon | Weight |
-| ------------------- | ------ | ------ |
-| Gray Death Standard | Flamer | 4t     |
-
-### Hermes HER-4S (Light)
-
-#### Weapons
-
-| Name                  | Heat | Damage | Ranges | Ammo |
-| --------------------- | ---- | ------ | ------ | ---- |
-| Medium Pulse Laser x3 | 4    | 6      | /2/4/6 | --   |
-| Guardian ECM Suite    |      |        | 6      |
-
-## Armoured Platoon Vehicles
-
-### Schiltron Prime
-
-#### Weapons
-
-| Name               | Damage | Ranges    | Ammo       |
-| ------------------ | ------ | --------- | ---------- |
-| Arrow IV x2        | 20     | -/1/2/8   | 20 Homing  |
-|                    |        |           | 20 Regular |
-| C3 Master (TAG)    | 0      | -/5/10/15 |
-| Medium Laser       | 5      | -/3/6/9   |
-| Small Laser        | 3      | -/1/2/3   |
-| Guardian ECM Suite |        | 6         |
-
-Spent Ammo
-
 - 2 Regular Arrow IV
 
-Damage
+## Damage
 
-- 15 to Turret
-- Fused Turret
-
-#### OMNI Infantry Loaded
-
-| Name                | Weapon | Weight |
-| ------------------- | ------ | ------ |
-| Gray Death Standard | Flamer | 4t     |
-
-### Sturmfeur Heavy Tank
-
-#### Weapons
-
-| Name        | Damage | Ranges    | Ammo |
-| ----------- | ------ | --------- | ---- |
-| LRM 20 x2   | 1/msi  | 6/7/14/21 | 18   |
-| Machine Gun | 2      | -/1/2/3   | 200  |
-
-### Puma Assault Tank PAT-005b
-
-#### Weapons
-
-| Name                | Damage | Ranges    | Ammo |
-| ------------------- | ------ | --------- | ---- |
-| ER PPC              | 10     | -/7/14/23 |
-| LRM 20 x2 w/Artemis | 1/msi  | 6/7/14/21 | 24   |
-| Medium Laser        | 5      | -/3/6/9   |
-| Small Pulse Laser   | 3      | -/1/2/3   |
-| Streak SRM-2        | 2/msi  | -/3/6/9   | 50   |
-| Vehicle Flamer      | 2      | -/1/2/3   | 20   |
-
-### Hawk Moth Gunship (Armour)
-
-#### Weapons
-
-| Name              | Damage | Ranges    | Ammo |
-| ----------------- | ------ | --------- | ---- |
-| Light Gauss Rifle | 8      | 3/8/17/25 | 16   |
-
-## Infantry Platoon
-
-### Karnov UR Transport BA
-
-#### Weapons
-
-| Name               | Damage | Ranges   | Ammo |
-| ------------------ | ------ | -------- | ---- |
-| Infantry Bay (8t)  |
-| ER Medium Laser x2 | 5      | -/4/8/12 |
-| Guardian ECM Suite |        | 6        |
-
-#### Infantry Loaded
-
-| Name                | Weapon                | Weight |
-| ------------------- | --------------------- | ------ |
-| Gray Death Standard | Machine Gun           | 4t     |
-| Gray Death Standard | Long Recoilless Rifle | 4t     |
-
-### Cavalry Attach Helicopter (Infantry)
-
-#### Weapons
-
-| Name              | Damage | Ranges  | Ammo |
-| ----------------- | ------ | ------- | ---- |
-| Infantry Bay (4t) |
-| Medium Laser x3   | 5      | -/3/6/9 |
-| Machine Gun x3    | 2      | -/1/2/3 | 100  |
-
-#### Infantry Loaded
-
-| Name                         | Weapon | Weight |
-| ---------------------------- | ------ | ------ |
-| Tag Spotter Infantry Platoon | TAG    | 3t     |
-
-### Maxim I Heavy Hover Transport
-
-#### Weapons
-
-| Name               | Damage | Ranges    | Ammo |
-| ------------------ | ------ | --------- | ---- |
-| Infantry Bay (12t) |
-| TAG                | 0      | -/5/10/15 |
-| ER Medium Laser x2 | 5      | -/4/8/12  |
-| Streak SRM-6       | 2/msi  | -/3/6/9   | 15   |
-
-#### Loaded Infantry
-
-| Name                         | Weapon   | Weight |
-| ---------------------------- | -------- | ------ |
-| Tag Spotter Infantry Platoon | TAG      | 3t     |
-| Heavy LRM Infantry Platoon   | LRM      | 3t     |
-| Conventional Infantry        | Flamer   | 3t     |
-| Xenoplanetary Infantry       | Coolness | 3t     |
-
-### Daimyo HQ 67-K
-
-#### Weapons
-
-| Name                          | Damage | Ranges    | Ammo |
-| ----------------------------- | ------ | --------- | ---- |
-| Infantry Bay (4t)             |
-| Communications Equipment (7t) |
-| Large Laser                   | 8      | -/5/10/15 |
-| Machine Gun x4                | 2      | -/1/2/3   | 100  |
-
-#### Infantry Loaded
-
-| Name                | Weapon | Weight |
-| ------------------- | ------ | ------ |
-| Gray Death Standard | SRM    | 4t     |
-
-## Availability and References
-
-| Name                                 | List       | Availability | Book                      |
-| ------------------------------------ | ---------- | ------------ | ------------------------- |
-| Marauder MAD-5S                      | Rasalhague | 3051         | RS 3085 Phoenix p180      |
-| Blackjack BJ2-0B                     | General    | 3057         | RS 3058 Inner Sphere p232 |
-| Owens OW-1D                          | Mercenary  | 3056         | RS 3058 Inner Sphere p206 |
-| Hermes HER-4S                        | Rasalhague | 3057         | RS 3050 Clan p235         |
-| Schiltron Prime                      | Rasalhague | 3059         | RS 3060 p45               |
-| Sturmfeur                            | Rasalhague | 3018         | RS 3039 p148              |
-| Puma Assault Tank PAT-005b           | General    | 2751         | RS 3075 Age of War p14    |
-| Harm Moth Gunship (Armour)           | Mercenary  | 3060         | RS 3060 p29               |
-| Karnov UR Transport BA               | General    | 3063         | RS 3058 Inner Sphere p56  |
-| Cavalry Attack Helicopter (Infantry) | General    | 3063         | RS 3058 p21               |
-| Maxim I Heavy Hover Transport        | General    | 3060         | RS 3058 p123              |
-| Daimyo HQ 67-K                       | Rasalhague | 2781         | RS 3075 Age of War p92    |
-| Gray Death Standard (All)            | Mercenary  | 3052         | RS 3058 Clan p31          |
-| Xenoplanetary Infantry               | Rasalhague | 3054         | RS 3085 The Cutting Edge  |
-| Conventional Infantry (All)          | General    |              | RS 3085 The Cutting Edge  |
-| Heavy LRM Infantry Platoon           | Rasalhague | 3057         | RS 3085 The Cutting Edge  |
+- Schiltron
+  - 15 To Turret
+  - Fused Turret
