@@ -122,15 +122,3 @@ flowchart LR
 | LRM Semi-Guided Ammo | 2     | 1        | 2             | 48/24/16/12 Rounds  |
 | LRM Thunder Ammo     | 2     | 1        | 2             | 48/24/16/12 Rounds  |
 | SRM Tear Gas         | 1     | 1        | 1             | 50 Rounds           |
-
-## Spent Ammo
-
-- 1 Gauss Round
-- 1 Narc
-- 2 Regular Arrow IV
-
-## Damage
-
-- Schiltron
-  - 15 To Turret
-  - Fused Turret
