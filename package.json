@@ -13,8 +13,12 @@
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
     "@fontsource/roboto": "^5.1.0",
+    "@mdx-js/loader": "^3.0.1",
+    "@mdx-js/react": "^3.0.1",
     "@mui/icons-material": "^6.1.0",
     "@mui/material": "^6.1.0",
+    "@next/mdx": "^14.2.11",
+    "@types/mdx": "^2.0.13",
     "next": "14.2.11",
     "react": "^18",
     "react-dom": "^18"
