@@ -1,4 +1,4 @@
-import { Framework } from "@/layout/Framework";
+// import { Framework } from "@/layout/Framework";
 import "./index.css";
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
@@ -18,7 +18,7 @@ const theme = createTheme({
       marginBottom: "4px",
     },
     h2: {
-      marginTop: "32px",
+      marginTop: "0",
       marginBottom: "4px",
     },
     h3: {

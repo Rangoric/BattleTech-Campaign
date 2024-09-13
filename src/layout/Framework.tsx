@@ -42,7 +42,8 @@ export const Framework: React.FC<{ children?: React.ReactNode }> = ({
       >
         <MenuList
           sx={{
-            margin: theme.spacing(1),
+            margin: theme.spacing(2),
+            marginRight: theme.spacing(1),
             position: "sticky",
             top: "0",
             flexBasis: "200px",
@@ -51,6 +52,15 @@ export const Framework: React.FC<{ children?: React.ReactNode }> = ({
         >
           <MenuItem component={Link} href="/command-structure">
             <Typography>Command Structure</Typography>
+          </MenuItem>
+          <MenuItem component={Link} href="/lance-platoon">
+            <Typography>Lance Platoon</Typography>
+          </MenuItem>
+          <MenuItem component={Link} href="/armoured-platoon">
+            <Typography>Armoured Platoon</Typography>
+          </MenuItem>
+          <MenuItem component={Link} href="/infantry-platoon">
+            <Typography>Infantry Platoon</Typography>
           </MenuItem>
         </MenuList>
         <Paper
