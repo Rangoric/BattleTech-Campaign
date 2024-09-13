@@ -62,6 +62,9 @@ export const Framework: React.FC<{ children?: React.ReactNode }> = ({
           <MenuItem component={Link} href="/infantry-platoon">
             <Typography>Infantry Platoon</Typography>
           </MenuItem>
+          <MenuItem component={Link} href="/supplies">
+            <Typography>Supplies</Typography>
+          </MenuItem>
         </MenuList>
         <Paper
           sx={{
