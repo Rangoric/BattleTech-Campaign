@@ -210,6 +210,21 @@ const trainingData = {
         },
       ],
     },
+    {
+      name: "Arctic Combat",
+    },
+    {
+      name: "Desert Combat",
+    },
+    {
+      name: "Jungle Combat",
+    },
+    {
+      name: "Mountain Combat",
+    },
+    {
+      name: "Urban Combat",
+    },
   ],
 };
 
