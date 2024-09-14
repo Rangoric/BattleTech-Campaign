@@ -22,6 +22,7 @@ const nextConfig = {
     nextImageExportOptimizer_generateAndUseBlurImages: "true",
     nextImageExportOptimizer_remoteImageCacheTTL: "0",
   },
+  experimental: { esmExternals: "loose" },
 };
 
 const withMDX = createMDX({

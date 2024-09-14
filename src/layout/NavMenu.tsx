@@ -18,8 +18,17 @@ export const NavMenu = () => (
     <MenuItem component={Link} href="/supplies">
       <Typography>Supplies</Typography>
     </MenuItem>
+    <MenuItem component={Link} href="/cast-of-characters">
+      <Typography>House of Or&apos;lient</Typography>
+    </MenuItem>
+    <MenuItem component={Link} href="/family-history">
+      <Typography>Or&apos;lient Family History</Typography>
+    </MenuItem>
     <MenuItem component={Link} href="/nejiro">
       <Typography>Nejiro</Typography>
+    </MenuItem>
+    <MenuItem component={Link} href="/training">
+      <Typography>Training Chart</Typography>
     </MenuItem>
     <MenuItem component={Link} href="/game-day-2024-09-15">
       <Typography>Game Day 2024-09-15</Typography>
