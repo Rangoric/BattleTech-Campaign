@@ -3,8 +3,8 @@ import Link from "next/link";
 
 export const NavMenu = () => (
   <>
-    <MenuItem component={Link} href="/command-structure">
-      <Typography>Command Structure</Typography>
+    <MenuItem component={Link} href="/senior-officers">
+      <Typography>Senior Officers</Typography>
     </MenuItem>
     <MenuItem component={Link} href="/lance-platoon">
       <Typography>Lance Platoon</Typography>
@@ -31,7 +31,7 @@ export const NavMenu = () => (
       <Typography>Training Chart</Typography>
     </MenuItem>
     <MenuItem component={Link} href="/monthly-report-end-of-june-3069">
-      <Typography>Monthly Report, end of June 3069</Typography>
+      <Typography>MR: June 3069</Typography>
     </MenuItem>
     <MenuItem component={Link} href="/game-day-2024-09-15">
       <Typography>Game Day 2024-09-15</Typography>

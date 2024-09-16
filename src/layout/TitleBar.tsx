@@ -18,7 +18,7 @@ export const TitleBar = () => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   return (
     <>
-      <AppBar sx={{ position: "absolute", top: 0, left: 0, right: 0 }}>
+      <AppBar sx={{ position: "fixed", top: 0, left: 0, right: 0 }}>
         <Toolbar>
           <IconButton
             id="basic-button"
