@@ -28,8 +28,6 @@ export const TitleBar = () => {
             aria-label="menu"
             sx={{
               marginRight: 2,
-              display: "block",
-              [theme.breakpoints.up("md")]: { display: "none" },
             }}
             aria-controls={isDrawerOpen ? "basic-menu" : undefined}
             aria-haspopup="true"
@@ -48,9 +46,6 @@ export const TitleBar = () => {
         onClose={() => setIsDrawerOpen(false)}
         open={isDrawerOpen}
         anchorEl={anchorEl}
-        sx={{
-          [theme.breakpoints.up("md")]: { display: "none" },
-        }}
       >
         <MenuList
           sx={{

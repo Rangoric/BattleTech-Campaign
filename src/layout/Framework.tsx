@@ -1,6 +1,5 @@
-import { createTheme, Box, Typography, MenuList, Paper } from "@mui/material";
+import { createTheme, Box, Typography, Paper } from "@mui/material";
 import React from "react";
-import { NavMenu } from "./NavMenu";
 import { TitleBar } from "./TitleBar";
 
 export const Framework: React.FC<{ children?: React.ReactNode }> = ({
@@ -16,20 +15,6 @@ export const Framework: React.FC<{ children?: React.ReactNode }> = ({
           marginTop: "64px",
         }}
       >
-        <MenuList
-          sx={{
-            margin: theme.spacing(2),
-            marginRight: theme.spacing(1),
-            position: "sticky",
-            top: "0",
-            flexBasis: "200px",
-            maxHeight: "100vh",
-            display: "none",
-            [theme.breakpoints.up("md")]: { display: "block" },
-          }}
-        >
-          <NavMenu />
-        </MenuList>
         <Paper
           sx={{
             margin: theme.spacing(1),

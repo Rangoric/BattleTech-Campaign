@@ -6,6 +6,9 @@ export const NavMenu = () => (
     <MenuItem component={Link} href="/senior-officers">
       <Typography>Senior Officers</Typography>
     </MenuItem>
+    <MenuItem component={Link} href="/company-information">
+      <Typography>Company Information</Typography>
+    </MenuItem>
     <MenuItem component={Link} href="/lance-platoon">
       <Typography>Lance Platoon</Typography>
     </MenuItem>
