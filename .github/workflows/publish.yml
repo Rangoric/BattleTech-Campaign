@@ -25,6 +25,9 @@ jobs:
       - name: Setup Node.js ⚙️ - Cache dependencies ⚡ - Install dependencies 🔧
         uses: ./.github/workflows/setup-node
 
+      - name: Prepare the Panda! 🐼
+        run: yarn prepare
+
       - name: Build with Next.js 🏗️
         run: yarn build
 
