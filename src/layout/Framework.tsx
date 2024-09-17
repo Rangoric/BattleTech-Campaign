@@ -1,4 +1,4 @@
-import { createTheme, Box, Typography, Paper } from "@mui/material";
+import { createTheme, Box, Paper } from "@mui/material";
 import React from "react";
 import { TitleBar } from "./TitleBar";
 
@@ -22,7 +22,7 @@ export const Framework: React.FC<{ children?: React.ReactNode }> = ({
             flex: "1",
           }}
         >
-          <Typography>{children}</Typography>
+          {children}
         </Paper>
       </Box>
     </Box>

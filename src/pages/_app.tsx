@@ -17,20 +17,21 @@ const theme = createTheme({
       marginTop: "32px",
       marginBottom: "4px",
     },
+    // H2 is used for the title of the page, to make it fit right in the design, no top margin is needed
     h2: {
       marginTop: "0",
       marginBottom: "4px",
     },
     h3: {
-      marginTop: "32px",
+      marginTop: "8px",
       marginBottom: "4px",
     },
     h4: {
-      marginTop: "32px",
+      marginTop: "8px",
       marginBottom: "4px",
     },
     h5: {
-      marginTop: "32px",
+      marginTop: "8px",
       marginBottom: "4px",
     },
   },

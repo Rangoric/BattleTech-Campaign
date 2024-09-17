@@ -17,6 +17,9 @@
     "jsx": "preserve",
     "incremental": true,
     "paths": {
+      "@/styled-system/*": [
+        "./styled-system/*"
+      ],
       "@/*": [
         "./src/*"
       ]

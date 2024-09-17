@@ -3,10 +3,17 @@ import "leaflet/dist/leaflet.css";
 import { ImageOverlay, MapContainer } from "react-leaflet";
 import { css } from "../../styled-system/css";
 import { CRS } from "leaflet";
+import { ClientUrls } from "@/utilities/ClientUrls";
 
 export const Maps = () => {
   return (
-    <Box sx={{ width: "800px", height: "600px", position: "relative" }}>
+    <Box
+      sx={{
+        width: "calc(100vw - 48px)",
+        height: "calc(100vh - 128px)",
+        position: "relative",
+      }}
+    >
       <MapContainer
         className={css({
           top: 0,
@@ -20,38 +27,38 @@ export const Maps = () => {
         crs={CRS.Simple}
       >
         <ImageOverlay
-          url={"images/main-map-with-color.jpg"}
+          url={ClientUrls.images("/main-map-with-color.jpg")}
           bounds={[
             [0, 0],
             [200, 150],
           ]}
         />
         <ImageOverlay
-          url={"images/Nejiro03.jpg"}
+          url={ClientUrls.images("/Nejiro03.jpg")}
           bounds={[
-            [355, 75 - 200],
-            [505, 275 - 200],
+            [350, 75 - 200],
+            [500, 275 - 200],
           ]}
         />
         <ImageOverlay
-          url={"images/Nejiro04.jpg"}
+          url={ClientUrls.images("/Nejiro04.jpg")}
           bounds={[
-            [205, -25 - 200],
-            [355, 175 - 200],
+            [200, -25 - 200],
+            [350, 175 - 200],
           ]}
         />
         <ImageOverlay
-          url={"images/Nejiro05.jpg"}
+          url={ClientUrls.images("/Nejiro05.jpg")}
           bounds={[
             [-60, 150],
             [-60 + 200, 300],
           ]}
         />
         <ImageOverlay
-          url={"images/Nejiro06.jpg"}
+          url={ClientUrls.images("/Nejiro06.jpg")}
           bounds={[
-            [205, 175 - 200],
-            [355, 375 - 200],
+            [200, 175 - 200],
+            [350, 375 - 200],
           ]}
         />
       </MapContainer>
