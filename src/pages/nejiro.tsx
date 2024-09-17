@@ -2,11 +2,15 @@ import { Framework } from "@/layout/Framework";
 import { Events } from "@/nejiro/events";
 import { Groups } from "@/nejiro/groups";
 import { Locations } from "@/nejiro/locations";
-import { Maps } from "@/nejiro/maps";
 import { People } from "@/nejiro/people";
 import { Box, Tab, Tabs } from "@mui/material";
+import dynamic from "next/dynamic";
 import { useSearchParams } from "next/navigation";
 import { useState } from "react";
+
+const Maps = dynamic(() => import("@/nejiro/maps").then((t) => t.Maps), {
+  ssr: false,
+});
 
 function a11yProps(index: number) {
   return {
