@@ -122,7 +122,7 @@ interface ITrainingData {
 const trainingData: ITrainingData = {
   name: "Available Training",
   description: "Available to any unit",
-  bonus: "Available for 1 unit at a time",
+  bonus: "Talk to your GM today to get training",
   children: [
     {
       name: "Basic Survival",
@@ -406,7 +406,7 @@ const Page = () => {
       <Typography>Notes:</Typography>
       <Typography>
         Most training is really for infantry. Taking it otherwise could help,
-        but might be harder to gain benefit from
+        but might be harder to utilize the benefit from them
       </Typography>
       <Typography>
         Everything gives a bonus, no training gives a penalty. Numbers will be +
