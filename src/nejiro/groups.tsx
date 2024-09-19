@@ -1,13 +1,17 @@
-import { Box } from "@mui/material";
+import { useSearchParams } from "next/navigation";
 import { groups } from "./data/groups/groups";
-import { GroupCard } from "./GroupCard";
+import { GroupList } from "./GroupList";
+import { applySearchToGroup } from "./searchHelpers";
 
 export const Groups = () => {
-  return (
-    <Box>
-      {groups.map((group, index) => (
-        <GroupCard key={index} {...group} />
-      ))}
-    </Box>
-  );
+  const searchParams = useSearchParams();
+  const filterTerm = searchParams.get("search") || "";
+  const filteredGroups = groups.filter((group) => {
+    if (filterTerm === "") {
+      return true;
+    }
+    const good = applySearchToGroup(group, filterTerm);
+    return good;
+  });
+  return <GroupList groups={filteredGroups} />;
 };

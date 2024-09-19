@@ -2,7 +2,7 @@ import { IGroup } from "@/nejiro/IGroup";
 
 export const HandsOfTheGoddess: IGroup = {
   name: "Hands of the Goddess",
-  description: "Player Faction",
+  owner: "(Jimdigris)",
   people: [
     {
       name: "Captain Quintin Bonanno",

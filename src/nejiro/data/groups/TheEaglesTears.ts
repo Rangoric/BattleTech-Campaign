@@ -2,7 +2,7 @@ import { IGroup } from "@/nejiro/IGroup";
 
 export const TheEaglesTears: IGroup = {
   name: `The Eagle's Tears`,
-  description: "Player Faction",
+  owner: "(Crash99c)",
   people: [
     {
       name: "Major 'Crash' Cranson",

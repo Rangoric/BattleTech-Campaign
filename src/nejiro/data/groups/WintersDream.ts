@@ -2,7 +2,7 @@ import { IGroup } from "@/nejiro/IGroup";
 
 export const WintersDream: IGroup = {
   name: `Winter's Dream`,
-  description: "Player Faction",
+  owner: "(Player)",
   people: [
     {
       name: "Lojtnant Tyr 'Hand of Justice' Mikelson",

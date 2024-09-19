@@ -1,13 +1,13 @@
 import { Framework } from "@/layout/Framework";
 import { Events } from "@/nejiro/events";
-import { NejiroTabs } from "@/nejiro/Tabs";
+import { NejiroHeader } from "@/nejiro/NejiroHeader";
 import { Box } from "@mui/material";
 
 const Page = () => {
   return (
     <Framework>
       <Box>
-        <NejiroTabs activeLabel="Events" />
+        <NejiroHeader activeLabel="Events" />
         <Box>
           <Events />
         </Box>

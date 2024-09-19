@@ -2,7 +2,7 @@ import { IGroup } from "@/nejiro/IGroup";
 
 export const KaihsHammers: IGroup = {
   name: `Kiah's Hammers`,
-  description: "Player Faction",
+  owner: "(Devondra)",
   people: [
     {
       name: "Hauptmann Kiah Lorrian Rosen Franks",

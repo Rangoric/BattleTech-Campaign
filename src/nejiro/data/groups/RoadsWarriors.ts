@@ -2,7 +2,7 @@ import { IGroup } from "@/nejiro/IGroup";
 
 export const RoadsWarriors: IGroup = {
   name: "Road's Warriors",
-  description: "Player Faction",
+  owner: "(Player)",
   people: [
     {
       name: "Tai-i Bully Roads",

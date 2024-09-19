@@ -1,27 +1,11 @@
-/*
-Valkyries of Hanakotoba
-Jasmine Or’lient						Unit CO
-Kem Icetoff						Unit XO
-Ranger Icetoff						Sr. NCO
-Ambrosia Or’lient					Lance CO
-Orchid Or’lient						Lance XO
-Armia Kazutomo					Armored Platoon CO
-Akira Or’lient						Armored Platoon XO
-Iris Or’lient						Infantry Platoon CO
-Amber Or’lient						Infantry Platoon XO
-Ulam							Chief Tech
-Starr Icetoff						Sr. Medical Officer
-Daisy Or’lient						Communications/Diplomatic Officer
-*/
-
 import { IGroup } from "@/nejiro/IGroup";
 
 export const ValkyriesOfHanakotoba: IGroup = {
   name: `Valkyries of Hanakotoba`,
-  description: "Player Faction",
+  owner: "(Kem)",
   people: [
     {
-      name: "Jasmine Or’lient",
+      name: "Jasmine Or'lient",
       title: "Unit CO",
       class: "MechWarrior",
     },
@@ -36,12 +20,12 @@ export const ValkyriesOfHanakotoba: IGroup = {
       class: "Battle Armour Squad Leader",
     },
     {
-      name: "Ambrosia Or’lient",
+      name: "Ambrosia Or'lient",
       title: "Lance CO",
       class: "MechWarrior",
     },
     {
-      name: "Orchid Or’lient",
+      name: "Orchid Or'lient",
       title: "Lance XO",
       class: "MechWarrior",
     },
@@ -51,17 +35,17 @@ export const ValkyriesOfHanakotoba: IGroup = {
       class: "Tank Commander",
     },
     {
-      name: "Akira Or’lient",
+      name: "Akira Or'lient",
       title: "Armored Platoon XO",
       class: "Tank Commander",
     },
     {
-      name: "Iris Or’lient",
+      name: "Iris Or'lient",
       title: "Infantry Platoon CO",
       class: "Infantry Commander",
     },
     {
-      name: "Amber Or’lient",
+      name: "Amber Or'lient",
       title: "Infantry Platoon XO",
       class: "Infantry Commander",
     },
@@ -74,7 +58,7 @@ export const ValkyriesOfHanakotoba: IGroup = {
       title: "Sr. Medical Officer",
     },
     {
-      name: "Daisy Or’lient",
+      name: "Daisy Or'lient",
       title: "Communications/Diplomatic Officer",
     },
   ],

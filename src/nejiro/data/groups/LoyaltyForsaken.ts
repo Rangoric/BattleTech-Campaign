@@ -2,7 +2,7 @@ import { IGroup } from "@/nejiro/IGroup";
 
 export const LoyaltyForsaken: IGroup = {
   name: `Loyalty Forsaken`,
-  description: "Player Faction",
+  owner: "(Fyall)",
   people: [
     {
       name: "Frederick Bosche “Duke” Lt. General Ret.",

@@ -2,7 +2,7 @@ import { IGroup } from "@/nejiro/IGroup";
 
 export const Ironborn: IGroup = {
   name: `Ironborn`,
-  description: "Player Faction",
+  owner: "(IronbornGreyjoy)",
   people: [
     {
       name: "Colonel Euron 'Crow's Eye' Grayjoy",

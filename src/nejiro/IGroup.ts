@@ -15,6 +15,6 @@ export interface IPerson {
 
 export interface IGroup {
   name: string;
-  description: string;
+  owner: string;
   people: IPerson[];
 }

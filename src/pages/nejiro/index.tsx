@@ -1,15 +1,19 @@
 import { Framework } from "@/layout/Framework";
-import { Search } from "@/nejiro/search";
-import { NejiroTabs } from "@/nejiro/Tabs";
+import { NejiroHeader } from "@/nejiro/NejiroHeader";
 import { Box } from "@mui/material";
+import dynamic from "next/dynamic";
+
+const Maps = dynamic(() => import("@/nejiro/maps").then((t) => t.Maps), {
+  ssr: false,
+});
 
 const Page = () => {
   return (
     <Framework>
       <Box>
-        <NejiroTabs />
+        <NejiroHeader />
         <Box>
-          <Search />
+          <Maps />
         </Box>
       </Box>
     </Framework>

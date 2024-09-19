@@ -20,6 +20,7 @@ export const Framework: React.FC<{ children?: React.ReactNode }> = ({
             margin: theme.spacing(1),
             padding: theme.spacing(1),
             flex: "1",
+            maxWidth: "calc(100% - 16px)",
           }}
         >
           {children}
