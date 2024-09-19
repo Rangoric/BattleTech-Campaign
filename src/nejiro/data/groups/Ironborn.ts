@@ -84,7 +84,7 @@ export const Ironborn: IGroup = {
     {
       name: "Major Alannah Harlaw",
       job: "Military and Political Liaison Ironborn",
-      description: "House Harlaw Matriarch",
+      description: ["House Harlaw Matriarch"],
     },
   ],
 };

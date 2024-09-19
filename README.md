@@ -96,3 +96,13 @@ flowchart
   rkMarried --> Kareth
   Ulam("Ulam (37)")
 ```
+
+Pages Digested
+
+VI
+2, 1
+
+https://bg.battletech.com/forums/index.php?topic=86040.msg2032846#msg2032846 has Fukuda Dai Ichizoku
+
+III
+49

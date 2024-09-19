@@ -1,6 +1,7 @@
 import { HandsOfTheGoddess } from "./HandsOfTheGoddess";
 import { Ironborn } from "./Ironborn";
 import { KaihsHammers } from "./KiahsHammers";
+import { KokuryuKai } from "./kokuryu-kai";
 import { LoyaltyForsaken } from "./LoyaltyForsaken";
 import { RoadsWarriors } from "./RoadsWarriors";
 import { TheDragonsClutch } from "./TheDragonsClutch";
@@ -18,4 +19,5 @@ export const groups = [
   RoadsWarriors,
   LoyaltyForsaken,
   ValkyriesOfHanakotoba,
+  KokuryuKai,
 ];

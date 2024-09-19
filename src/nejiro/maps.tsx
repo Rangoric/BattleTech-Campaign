@@ -10,7 +10,7 @@ export const Maps = () => {
     <Box
       sx={{
         width: "calc(100vw - 48px)",
-        height: "calc(100vh - 128px)",
+        height: "calc(100vh - 192px)",
         position: "relative",
       }}
     >

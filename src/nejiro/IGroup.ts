@@ -1,6 +1,7 @@
 export interface IPerson {
   name: string;
-  description?: string;
+  languages?: string[];
+  description?: string[];
   // Official Title
   title?: string;
   // What they can command
@@ -11,6 +12,8 @@ export interface IPerson {
   relationships?: string[];
   // Age is just a number, but should be represented by a string
   age?: string;
+  // Location of the token for this character
+  token?: string;
 }
 
 export interface IGroup {
