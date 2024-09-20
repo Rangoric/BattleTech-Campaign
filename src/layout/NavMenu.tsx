@@ -21,6 +21,9 @@ export const NavMenu = () => (
     <MenuItem component={Link} href="/supplies">
       <Typography>Supplies</Typography>
     </MenuItem>
+    <MenuItem component={Link} href="/shopping-list">
+      <Typography>Shopping List</Typography>
+    </MenuItem>
     <MenuItem component={Link} href="/cast-of-characters">
       <Typography>House of Or&apos;lient</Typography>
     </MenuItem>
