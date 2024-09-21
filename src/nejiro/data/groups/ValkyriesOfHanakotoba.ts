@@ -191,5 +191,28 @@ export const ValkyriesOfHanakotoba: IGroup = {
         "Mother of Indigo Or'lient",
       ],
     },
+    {
+      name: "Indigo Or'lient",
+      age: "35",
+      class: "VTOL Pilot",
+      languages: ["Swedish", "Japanese", "Swedanese"],
+      description: [
+        "Younger brother by almost 10 years to Ambrosia & Jasmine, he's way more mellow. He's the pilot of the Karnov transport, and very good at getting his 2 squads of BA to where they need to be. Almost didn't come along as he was a civilian pilot, but didn't want to miss watching his nieces and nephew grow up.",
+      ],
+      relationships: [
+        "Son of Daisy Or'lient",
+        "Son of Alphonse Barbeau",
+        "Brother of Jasmine Or'lient",
+        "Brother of Ambrosia Or'lient",
+      ],
+    },
+    {
+      name: "Brant Crowley",
+      class: "Infantry Commander",
+      languages: ["Swedish", "Japanese", "Swedanese"],
+      description: [
+        "Given a permanent call sign after getting the only hit and kill for the team in it's first mission with the GSF.",
+      ],
+    },
   ],
 };
