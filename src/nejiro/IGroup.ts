@@ -16,8 +16,30 @@ export interface IPerson {
   token?: string;
 }
 
+export interface ITerritorialHolding {
+  name: string;
+  size?: string;
+  location?: string;
+  description?: string[];
+}
+
+export interface ICorporateHoldings {
+  name: string;
+  description?: string[];
+  holdings?: ICorporateHolding[];
+}
+
+export interface ICorporateHolding {
+  name: string;
+  description?: string[];
+  locations?: string[];
+}
+
 export interface IGroup {
   name: string;
   owner: string;
+  description?: string[];
   people: IPerson[];
+  territorialHoldings?: ITerritorialHolding[];
+  corporateHoldings?: ICorporateHoldings[];
 }
