@@ -9,11 +9,16 @@ export const TerritorialHoldings: React.FC<ITerritorialHoldingProps> = ({
   holdings,
 }) => {
   return (
-    <Box sx={{ display: "flex", gap: 1, flexWrap: "wrap" }}>
-      {holdings.map((holding, index) => (
-        <TerritorialHoldingDisplay key={index} {...holding} />
-      ))}
-    </Box>
+    <>
+      {holdings.length > 0 && (
+        <Typography variant={"h6"}>Territorial Holdings</Typography>
+      )}
+      <Box sx={{ display: "flex", gap: 1, flexWrap: "wrap" }}>
+        {holdings.map((holding, index) => (
+          <TerritorialHoldingDisplay key={index} {...holding} />
+        ))}
+      </Box>
+    </>
   );
 };
 
@@ -24,11 +29,11 @@ const TerritorialHoldingDisplay: React.FC<ITerritorialHolding> = ({
   description,
 }) => {
   return (
-    <Card elevation={3} sx={{ width: 320 }}>
+    <Card elevation={3} sx={{ width: "100%" }}>
       <CardContent>
         <Typography>{name}</Typography>
-        <Typography>Size: {size}</Typography>
-        <Typography>Location: {location}</Typography>
+        {size && <Typography>Size: {size}</Typography>}
+        {location && <Typography>Location: {location}</Typography>}
         {description?.map((item) => <Typography key={item}>{item}</Typography>)}
       </CardContent>
     </Card>

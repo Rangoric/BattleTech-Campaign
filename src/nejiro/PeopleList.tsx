@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { IPerson } from "./IGroup";
 import { PersonDisplay } from "./PersonDisplay";
 
@@ -8,10 +8,13 @@ export interface IPeopleListProps {
 
 export const PeopleList = ({ people }: IPeopleListProps) => {
   return (
-    <Box sx={{ display: "flex", gap: 1, flexWrap: "wrap" }}>
-      {people.map((person, index) => (
-        <PersonDisplay key={index} person={person} />
-      ))}
-    </Box>
+    <>
+      {people.length > 0 && <Typography variant={"h6"}>People:</Typography>}
+      <Box sx={{ display: "flex", gap: 1, flexWrap: "wrap" }}>
+        {people.map((person, index) => (
+          <PersonDisplay key={index} person={person} />
+        ))}
+      </Box>
+    </>
   );
 };

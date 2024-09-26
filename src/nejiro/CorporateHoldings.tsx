@@ -20,7 +20,7 @@ export const CorporateHoldings: React.FC<ICorporateHoldingProps> = ({
       <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1 }}>
         {holding.holdings?.map((item) => (
           <React.Fragment key={item.name}>
-            <Card elevation={3} sx={{ width: 320 }}>
+            <Card elevation={3} sx={{ width: "100%" }}>
               <CardContent>
                 <Typography>{item.name}</Typography>
                 {item.description?.map((item) => (

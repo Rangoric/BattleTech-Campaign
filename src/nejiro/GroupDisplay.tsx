@@ -5,6 +5,7 @@ import {
   AccordionDetails,
   AccordionSummary,
   Box,
+  Link,
   Typography,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
@@ -15,6 +16,7 @@ import { CorporateHoldings } from "./CorporateHoldings";
 export const GroupDisplay: React.FC<IGroup> = ({
   name,
   owner,
+  sources,
   people,
   description,
   territorialHoldings,
@@ -33,11 +35,19 @@ export const GroupDisplay: React.FC<IGroup> = ({
         {description?.map((line, index) => (
           <Typography key={index}>{line}</Typography>
         ))}
-        <Typography variant={"h6"}>People:</Typography>
         <PeopleList people={people} />
-        <Typography variant={"h6"}>Territorial Holdings</Typography>
         <TerritorialHoldings holdings={territorialHoldings ?? []} />
         <CorporateHoldings holdings={corporateHoldings ?? []} />
+        {sources && (
+          <Typography>
+            Source(s):
+            {sources.map((t) => (
+              <Link sx={{ paddingLeft: 1 }} href={t.url} key={t.url}>
+                {t.name}
+              </Link>
+            ))}
+          </Typography>
+        )}
       </AccordionDetails>
     </Accordion>
   );

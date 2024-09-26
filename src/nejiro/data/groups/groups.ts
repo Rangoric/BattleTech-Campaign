@@ -1,3 +1,4 @@
+import { FukudaDaiIchizoku } from "./FukudaDaiIchizoku";
 import { HandsOfTheGoddess } from "./HandsOfTheGoddess";
 import { Ironborn } from "./Ironborn";
 import { KaihsHammers } from "./KiahsHammers";
@@ -12,14 +13,15 @@ import { WintersDream } from "./WintersDream";
 
 export const groups = [
   HandsOfTheGoddess,
-  KaihsHammers,
-  TheEaglesTears,
   Ironborn,
-  WintersDream,
-  TheDragonsClutch,
-  RoadsWarriors,
+  KaihsHammers,
   LoyaltyForsaken,
+  RoadsWarriors,
+  TheDragonsClutch,
+  TheEaglesTears,
   ValkyriesOfHanakotoba,
+  WintersDream,
+  FukudaDaiIchizoku,
   KokuryuKai,
   TikhonovichDaiIchizoku,
 ];
