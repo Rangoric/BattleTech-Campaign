@@ -2,6 +2,11 @@ import { IGroup } from "@/nejiro/IGroup";
 
 export const TikhonovichDaiIchizoku: IGroup = {
   name: "Tikhonovich Dai Ichizoku",
+  map: {
+    mapName: "main-map-with-color.jpg",
+    up: 980,
+    right: 360,
+  },
   sources: [
     {
       name: "BattleTech Forum Post",

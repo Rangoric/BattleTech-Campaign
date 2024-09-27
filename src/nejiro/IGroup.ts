@@ -38,6 +38,11 @@ export interface ICorporateHolding {
 export interface IGroup {
   name: string;
   owner: string;
+  map?: {
+    mapName: string;
+    right: number;
+    up: number;
+  };
   sources?: { name: string; url: string }[];
   description?: string[];
   people: IPerson[];

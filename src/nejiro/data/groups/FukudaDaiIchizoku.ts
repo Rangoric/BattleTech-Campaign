@@ -2,6 +2,11 @@ import { IGroup } from "@/nejiro/IGroup";
 
 export const FukudaDaiIchizoku: IGroup = {
   name: "Fukuda Dai Ichizoku",
+  map: {
+    mapName: "main-map-with-color.jpg",
+    up: 500,
+    right: 800,
+  },
   sources: [
     {
       name: "BattleTech Forum Post",

@@ -12,6 +12,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { PeopleList } from "./PeopleList";
 import { TerritorialHoldings } from "./TerritorialHoldings";
 import { CorporateHoldings } from "./CorporateHoldings";
+import { GroupMapDisplay } from "./GroupMapDisplay";
 
 export const GroupDisplay: React.FC<IGroup> = ({
   name,
@@ -21,6 +22,7 @@ export const GroupDisplay: React.FC<IGroup> = ({
   description,
   territorialHoldings,
   corporateHoldings,
+  map,
 }) => {
   return (
     <Accordion elevation={2}>
@@ -32,6 +34,7 @@ export const GroupDisplay: React.FC<IGroup> = ({
         </Box>
       </AccordionSummary>
       <AccordionDetails>
+        {map && <GroupMapDisplay data={map} />}
         {description?.map((line, index) => (
           <Typography key={index}>{line}</Typography>
         ))}
