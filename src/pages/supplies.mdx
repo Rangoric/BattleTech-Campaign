@@ -13,15 +13,40 @@ export default function MDXPage({ children }) {
 
 ### Inner Sphere Supplier
 
-| Name                 | Count | Ton Each | Total Tonnage | Notes               |
-| -------------------- | ----- | -------- | ------------- | ------------------- |
-| Arrow IV Homing Ammo | 2     | 1        | 2             | 10 Rounds           |
-| Arrow IV Ammo        | 5     | 1        | 5             | 25 Rounds           |
-| Arrow IV FASCAM Ammo | 1     | 1        | 1             | 05 Rounds           |
-| LRM Artemis IV Ammo  | 6     | 1        | 6             | 144/76/48/36 Rounds |
-| LRM Semi-Guided Ammo | 2     | 1        | 2             | 48/24/16/12 Rounds  |
-| LRM Thunder Ammo     | 2     | 1        | 2             | 48/24/16/12 Rounds  |
-| SRM Tear Gas         | 1     | 1        | 1             | 50 Rounds           |
+| Name                 | Ton Count | Ton Each | Total Tonnage | Notes               |
+| -------------------- | --------- | -------- | ------------- | ------------------- |
+| Arrow IV Homing Ammo | 2         | 5        | 2             | 10 Rounds           |
+| Arrow IV Ammo        | 5         | 5        | 5             | 25 Rounds           |
+| Arrow IV FASCAM Ammo | 1         | 5        | 1             | 05 Rounds           |
+| LRM Artemis IV Ammo  | 6         | 120      | 6             | 144/76/48/36 Rounds |
+| LRM Semi-Guided Ammo | 2         | 120      | 2             | 48/24/16/12 Rounds  |
+| LRM Thunder Ammo     | 2         | 120      | 2             | 48/24/16/12 Rounds  |
+| SRM Tear Gas         | 1         | 100      | 1             | 100 Rounds          |
+
+### Ammo Requirements
+
+| Weapon System | Ammo Type      | Rounds Per Ton | Cost (ton/each) | Notes                                                         |
+| ------------- | -------------- | -------------- | --------------- | ------------------------------------------------------------- |
+| LRM Artemis   | Artemis IV     | 120            | 60,000 / 500    | BJ2-OB (LRM10) x 1, PAT-005b (LRM20) x2                       |
+| LRM           | Semi-Guided    | 120            | 90,000 / 750    | BJ2-OB (LRM10) x 1, Sturmfeur (LRM20) x2, PAT-005b (LRM20) x2 |
+| LRM           | Thunder        | 120            | 60,000 / 500    | BJ2-OB (LRM10) x 1, Sturmfeur (LRM20) x2, PAT-005b (LRM20) x2 |
+| LRM           | Magnetic Pulse | 120            | 150,000 / 1,250 | BJ2-OB (LRM10) x 1, Sturmfeur (LRM20) x2, PAT-005b (LRM20) x2 |
+| SRM           | Narc           | 100            | 54,000 / 540    | OW-1D (SRM4) x 1                                              |
+| SRM           | Tear Gas       | 100            | 40,500 / 405    | OW-1D (SRM4) x 1                                              |
+| SRM           | Magnetic Pulse | 100            | 135,000 / 1,350 | OW-1D (SRM4) x 1                                              |
+| SRM           | Tandem (AP)    | 50             | 67,500 / 1,350  | OW-1D (SRM4) x 1                                              |
+| SRM Streak    | Streak         | 100            | 54,000 / 540    | Maxim x 1 (SRMS2), PAT-005b (SRMS2) x1                        |
+| Narc          | Narc           | 6              | 6,000 / 1,000   | OW-1D x 1                                                     |
+| Arrow IV      | Arrow IV       | 5              | 50,000 / 10,000 | Schiltron x 2                                                 |
+| Arrow IV      | Homing         | 5              | 75,000 / 15,000 | Schiltron x 2                                                 |
+| Arrow IV      | FASCAM         | 5              | 75,000 / 15,000 | Schiltron x 2                                                 |
+
+### Non-Standard 'Bulk' Equipment Requirements
+
+| Name                | Cost | Notes         |
+| ------------------- | ---- | ------------- |
+| Endo Steel          |      | BJ2-O, HER-4S |
+| Ferro Fibrous Armor |      | HER-4S        |
 
 ## Ledger
 
