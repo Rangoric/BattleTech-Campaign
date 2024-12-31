@@ -45,7 +45,7 @@ export const NavMenu = () => (
     <MenuItem component={Link} href="/game-day-2024-10-13">
       <Typography>Game Day 2024-10-13</Typography>
     </MenuItem>
-    <MenuItem component={Link} href="/monthly-report-end-of-june-3069">
+    <MenuItem component={Link} href="/monthly-report-3069-06">
       <Typography>MR: June 3069</Typography>
     </MenuItem>
     <MenuItem component={Link} href="/game-day-2024-09-15">
