@@ -1,3 +1,5 @@
+import { ISources } from "./ISources";
+
 export interface IPerson {
   name: string;
   languages?: string[];
@@ -43,7 +45,7 @@ export interface IGroup {
     right: number;
     up: number;
   };
-  sources?: { name: string; url: string }[];
+  sources?: ISources;
   description?: string[];
   people: IPerson[];
   territorialHoldings?: ITerritorialHolding[];
