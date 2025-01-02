@@ -25,7 +25,14 @@ export const Events = () => {
         <TimelineItem key={event.title}>
           <TimelineOppositeContent color="textSecondary">{event.time}</TimelineOppositeContent>
           <TimelineSeparator>
-            <TimelineDot />
+            <TimelineConnector />
+            {event.involvedPeople.length > 0 && (
+              <AvatarGroup>
+                {event.involvedPeople.map((person) => (
+                  <PersonAvatar key={person} personName={person} />
+                ))}
+              </AvatarGroup>
+            )}
             <TimelineConnector />
           </TimelineSeparator>
           <TimelineContent>
@@ -36,13 +43,6 @@ export const Events = () => {
                     <Typography variant={"h6"}>{event.title}</Typography>
                     <Typography>{event.summary}</Typography>
                   </Box>
-                  {event.involvedPeople.length > 0 && (
-                    <AvatarGroup>
-                      {event.involvedPeople.map((person) => (
-                        <PersonAvatar key={person} personName={person} />
-                      ))}
-                    </AvatarGroup>
-                  )}
                 </Box>
               </AccordionSummary>
               <AccordionDetails>
