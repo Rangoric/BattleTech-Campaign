@@ -2,7 +2,16 @@ import { IEvent } from "../../IEvents";
 
 export const vohEvents: IEvent[] = [
   {
-    time: "3069 - June",
+    time: "3069 June",
+    title: "Mission 90",
+    summary: "Chasing some fleeing bandits",
+    involvedPeople: ["Jasmine Or'lient", "Ambrosia Or'lient"],
+    mentionedPeople: [],
+    outsideLinks: [],
+    referencePages: [],
+  },
+  {
+    time: "3069 June",
     title: "The Valkyries of Hanakotoba arrive on Nejiro",
     summary: "They arrive on Nejiro and are setup at Camp Haken",
     involvedPeople: ["Jasmine Or'lient"],
