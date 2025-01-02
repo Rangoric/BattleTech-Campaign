@@ -16,6 +16,8 @@ export interface IPerson {
   age?: string;
   // Location of the token for this character
   token?: string;
+  // Location of the turnabout image
+  profile?: string;
 }
 
 export interface ITerritorialHolding {

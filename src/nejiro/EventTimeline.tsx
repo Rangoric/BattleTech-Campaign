@@ -3,19 +3,31 @@ import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
 import TimelineItem from "@mui/lab/TimelineItem";
-import TimelineOppositeContent, { timelineOppositeContentClasses } from "@mui/lab/TimelineOppositeContent";
+import TimelineOppositeContent, {
+  timelineOppositeContentClasses,
+} from "@mui/lab/TimelineOppositeContent";
 import TimelineSeparator from "@mui/lab/TimelineSeparator";
-import { Accordion, AccordionSummary, Box, Typography, AvatarGroup, AccordionDetails } from "@mui/material";
+import {
+  Accordion,
+  AccordionSummary,
+  Box,
+  Typography,
+  AvatarGroup,
+  AccordionDetails,
+} from "@mui/material";
 import Link from "next/link";
 import { PersonAvatar } from "./PersonAvatar";
 import { IEvents } from "./IEvents";
 import React from "react";
+import { DetailsDisplay } from "./DetailsDisplay";
 
 export interface IEventTimelineProps {
   filteredEvents: IEvents;
 }
 
-export const EventTimeline: React.FC<IEventTimelineProps> = ({ filteredEvents }) => {
+export const EventTimeline: React.FC<IEventTimelineProps> = ({
+  filteredEvents,
+}) => {
   return (
     <Timeline
       sx={{
@@ -26,7 +38,9 @@ export const EventTimeline: React.FC<IEventTimelineProps> = ({ filteredEvents })
     >
       {filteredEvents.map((event) => (
         <TimelineItem key={event.title}>
-          <TimelineOppositeContent color="textSecondary">{event.time}</TimelineOppositeContent>
+          <TimelineOppositeContent color="textSecondary">
+            {event.time}
+          </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineConnector />
             <TimelineDot></TimelineDot>
@@ -35,7 +49,13 @@ export const EventTimeline: React.FC<IEventTimelineProps> = ({ filteredEvents })
           <TimelineContent>
             <Accordion elevation={3}>
               <AccordionSummary>
-                <Box sx={{ display: "flex", justifyContent: "space-between", width: "100%" }}>
+                <Box
+                  sx={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    width: "100%",
+                  }}
+                >
                   <Box>
                     <Typography variant={"h6"}>{event.title}</Typography>
                     <Typography>{event.summary}</Typography>
@@ -50,7 +70,7 @@ export const EventTimeline: React.FC<IEventTimelineProps> = ({ filteredEvents })
                 </Box>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography>{event.details}</Typography>
+                <DetailsDisplay details={event.details} />
                 {event.referencePages.length > 0 && (
                   <Box>
                     <Typography variant={"h6"}>Reference Pages</Typography>
@@ -69,7 +89,11 @@ export const EventTimeline: React.FC<IEventTimelineProps> = ({ filteredEvents })
                     <ul>
                       {event.outsideLinks.map((link) => (
                         <li key={link.name}>
-                          <a href={link.url} target={"_blank"} rel={"noreferrer"}>
+                          <a
+                            href={link.url}
+                            target={"_blank"}
+                            rel={"noreferrer"}
+                          >
                             {link.name}
                           </a>
                         </li>

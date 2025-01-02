@@ -1,3 +1,4 @@
+import { IDetails } from "./IDetails";
 import { ISources } from "./ISources";
 
 export interface IEvent {
@@ -6,7 +7,7 @@ export interface IEvent {
   summary: string;
   involvedPeople: string[];
   mentionedPeople: string[];
-  details?: string;
+  details?: IDetails;
   outsideLinks: ISources;
   referencePages: ISources;
 }

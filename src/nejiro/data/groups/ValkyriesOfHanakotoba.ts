@@ -11,8 +11,14 @@ export const ValkyriesOfHanakotoba: IGroup = {
       description: [],
       title: "Unit CO",
       class: "MechWarrior",
-      token: "BT Jasmine-turnaround.gif",
-      relationships: ["Daughter of Daisy Or'lient", "Daughter of Alphonse Barbeau", "Wife of Kem Icetoff", "Younger Twin of Ambrosia Or'lient"],
+      token: "BT Jasmine-token.png",
+      profile: "BT Jasmine-turnaround.gif",
+      relationships: [
+        "Daughter of Daisy Or'lient",
+        "Daughter of Alphonse Barbeau",
+        "Wife of Kem Icetoff",
+        "Younger Twin of Ambrosia Or'lient",
+      ],
     },
     {
       name: "Kem Icetoff",
@@ -24,15 +30,24 @@ export const ValkyriesOfHanakotoba: IGroup = {
       ],
       title: "Unit XO",
       class: "Armour Commander",
-      token: "BT Kem-turnaround.gif",
-      relationships: ["Wife of Jasmine Or'lient", "Daughter of Tryna Icetoff", "Daughter of Starr Icetoff"],
+      token: "BT Kem-token.png",
+      profile: "BT Kem-turnaround.gif",
+      relationships: [
+        "Wife of Jasmine Or'lient",
+        "Daughter of Tryna Icetoff",
+        "Daughter of Starr Icetoff",
+      ],
     },
     {
       name: "Ragnar Icetoff",
       age: "35",
       title: "Sr. NCO",
       class: "Battle Armour Squad Leader",
-      relationships: ["Brother of Kem Icetoff", "Son of Tryna Icetoff", "Son of Starr Icetoff"],
+      relationships: [
+        "Brother of Kem Icetoff",
+        "Son of Tryna Icetoff",
+        "Son of Starr Icetoff",
+      ],
     },
     {
       name: "Ambrosia Or'lient",
@@ -46,7 +61,8 @@ export const ValkyriesOfHanakotoba: IGroup = {
       ],
       title: "Lance CO",
       class: "MechWarrior",
-      token: "BT Ambrosia-turnaround.gif",
+      token: "BT Ambrosia-token.png",
+      profile: "BT Ambrosia-turnaround.gif",
       relationships: [
         "Daughter of Daisy Or'lient",
         "Daughter of Alphonse Barbeau",
@@ -130,7 +146,11 @@ export const ValkyriesOfHanakotoba: IGroup = {
       ],
       title: "Infantry XO",
       class: "Infantry Commander",
-      relationships: ["Mother of 6", "Daughter of Rose Or'lient", "Ex-Wife of 3"],
+      relationships: [
+        "Mother of 6",
+        "Daughter of Rose Or'lient",
+        "Ex-Wife of 3",
+      ],
     },
     {
       name: "Ulam",
@@ -150,7 +170,11 @@ export const ValkyriesOfHanakotoba: IGroup = {
         "Skilled field doctor has been working usually out near the front lines of any conflict. However, since Ragnar wouldn't let his sister go alone, and Tryna wouldn't let either of them go alone, Starr didn't really need convincing.",
       ],
       title: "Sr. Medical Officer",
-      relationships: ["Father of Kem Icetoff", "Father of Ranger Icetoff", "Husband of Tryna Icetoff"],
+      relationships: [
+        "Father of Kem Icetoff",
+        "Father of Ranger Icetoff",
+        "Husband of Tryna Icetoff",
+      ],
     },
     {
       name: "Daisy Or'lient",
@@ -162,8 +186,14 @@ export const ValkyriesOfHanakotoba: IGroup = {
         "If contacting the unit in general, Daisy is the first to be contacted, but won't force it when someone is looking for the Unit Leader instead.",
       ],
       title: "Communications/Diplomatic Officer",
-      token: "BT Daisy-turnaround.gif",
-      relationships: ["Mother of Jasmine Or'lient", "Mother of Ambrosia Or'lient", "Wife of Alphonse Barbeau", "Mother of Indigo Or'lient"],
+      token: "BT Daisy-token.png",
+      profile: "BT Daisy-turnaround.gif",
+      relationships: [
+        "Mother of Jasmine Or'lient",
+        "Mother of Ambrosia Or'lient",
+        "Wife of Alphonse Barbeau",
+        "Mother of Indigo Or'lient",
+      ],
     },
     {
       name: "Indigo Or'lient",
@@ -173,13 +203,20 @@ export const ValkyriesOfHanakotoba: IGroup = {
       description: [
         "Younger brother by almost 10 years to Ambrosia & Jasmine, he's way more mellow. He's the pilot of the Karnov transport, and very good at getting his 2 squads of BA to where they need to be. Almost didn't come along as he was a civilian pilot, but didn't want to miss watching his nieces and nephew grow up.",
       ],
-      relationships: ["Son of Daisy Or'lient", "Son of Alphonse Barbeau", "Brother of Jasmine Or'lient", "Brother of Ambrosia Or'lient"],
+      relationships: [
+        "Son of Daisy Or'lient",
+        "Son of Alphonse Barbeau",
+        "Brother of Jasmine Or'lient",
+        "Brother of Ambrosia Or'lient",
+      ],
     },
     {
       name: "Brant Crowley",
       class: "Infantry Commander",
       languages: ["Swedish", "Japanese", "Swedanese"],
-      description: ["Given a permanent call sign after getting the only hit and kill for the team in it's first mission with the GSF."],
+      description: [
+        "Given a permanent call sign after getting the only hit and kill for the team in it's first mission with the GSF.",
+      ],
     },
   ],
 };

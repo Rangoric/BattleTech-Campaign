@@ -9,12 +9,12 @@ interface IPersonDisplayProps {
 export const PersonDisplay = ({ person }: IPersonDisplayProps) => {
   return (
     <Card elevation={3} sx={{ width: 320 }}>
-      {person.token && (
+      {person.profile && (
         <CardMedia
           component={"img"}
           height={320}
           width={320}
-          image={ClientUrls.images(person.token)}
+          image={ClientUrls.images(person.profile)}
         />
       )}
       <CardContent>
