@@ -11,7 +11,7 @@ export const ValkyriesOfHanakotoba: IGroup = {
       description: [],
       title: "Unit CO",
       class: "MechWarrior",
-      token: "BT Jasmine-token.png",
+      token: "BT Jasmine-Token.png",
       profile: "BT Jasmine-turnaround.gif",
       relationships: [
         "Daughter of Daisy Or'lient",
@@ -30,7 +30,7 @@ export const ValkyriesOfHanakotoba: IGroup = {
       ],
       title: "Unit XO",
       class: "Armour Commander",
-      token: "BT Kem-token.png",
+      token: "BT Kem-Token.png",
       profile: "BT Kem-turnaround.gif",
       relationships: [
         "Wife of Jasmine Or'lient",
@@ -61,7 +61,7 @@ export const ValkyriesOfHanakotoba: IGroup = {
       ],
       title: "Lance CO",
       class: "MechWarrior",
-      token: "BT Ambrosia-token.png",
+      token: "BT Ambrosia-Token.png",
       profile: "BT Ambrosia-turnaround.gif",
       relationships: [
         "Daughter of Daisy Or'lient",
@@ -186,7 +186,7 @@ export const ValkyriesOfHanakotoba: IGroup = {
         "If contacting the unit in general, Daisy is the first to be contacted, but won't force it when someone is looking for the Unit Leader instead.",
       ],
       title: "Communications/Diplomatic Officer",
-      token: "BT Daisy-token.png",
+      token: "BT Daisy-Token.png",
       profile: "BT Daisy-turnaround.gif",
       relationships: [
         "Mother of Jasmine Or'lient",
