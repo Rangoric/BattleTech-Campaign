@@ -1,6 +1,6 @@
 import React from "react";
-import { eDetailType, IDetail, IDetails } from "./IDetails";
-import { Card, CardContent, CardHeader, Typography } from "@mui/material";
+import { eDetailType, IDetail, IDetailConversation, IDetails } from "./IDetails";
+import { Box, Card, CardContent, CardHeader, Typography } from "@mui/material";
 import { getTokenOfPerson } from "./data/groups/utilities";
 import { PersonAvatar } from "./PersonAvatar";
 
@@ -27,11 +27,21 @@ export const DetailsDisplay: React.FC<IDetailsDisplayProps> = ({ details }) => {
 
 export const DetailDisplay = ({ detail }: IDetailDisplayProps) => {
   if (typeof detail === "string") {
-    return (
-      <Typography sx={{ paddingBottom: 1 }}>
-        {detail === "" ? <>&nbsp;</> : detail}
-      </Typography>
-    );
+    if (detail.includes(":")) {
+      const stringDetail: IDetailConversation = {
+        type: eDetailType.Conversation,
+        speaker: detail.split(":")[0],
+        text: detail.split(":")[1],
+      };
+      return DetailDisplayByType(stringDetail);
+    }
+  }
+  return DetailDisplayByType(detail);
+};
+
+const DetailDisplayByType = (detail: IDetail) => {
+  if (typeof detail === "string") {
+    return <Typography sx={{ paddingBottom: 1 }}>{detail === "" ? <>&nbsp;</> : detail}</Typography>;
   }
 
   switch (detail.type) {
@@ -49,7 +59,7 @@ export const DetailDisplay = ({ detail }: IDetailDisplayProps) => {
     case eDetailType.Conversation:
       const token = getTokenOfPerson(detail.speaker);
       return (
-        <Typography
+        <Box
           sx={{
             display: "flex",
             alignItems: "center",
@@ -65,8 +75,8 @@ export const DetailDisplay = ({ detail }: IDetailDisplayProps) => {
               </Typography>
             </>
           )}
-          {detail.text}
-        </Typography>
+          <Typography>{detail.text}</Typography>
+        </Box>
       );
     case eDetailType.Text:
       return <Typography>{detail.text}</Typography>;
