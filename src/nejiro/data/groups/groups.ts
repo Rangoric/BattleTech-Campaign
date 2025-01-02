@@ -1,4 +1,5 @@
 import { FukudaDaiIchizoku } from "./FukudaDaiIchizoku";
+import { GSF } from "./GSF";
 import { HandsOfTheGoddess } from "./HandsOfTheGoddess";
 import { Ironborn } from "./Ironborn";
 import { KaihsHammers } from "./KiahsHammers";
@@ -12,6 +13,7 @@ import { ValkyriesOfHanakotoba } from "./ValkyriesOfHanakotoba";
 import { WintersDream } from "./WintersDream";
 
 export const groups = [
+  GSF,
   HandsOfTheGoddess,
   Ironborn,
   KaihsHammers,

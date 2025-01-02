@@ -3,7 +3,6 @@ import TimelineItem from "@mui/lab/TimelineItem";
 import TimelineSeparator from "@mui/lab/TimelineSeparator";
 import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
-import TimelineDot from "@mui/lab/TimelineDot";
 import TimelineOppositeContent, { timelineOppositeContentClasses } from "@mui/lab/TimelineOppositeContent";
 import { vohEvents } from "./data/events/ValkyriesOfHanakotoba.events";
 import { Accordion, AccordionDetails, AccordionSummary, AvatarGroup, Box, Typography } from "@mui/material";
