@@ -1,6 +1,8 @@
 import React from "react";
 import { eDetailType, IDetail, IDetails } from "./IDetails";
 import { Card, CardContent, CardHeader, Typography } from "@mui/material";
+import { getTokenOfPerson } from "./data/groups/utilities";
+import { PersonAvatar } from "./PersonAvatar";
 
 export interface IDetailsDisplayProps {
   details?: IDetails;
@@ -25,7 +27,11 @@ export const DetailsDisplay: React.FC<IDetailsDisplayProps> = ({ details }) => {
 
 export const DetailDisplay = ({ detail }: IDetailDisplayProps) => {
   if (typeof detail === "string") {
-    return <Typography>{detail}</Typography>;
+    return (
+      <Typography sx={{ paddingBottom: 1 }}>
+        {detail === "" ? <>&nbsp;</> : detail}
+      </Typography>
+    );
   }
 
   switch (detail.type) {
@@ -41,9 +47,25 @@ export const DetailDisplay = ({ detail }: IDetailDisplayProps) => {
         </Card>
       );
     case eDetailType.Conversation:
+      const token = getTokenOfPerson(detail.speaker);
       return (
-        <Typography>
-          <strong>{detail.speaker}</strong>: {detail.text}
+        <Typography
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            gap: 1,
+            paddingBottom: 1,
+          }}
+        >
+          {token && <PersonAvatar personName={detail.speaker} />}
+          {!token && (
+            <>
+              <Typography sx={{ fontWeight: "bold" }} component={"span"}>
+                {detail.speaker}:
+              </Typography>
+            </>
+          )}
+          {detail.text}
         </Typography>
       );
     case eDetailType.Text:

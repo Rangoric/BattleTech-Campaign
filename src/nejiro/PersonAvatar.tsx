@@ -1,4 +1,4 @@
-import { Avatar } from "@mui/material";
+import { Avatar, Tooltip } from "@mui/material";
 import { getTokenOfPerson } from "./data/groups/utilities";
 
 function stringToColor(string: string) {
@@ -26,14 +26,18 @@ function stringAvatar(name: string) {
     sx: {
       bgcolor: stringToColor(name),
     },
-    children: `${name.split(" ")[0][0]}${name.split(" ")[1][0]}`,
+    children: `${name.split(" ")[0][0]}${name.split(" ")[1]?.[0] ?? ""}`,
   };
 }
 export const PersonAvatar = ({ personName }: { personName: string }) => {
   const token = getTokenOfPerson(personName);
   return (
     <>
-      {token && <Avatar alt={personName} src={token} />}
+      {token && (
+        <Tooltip title={personName}>
+          <Avatar alt={personName} src={token} />
+        </Tooltip>
+      )}
       {!token && <Avatar {...stringAvatar(personName)} />}
     </>
   );
