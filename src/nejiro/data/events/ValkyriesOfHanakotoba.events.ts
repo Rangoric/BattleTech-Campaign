@@ -3,12 +3,30 @@ import { IEvent } from "../../IEvents";
 export const vohEvents: IEvent[] = [
   {
     time: "3069 June",
-    title: "Mission 90",
-    summary: "Chasing some fleeing bandits",
-    involvedPeople: ["Jasmine Or'lient", "Ambrosia Or'lient"],
+    title: "Mission 91",
+    summary: "Investigating some natural ECM & Caverns",
+    involvedPeople: ["Jasmine Or'lient", "Marceau Barbeau", "Akira Or'lient", "Alphonse Barbaue"],
     mentionedPeople: [],
     outsideLinks: [],
     referencePages: [],
+  },
+  {
+    time: "3069 June",
+    title: "Mission 90",
+    summary: "Chasing some fleeing bandits",
+    involvedPeople: [
+      "Ambrosia Or'lient",
+      "Orchid Or'lient",
+      "Ragnar Icetoff",
+      "Tryna Icetoff",
+      "Kem Icetoff",
+      "Karenth Icetoff",
+      "Iris Or'lient",
+      "Brant Crowley",
+    ],
+    mentionedPeople: [],
+    outsideLinks: [],
+    referencePages: [{ name: "Mission 90", url: "/game-day-2024-07-07" }],
   },
   {
     time: "3069 June",

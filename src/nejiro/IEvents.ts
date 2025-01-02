@@ -10,3 +10,5 @@ export interface IEvent {
   outsideLinks: ISources;
   referencePages: ISources;
 }
+
+export type IEvents = IEvent[];
