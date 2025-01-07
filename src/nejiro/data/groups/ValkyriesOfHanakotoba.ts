@@ -121,6 +121,46 @@ export const ValkyriesOfHanakotoba: IGroup = {
       ],
     },
     {
+      name: "Chrysanthemum Or'lient",
+      age: "16",
+      languages: [
+        "Swedish",
+        "Japanese",
+        "Swedanese",
+        "English",
+        "Mandarin",
+        "German",
+      ],
+      description: [
+        "Chrysanthemum loves her Nana Daisy, and been helping her out when she can. She's been learning languages, but has been focusing on languages they are likely to deal with so doesn't know nearly as many as Daisy or Kem yet.",
+        "Daisy's hoping that when she gets older she can handle more and more of her own work. But for now Chrys is still getting her general education.",
+      ],
+      relationships: [
+        "Daughter of Ambrosia Or'lient",
+        "Daughter of Arima Kazutomo",
+        "Sister of Akira Or'lient",
+        "Sister of Orchid Or'lient",
+        "Sister of Dahlia Or'lient",
+      ],
+    },
+    {
+      name: "Dahlia Or'lient",
+      languages: ["Swedish", "Japanese", "Swedanese"],
+      age: "15",
+      description: [
+        "Dahlia is the youngest and has always felt a bit left out of family affairs. To compensate some, she's made a data repository of information, and helps out Ulam with electronic repairs.",
+        "Between the website she made and the amount she keeps digging into and documenting family history, she's become the unofficial/official historian of the family.",
+        "She's attending the Nejiro Polytech Institute, focusing on mech electronics. When piloting a mech, she's likely to 'accidentally' break something electronic so that she can spend time fixing it.",
+      ],
+      relationships: [
+        "Daughter of Ambrosia Or'lient",
+        "Daughter of Arima Kazutomo",
+        "Sister of Akira Or'lient",
+        "Sister of Orchid Or'lient",
+        "Sister of Chrysanthemum Or'lient",
+      ],
+    },
+    {
       name: "Iris Or'lient",
       age: "32",
       languages: ["Swedish"],
