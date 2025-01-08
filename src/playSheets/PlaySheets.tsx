@@ -7,7 +7,7 @@ interface IPlaySheetsProps {
 
 export const PlaySheets: React.FC<IPlaySheetsProps> = ({ unit }) => {
   const unitData = allUnits[unit];
-  const [unitStatus, setUnitStatus] = useUnitStatus(unit);
+  useUnitStatus(unit);
 
   if (!unitData) {
     return <>No data for unit {unit}</>;

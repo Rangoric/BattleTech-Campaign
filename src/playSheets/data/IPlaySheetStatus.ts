@@ -1,1 +1,3 @@
-export interface IPlaySheetStatus {}
+export interface IPlaySheetStatus {
+  something: string;
+}
