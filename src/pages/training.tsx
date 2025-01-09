@@ -224,7 +224,7 @@ const trainingData: ITrainingData = {
       time: 8,
     },
     {
-      name: "Navel Assault (Space)",
+      name: "Naval Assault (Space)",
       description: "Teaches unit how to assault in a ZeroG environment",
       bonus: "Unit gets +1 on attack rolls in ZeroG",
       time: 8,
@@ -392,7 +392,7 @@ const Page = () => {
           onLinkMouseMove={() => {}}
           onLinkMouseLeave={() => {}}
           onLinkClick={() => {}}
-          onNodeMouseMove={(node) => {
+          onNodeMouseMove={(node: any) => {
             const data = node.data as ITrainingData;
             setTooltip(Tooltip({ data }));
           }}

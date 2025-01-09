@@ -19,7 +19,6 @@ const Page = () => {
 
   return (
     <Box p={1}>
-      <PlaySheets unit={selectedUnit} />
       <Backdrop open={open} />
       <SpeedDial
         ariaLabel="Pick a Unit"
@@ -78,6 +77,7 @@ const Page = () => {
           onClick={() => setSelectedUnit("INANNA")}
         />
       </SpeedDial>
+      <PlaySheets unit={selectedUnit} />
     </Box>
   );
 };
