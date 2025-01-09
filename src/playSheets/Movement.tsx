@@ -27,14 +27,14 @@ export const Movement: React.FC<IMovement> = ({ unitData }) => {
         <ToggleButton value={"Ping"} color={"standard"}>
           Ping
         </ToggleButton>
-        <ToggleButton value={"Walk"} color={"primary"}>
+        <ToggleButton value={"Walk"} color={"success"}>
           Walk {unitData.movement.walk}
         </ToggleButton>
-        <ToggleButton value={"Run"} color={"warning"}>
+        <ToggleButton value={"Run"} color={"error"}>
           Run {unitData.movement.run}
         </ToggleButton>
         {!!unitData.movement.jump && (
-          <ToggleButton value={"Jump"} color={"error"}>
+          <ToggleButton value={"Jump"} color={"warning"}>
             Jump {unitData.movement.jump}
           </ToggleButton>
         )}
