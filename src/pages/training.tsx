@@ -392,8 +392,8 @@ const Page = () => {
           onLinkMouseMove={() => {}}
           onLinkMouseLeave={() => {}}
           onLinkClick={() => {}}
-          onNodeMouseMove={(node: any) => {
-            const data = node.data as ITrainingData;
+          onNodeMouseMove={(node: { data: ITrainingData }) => {
+            const data = node.data;
             setTooltip(Tooltip({ data }));
           }}
           onNodeMouseLeave={() => setTooltip(undefined)}
