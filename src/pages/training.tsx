@@ -1,5 +1,6 @@
 import { Framework } from "@/layout/Framework";
 import { Box, Card, CardContent, Typography } from "@mui/material";
+import { ComputedNode } from "@nivo/tree";
 import dynamic from "next/dynamic";
 import { ReactNode, useState } from "react";
 
@@ -392,8 +393,8 @@ const Page = () => {
           onLinkMouseMove={() => {}}
           onLinkMouseLeave={() => {}}
           onLinkClick={() => {}}
-          onNodeMouseMove={(node: { data: ITrainingData }) => {
-            const data = node.data;
+          onNodeMouseMove={(node: ComputedNode<unknown>) => {
+            const data = node.data as ITrainingData;
             setTooltip(Tooltip({ data }));
           }}
           onNodeMouseLeave={() => setTooltip(undefined)}
