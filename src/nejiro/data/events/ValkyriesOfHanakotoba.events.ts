@@ -6,7 +6,14 @@ export const vohEvents: IEvent[] = [
     time: "3069 July",
     title: "Mission 95",
     summary: "Bug Hunt",
-    involvedPeople: ["Ambrosia Or'lient", "Ragnar Icetoff", "Orchid Or'lient", "Tryna Icetoff", "Akira Or'lient", "Indigo Or'lient"],
+    involvedPeople: [
+      "Ambrosia Or'lient",
+      "Ragnar Icetoff",
+      "Orchid Or'lient",
+      "Tryna Icetoff",
+      "Akira Or'lient",
+      "Indigo Or'lient",
+    ],
     mentionedPeople: [],
     outsideLinks: [],
     referencePages: [{ name: "Mission 95", url: "/game-day-2025-01-05" }],
@@ -15,7 +22,12 @@ export const vohEvents: IEvent[] = [
     time: "3069 July",
     title: "Mission 94",
     summary: "Training Mission",
-    involvedPeople: ["Jasmine Or'lient", "Clover Or'lient", "Armia Kazutomo", "Amber Or'lient"],
+    involvedPeople: [
+      "Jasmine Or'lient",
+      "Clover Or'lient",
+      "Armia Kazutomo",
+      "Amber Or'lient",
+    ],
     mentionedPeople: [],
     outsideLinks: [],
     referencePages: [{ name: "Mission 94", url: "/game-day-2024-11-10" }],
@@ -49,7 +61,8 @@ export const vohEvents: IEvent[] = [
   {
     time: "3069 July",
     title: "Dahlia enrolling in technical school",
-    summary: "Dahlia is being enrolled in Nejiro Polytech run by Loyalty Forsaken",
+    summary:
+      "Dahlia is being enrolled in Nejiro Polytech run by Loyalty Forsaken",
     involvedPeople: ["Dahlia Or'lient", "Jasmine Or'lient"],
     mentionedPeople: [],
     outsideLinks: [
@@ -80,7 +93,13 @@ export const vohEvents: IEvent[] = [
     time: "3069 July",
     title: "Mission 93",
     summary: "Assisting prisoner escort",
-    involvedPeople: ["Orchid Or'lient", "Tryna Icetoff", "Clover Or'lient", "Akira Or'lient", "Amber Or'lient"],
+    involvedPeople: [
+      "Orchid Or'lient",
+      "Tryna Icetoff",
+      "Clover Or'lient",
+      "Akira Or'lient",
+      "Amber Or'lient",
+    ],
     mentionedPeople: [],
     outsideLinks: [],
     referencePages: [{ name: "Mission 93", url: "/game-day-2024-10-13" }],
@@ -107,7 +126,8 @@ export const vohEvents: IEvent[] = [
   {
     time: "3069 July",
     title: "Gulia & Mieyo talk about ECM Crystals",
-    summary: "Gulia and Mieyo talk about the crystals found in the caverns and the ECM they produce",
+    summary:
+      "Gulia and Mieyo talk about the crystals found in the caverns and the ECM they produce",
     involvedPeople: ["Gulia", "Mieyo"],
     mentionedPeople: ["Jasmine Or'lient"],
     outsideLinks: [
@@ -128,7 +148,7 @@ export const vohEvents: IEvent[] = [
     time: "3069 July",
     title: "Daisy and Joy talk about Citizenship",
     summary: "Daisy and Joy talk about the citizenship process on Nejiro",
-    involvedPeople: ["Daisy Or'lient", "Joy"],
+    involvedPeople: ["Daisy Or'lient", "Joy Yorokobi"],
     mentionedPeople: [],
     outsideLinks: [
       {
@@ -150,8 +170,14 @@ export const vohEvents: IEvent[] = [
   {
     time: "3069 July",
     title: "Jasmine & People chat about the ECM Crystals",
-    summary: "Jasmine, Daisy, Alphonse, and Ulam chat about the crystals found in the caverns and the ECM they produce",
-    involvedPeople: ["Jasmine Or'lient", "Daisy Or'lient", "Alphonse Barbeau", "Ulam"],
+    summary:
+      "Jasmine, Daisy, Alphonse, and Ulam chat about the crystals found in the caverns and the ECM they produce",
+    involvedPeople: [
+      "Jasmine Or'lient",
+      "Daisy Or'lient",
+      "Alphonse Barbeau",
+      "Ulam",
+    ],
     mentionedPeople: ["Dahlia Or'lient"],
     outsideLinks: [
       {
@@ -189,7 +215,8 @@ export const vohEvents: IEvent[] = [
   {
     time: "3069 July",
     title: "Jasmine & Kem's End of July Talk",
-    summary: "Jasmine and Kem chat about short term and long term plans on Nejiro",
+    summary:
+      "Jasmine and Kem chat about short term and long term plans on Nejiro",
     involvedPeople: ["Jasmine Or'lient", "Kem Icetoff", "Dahlia Or'lient"],
     mentionedPeople: ["Ulam", "Karenth Icetoff"],
     details: [
@@ -271,13 +298,20 @@ In related news Kem will filling in as our Jukebox during on base lunches for a 
     involvedPeople: [],
     mentionedPeople: [],
     outsideLinks: [],
-    referencePages: [{ name: "Monthly Report - June 3069", url: "/monthly-report-3069-06" }],
+    referencePages: [
+      { name: "Monthly Report - June 3069", url: "/monthly-report-3069-06" },
+    ],
   },
   {
     time: "3069 June",
     title: "Mission 92",
     summary: "Escort mission",
-    involvedPeople: ["Jasmine Or'lient", "Clover Or'lient", "Akira Or'lient", "Indigo Or'lient"],
+    involvedPeople: [
+      "Jasmine Or'lient",
+      "Clover Or'lient",
+      "Akira Or'lient",
+      "Indigo Or'lient",
+    ],
     mentionedPeople: [],
     outsideLinks: [],
     referencePages: [{ name: "Mission 92", url: "/game-day-2024-09-15" }],
@@ -286,7 +320,12 @@ In related news Kem will filling in as our Jukebox during on base lunches for a 
     time: "3069 June",
     title: "Mission 91",
     summary: "Investigating some natural ECM & Caverns",
-    involvedPeople: ["Jasmine Or'lient", "Marceau Barbeau", "Akira Or'lient", "Alphonse Barbaue"],
+    involvedPeople: [
+      "Jasmine Or'lient",
+      "Marceau Barbeau",
+      "Akira Or'lient",
+      "Alphonse Barbaue",
+    ],
     mentionedPeople: [],
     outsideLinks: [],
     referencePages: [{ name: "Mission 91", url: "/game-day-2024-08-11" }],
