@@ -36,26 +36,29 @@ export const NavMenu = () => (
     <MenuItem component={Link} href="/general-inventory">
       <Typography>General Inventory</Typography>
     </MenuItem>
+    <MenuItem component={Link} href="/monthly-report-3069-07">
+      <Typography>End of August 3069</Typography>
+    </MenuItem>
     <MenuItem component={Link} href="/game-day-2025-01-05">
-      <Typography>Game Day 2025-01-05</Typography>
+      <Typography>Mission 95 (2025-01-05)</Typography>
     </MenuItem>
     <MenuItem component={Link} href="/game-day-2024-11-10">
-      <Typography>Game Day 2024-11-10</Typography>
+      <Typography>Mission 94 (2024-11-10)</Typography>
     </MenuItem>
     <MenuItem component={Link} href="/game-day-2024-10-13">
-      <Typography>Game Day 2024-10-13</Typography>
+      <Typography>Mission 93 (2024-10-13)</Typography>
     </MenuItem>
     <MenuItem component={Link} href="/monthly-report-3069-06">
-      <Typography>MR: June 3069</Typography>
+      <Typography>End of June 3069</Typography>
     </MenuItem>
     <MenuItem component={Link} href="/game-day-2024-09-15">
-      <Typography>Game Day 2024-09-15</Typography>
+      <Typography>Mission 92 (2024-09-15)</Typography>
     </MenuItem>
     <MenuItem component={Link} href="/game-day-2024-08-11">
-      <Typography>Game Day 2024-08-11</Typography>
+      <Typography>Mission 91 (2024-08-11)</Typography>
     </MenuItem>
     <MenuItem component={Link} href="/game-day-2024-07-07">
-      <Typography>Game Day 2024-07-07</Typography>
+      <Typography>Mission 90 (2024-07-07)</Typography>
     </MenuItem>
   </>
 );

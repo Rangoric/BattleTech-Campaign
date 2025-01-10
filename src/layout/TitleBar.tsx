@@ -1,12 +1,4 @@
-import {
-  createTheme,
-  AppBar,
-  Toolbar,
-  IconButton,
-  Typography,
-  Menu,
-  MenuList,
-} from "@mui/material";
+import { createTheme, AppBar, Toolbar, IconButton, Typography, Menu, MenuList } from "@mui/material";
 import React, { useState } from "react";
 import { NavMenu } from "./NavMenu";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -42,18 +34,14 @@ export const TitleBar = () => {
           </Typography>
         </Toolbar>
       </AppBar>
-      <Menu
-        onClose={() => setIsDrawerOpen(false)}
-        open={isDrawerOpen}
-        anchorEl={anchorEl}
-      >
+      <Menu onClose={() => setIsDrawerOpen(false)} open={isDrawerOpen} anchorEl={anchorEl}>
         <MenuList
           sx={{
             margin: theme.spacing(2),
             marginRight: theme.spacing(1),
             position: "sticky",
             top: "0",
-            width: "200px",
+            width: "240px",
             maxHeight: "100vh",
             display: "block",
           }}
