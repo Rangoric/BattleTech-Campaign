@@ -30,7 +30,7 @@ export const inanna: IRecordSheet = {
         ammoPerShot: 1,
       },
       {
-        name: "LRM-10 w/Artemis IV FCS",
+        name: "LRM-10 w/Artemis",
         location: "RA",
         heat: 4,
         damage: 1,
@@ -71,14 +71,7 @@ export const inanna: IRecordSheet = {
         location: eLocations.head,
         armour: 9,
         internalStructure: 3,
-        critSlots: [
-          { item: "Life Support" },
-          { item: "Sensors" },
-          { item: "Cockpit" },
-          { item: "Endo Steel" },
-          { item: "Sensors" },
-          { item: "Life Support" },
-        ],
+        critSlots: [{ item: "Life Support" }, { item: "Sensors" }, { item: "Cockpit" }, { item: "Endo Steel" }, { item: "Sensors" }, { item: "Life Support" }],
       },
       [eLocations.centerTorso]: {
         location: eLocations.centerTorso,

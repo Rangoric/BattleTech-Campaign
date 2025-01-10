@@ -1,3 +1,5 @@
+import { eMovementSpeed } from "../rules/eMovementSpeed";
+
 export interface IUnitStatus {
-  movementSpeed: string;
+  movementSpeed: eMovementSpeed;
 }
