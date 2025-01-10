@@ -1,20 +1,27 @@
 import { Card, CardContent, Typography } from "@mui/material";
-import { ILocation } from "./data/IRecordSheet";
+import { eIncomingFireDirection, HitLocationFromDirection, ILocation } from "./data/IRecordSheet";
 import { IUnitStatus } from "./data/IUnitStatus";
 
 export interface ILocationDisplayProps {
   location: ILocation;
   unitStatus: IUnitStatus;
+  incomingFireDirection: eIncomingFireDirection;
 }
 
-export const LocationDisplay: React.FC<ILocationDisplayProps> = ({ location }) => {
+export const LocationDisplay: React.FC<ILocationDisplayProps> = ({ location, incomingFireDirection }) => {
   return (
     <Card elevation={2}>
       <CardContent>
-        <Typography>RA</Typography>
-        <Typography>A: {location.armour}</Typography>
-        <Typography>S: {location.internalStructure}</Typography>
-        <Typography>CL: {location.critSlots.length}</Typography>
+        <Typography>
+          {location.location} ({HitLocationFromDirection[incomingFireDirection][location.location].join(",")})
+        </Typography>
+        <Typography>
+          A: {location.armour}
+          {!!location.rearArmour && <>/{location.rearArmour}</>}
+        </Typography>
+        <Typography>
+          S: {location.internalStructure} C: {location.critSlots.length}
+        </Typography>
       </CardContent>
     </Card>
   );
