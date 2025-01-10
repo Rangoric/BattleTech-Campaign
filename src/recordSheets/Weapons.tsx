@@ -1,6 +1,5 @@
 import { Box, Typography } from "@mui/material";
 import { IRecordSheet } from "./data/IRecordSheet";
-import { useUnitStatus } from "./data/useUnitStatus";
 import { WeaponDisplay } from "./WeaponDisplay";
 
 export interface IWeapons {
