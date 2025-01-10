@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import { IRecordSheet } from "./data/IRecordSheet";
 import { WeaponDisplay } from "./WeaponDisplay";
 
@@ -10,10 +10,7 @@ export const Weapons: React.FC<IWeapons> = ({ units }) => {
   return (
     <Box>
       {units.map((unit) => (
-        <Box key={unit.pilotData.callSign}>
-          <Typography>{unit.pilotData.callSign}</Typography>
-          <WeaponDisplay unit={unit} />
-        </Box>
+        <WeaponDisplay unit={unit} key={unit.pilotData.callSign} />
       ))}
     </Box>
   );
