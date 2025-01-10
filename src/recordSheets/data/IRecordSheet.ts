@@ -1,23 +1,28 @@
-export interface IPlaySheetData {
-  pilot: string;
-  callSign: string;
+export interface IRecordSheet {
   pilotData: {
+    name: string;
+    callSign: string;
     gunnery: number;
     piloting: number;
   };
-  vehicle: string;
+  vehicle: IVehicle;
+}
+
+export interface IVehicle {
+  name: string;
+  tonnage: number;
   movement: {
     walk: number;
     run: number;
     jump: number;
   };
-  tonnage: number;
   weapons: IWeapon[];
-  locations: Record<eLocations, ILocation>;
+  equipment: IEquipment[];
   heatSinks: {
     number: number;
     type: eHeatSinkType;
   };
+  locations: Record<eLocations, ILocation>;
 }
 
 export enum eHeatSinkType {
@@ -40,6 +45,13 @@ export interface IWeapon {
   longRange: number;
   extremeRange: number;
   ammoPerShot?: number;
+}
+
+export interface IEquipment {
+  name: string;
+  location: string;
+  range?: number;
+  effects: string[];
 }
 
 export interface ILocation {

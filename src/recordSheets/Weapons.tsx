@@ -1,8 +1,8 @@
 import { Box } from "@mui/material";
-import { IPlaySheetData } from "./data/IPlaySheetData";
+import { IRecordSheet } from "./data/IRecordSheet";
 
 export interface IWeapons {
-  unitData: IPlaySheetData;
+  unitData: IRecordSheet;
 }
 
 export const Weapons: React.FC<IWeapons> = () => {
