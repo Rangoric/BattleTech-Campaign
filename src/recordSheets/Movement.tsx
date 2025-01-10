@@ -1,9 +1,4 @@
-import {
-  Box,
-  ToggleButton,
-  ToggleButtonGroup,
-  Typography,
-} from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { IRecordSheet } from "./data/IRecordSheet";
 import { MovementDisplay } from "./MovementDisplay";
 
