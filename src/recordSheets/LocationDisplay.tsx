@@ -9,11 +9,12 @@ export interface ILocationDisplayProps {
 }
 
 export const LocationDisplay: React.FC<ILocationDisplayProps> = ({ location, incomingFireDirection }) => {
+  const ifd = incomingFireDirection ?? eIncomingFireDirection.front;
   return (
     <Card elevation={2}>
       <CardContent>
         <Typography>
-          {location.location} ({HitLocationFromDirection[incomingFireDirection][location.location].join(",")})
+          {location.location} ({HitLocationFromDirection[ifd][location.location].join(",")})
         </Typography>
         <Typography>
           A: {location.armour}
