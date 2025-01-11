@@ -7,7 +7,7 @@ export interface IUnitStatus {
 }
 
 export interface IDamageAtLocation {
-  amour: number;
+  armour: number;
   rearArmour: number;
   internalStructure: number;
   critSlots: number[];

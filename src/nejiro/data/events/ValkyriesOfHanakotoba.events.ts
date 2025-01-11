@@ -3,6 +3,72 @@ import { IEvent } from "../../IEvents";
 
 export const vohEvents: IEvent[] = [
   {
+    time: "3069 August",
+    title: "C3 Discussion with Everett Franks",
+    summary:
+      "Jasmine and Everett discuss C3 systems and how they can be used together. Also, Jasmine inquires about salvage/repairable C3 units",
+    involvedPeople: ["Jasmine Or'lient", "Everett Franks", "Joy Yorokobi"],
+    mentionedPeople: ["Dahlia Or'lient", "Ulam"],
+    outsideLinks: [
+      {
+        name: "Forum Post",
+        url: "https://bg.battletech.com/forums/index.php?topic=86040.msg2053306#msg2053306",
+      },
+      {
+        name: "Forum Post",
+        url: "https://bg.battletech.com/forums/index.php?topic=86040.msg2053306#msg2053306",
+      },
+    ],
+    referencePages: [],
+  },
+  {
+    time: "3069 August",
+    title: "Bulk Order of Parts in August",
+    summary: "Jasmine orders a bunch of parts",
+    involvedPeople: ["Jasmine Or'lient"],
+    mentionedPeople: [],
+    outsideLinks: [
+      {
+        name: "Forum Post",
+        url: "https://bg.battletech.com/forums/index.php?topic=86040.msg2053035#msg2053035",
+      },
+    ],
+    referencePages: [],
+  },
+  {
+    time: "3069 August",
+    title: "Jasmine's Communication with the GSF",
+    summary: "Jasmine communicates with the GSF about various things",
+    involvedPeople: ["Jasmine Or'lient"],
+    mentionedPeople: ["Dahlia Or'lient"],
+    outsideLinks: [
+      {
+        name: "Forum Post",
+        url: "https://bg.battletech.com/forums/index.php?topic=86040.msg2052641#msg2052641",
+      },
+      {
+        name: "Forum Post",
+        url: "https://bg.battletech.com/forums/index.php?topic=86040.msg2052909#msg2052909",
+      },
+      {
+        name: "Forum Post",
+        url: "https://bg.battletech.com/forums/index.php?topic=86040.msg2052919#msg2052919",
+      },
+    ],
+    referencePages: [],
+  },
+  {
+    time: "3069 July",
+    title: "Monthly Report - End of July 3069",
+    summary: "Made some money, made some choices",
+    involvedPeople: [],
+    mentionedPeople: [],
+    outsideLinks: [],
+    referencePages: [
+      { name: "Monthly Report - July 3069", url: "/monthly-report-3069-07" },
+    ],
+  },
+  {
     time: "3069 July",
     title: "Mission 95",
     summary: "Bug Hunt",
