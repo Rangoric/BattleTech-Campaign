@@ -10,5 +10,11 @@ export interface IDamageAtLocation {
   armour: number;
   rearArmour: number;
   internalStructure: number;
-  critSlots: number[];
+  critSlots: ICritSlotStatus[];
+}
+
+export interface ICritSlotStatus {
+  critSlot: number;
+  damaged: boolean;
+  spentAmmo: number;
 }
