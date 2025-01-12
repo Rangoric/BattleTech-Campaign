@@ -116,7 +116,7 @@ export const LocationDialog = ({ onClose, open, unit, location }: ILocationDialo
             Crit Slots: {unitLocation.critSlots.length}/{unitLocation.critSlots.length}
           </Typography>
           {unitLocation.critSlots.map((slot, index) => (
-            <Box key={slot.item + index} color={critSlotAt(index)?.damaged ? "error.main" : "text.primary"}>
+            <Box key={slot.item + index} color={critSlotAt(index)?.damaged ? "error.main" : "text.primary"} display={"flex"} justifyContent={"space-between"}>
               <Typography>
                 {slot.item}{" "}
                 {slot.ammoCount && (
@@ -124,12 +124,14 @@ export const LocationDialog = ({ onClose, open, unit, location }: ILocationDialo
                     {slot.ammoCount - (critSlotAt(index)?.spentAmmo ?? 0)}/{slot.ammoCount}
                   </>
                 )}
+              </Typography>
+              <Box>
                 <Button onClick={() => setNewCritSlot({ critSlot: index, damaged: true, spentAmmo: 0 })}>
                   <HandymanIcon />
                 </Button>
                 {slot.ammoCount && <Button onClick={() => setNewCritSlot({ critSlot: index, damaged: false, spentAmmo: 1 })}>Spend</Button>}
                 {slot.ammoCount && <Button onClick={() => setNewCritSlot({ critSlot: index, damaged: false, spentAmmo: -1 })}>Add</Button>}
-              </Typography>
+              </Box>
             </Box>
           ))}
         </Box>
