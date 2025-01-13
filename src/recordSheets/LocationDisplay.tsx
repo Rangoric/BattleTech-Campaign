@@ -48,7 +48,9 @@ export const LocationDisplay: React.FC<ILocationDisplayProps> = ({
               S:{" "}
               {unitLocation.internalStructure -
                 damageAtLocation.internalStructure}{" "}
-              C: {unitLocation.critSlots.length}
+              C:{" "}
+              {unitLocation.critSlots.length -
+                damageAtLocation.critSlots.filter((t) => t.damaged).length}
             </Typography>
           </CardContent>
         </CardActionArea>
