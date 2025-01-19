@@ -23,7 +23,6 @@ interface IVehicleBase {
     number: number;
     type: eHeatSinkType;
   };
-  locations: {};
 }
 interface IBattleMech extends IVehicleBase {
   type: eVehicleType.battlemech;
