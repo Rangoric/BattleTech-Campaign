@@ -1,6 +1,5 @@
-import { Dialog, DialogTitle, Button, Box, Typography, ButtonGroup } from "@mui/material";
+import { Dialog, DialogTitle, Button, Box, ButtonGroup } from "@mui/material";
 import { eLocations, ILocation, IRecordSheet } from "./data/IRecordSheet";
-import ReportIcon from "@mui/icons-material/Report";
 import HandymanIcon from "@mui/icons-material/Handyman";
 import { useUnitStatus } from "./data/useUnitStatus";
 import { ICritSlotStatus } from "./data/IUnitStatus";
@@ -58,13 +57,10 @@ export const LocationDialog = ({ onClose, open, unit, location }: ILocationDialo
     <Dialog onClose={onClose} open={open}>
       <DialogTitle>{location}</DialogTitle>
       <Box padding={1} width={360} display={"flex"} flexDirection={"column"} gap={1}>
-        <Box display={"flex"} justifyContent={"space-between"} alignItems={"center"}>
-          <Typography>
-            Armour: {unitLocation.armour - damageAtLocation.armour}/{unitLocation.armour}
-          </Typography>
+        <Box>
           <ButtonGroup>
             <Button onClick={() => setNewValue({ armour: damageAtLocation.armour + 1 })}>
-              <ReportIcon />
+              Armour: {unitLocation.armour - damageAtLocation.armour}/{unitLocation.armour}
             </Button>
             <Button onClick={() => setNewValue({ armour: damageAtLocation.armour - 1 })}>
               <HandymanIcon />
@@ -72,24 +68,16 @@ export const LocationDialog = ({ onClose, open, unit, location }: ILocationDialo
           </ButtonGroup>
         </Box>
         {!!unitLocation.rearArmour && (
-          <Box display={"flex"} justifyContent={"space-between"} alignItems={"center"}>
-            <Typography>
+          <ButtonGroup>
+            <Button onClick={() => setNewValue({ rearArmour: damageAtLocation.rearArmour + 1 })}>
               Rear Armour: {unitLocation.rearArmour - damageAtLocation.rearArmour}/{unitLocation.rearArmour}
-            </Typography>
-            <ButtonGroup>
-              <Button onClick={() => setNewValue({ rearArmour: damageAtLocation.rearArmour + 1 })}>
-                <ReportIcon />
-              </Button>
-              <Button onClick={() => setNewValue({ rearArmour: damageAtLocation.rearArmour - 1 })}>
-                <HandymanIcon />
-              </Button>
-            </ButtonGroup>
-          </Box>
+            </Button>
+            <Button onClick={() => setNewValue({ rearArmour: damageAtLocation.rearArmour - 1 })}>
+              <HandymanIcon />
+            </Button>
+          </ButtonGroup>
         )}
-        <Box display={"flex"} justifyContent={"space-between"} alignItems={"center"}>
-          <Typography>
-            Structure: {unitLocation.internalStructure - damageAtLocation.internalStructure}/{unitLocation.internalStructure}
-          </Typography>
+        <Box>
           <ButtonGroup>
             <Button
               onClick={() =>
@@ -98,7 +86,7 @@ export const LocationDialog = ({ onClose, open, unit, location }: ILocationDialo
                 })
               }
             >
-              <ReportIcon />
+              Structure: {unitLocation.internalStructure - damageAtLocation.internalStructure}/{unitLocation.internalStructure}
             </Button>
             <Button
               onClick={() =>
@@ -112,9 +100,6 @@ export const LocationDialog = ({ onClose, open, unit, location }: ILocationDialo
           </ButtonGroup>
         </Box>
         <Box>
-          <Typography>
-            Crit Slots: {unitLocation.critSlots.length - damageAtLocation.critSlots.filter((t) => t.damaged).length}/{unitLocation.critSlots.length}
-          </Typography>
           {unitLocation.critSlots.map((slot, index) => (
             <ButtonGroup key={slot.item + index} sx={{ width: "100%" }}>
               <Button
