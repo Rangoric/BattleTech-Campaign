@@ -8,7 +8,7 @@ export interface IDefensesProps {
 
 export const Defenses: React.FC<IDefensesProps> = ({ units }) => {
   return (
-    <Box display={"flex"} flexDirection={"column"} gap={1}>
+    <Box display={"flex"} flexDirection={"row"} gap={1} flexWrap={"wrap"}>
       {units.map((unit) => (
         <DefenseDisplay key={unit.pilotData.callSign} unit={unit} />
       ))}

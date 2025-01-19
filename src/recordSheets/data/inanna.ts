@@ -1,4 +1,4 @@
-import { eHeatSinkType, eLocations, IRecordSheet } from "./IRecordSheet";
+import { eHeatSinkType, eLocations, eVehicleType, IRecordSheet } from "./IRecordSheet";
 
 export const inanna: IRecordSheet = {
   pilotData: {
@@ -9,6 +9,7 @@ export const inanna: IRecordSheet = {
   },
   vehicle: {
     name: "BJ2-OB",
+    type: eVehicleType.battlemech,
     movement: {
       walk: 4,
       run: 6,

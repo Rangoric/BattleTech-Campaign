@@ -10,6 +10,7 @@ export interface IRecordSheet {
 
 export interface IVehicle {
   name: string;
+  type: eVehicleType;
   tonnage: number;
   movement: {
     walk: number;
@@ -23,6 +24,15 @@ export interface IVehicle {
     type: eHeatSinkType;
   };
   locations: Record<eLocations, ILocation>;
+}
+
+export enum eVehicleType {
+  battlemech = "battlemech",
+  quadBattlemech = "quadBattlemech",
+  vehicle = "vehicle",
+  aerospace = "aerospace",
+  battleArmor = "battleArmor",
+  infantry = "infantry",
 }
 
 export enum eHeatSinkType {

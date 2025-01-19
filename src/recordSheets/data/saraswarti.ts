@@ -1,4 +1,4 @@
-import { eHeatSinkType, eLocations, IRecordSheet } from "./IRecordSheet";
+import { eHeatSinkType, eLocations, eVehicleType, IRecordSheet } from "./IRecordSheet";
 
 export const saraswarti: IRecordSheet = {
   pilotData: {
@@ -9,6 +9,7 @@ export const saraswarti: IRecordSheet = {
   },
   vehicle: {
     name: "OW-1C",
+    type: eVehicleType.battlemech,
     movement: {
       walk: 8,
       run: 12,
@@ -87,14 +88,7 @@ export const saraswarti: IRecordSheet = {
         location: eLocations.head,
         armour: 9,
         internalStructure: 3,
-        critSlots: [
-          { item: "Life Support" },
-          { item: "Sensors" },
-          { item: "Cockpit" },
-          { item: "Empty" },
-          { item: "Sensors" },
-          { item: "Life Support" },
-        ],
+        critSlots: [{ item: "Life Support" }, { item: "Sensors" }, { item: "Cockpit" }, { item: "Empty" }, { item: "Sensors" }, { item: "Life Support" }],
       },
       [eLocations.centerTorso]: {
         location: eLocations.centerTorso,
@@ -132,57 +126,31 @@ export const saraswarti: IRecordSheet = {
         armour: 12,
         rearArmour: 4,
         internalStructure: 8,
-        critSlots: [
-          { item: "XL Fusion Engine" },
-          { item: "XL Fusion Engine" },
-          { item: "XL Fusion Engine" },
-          { item: "TAG" },
-          { item: "C3 Slave" },
-        ],
+        critSlots: [{ item: "XL Fusion Engine" }, { item: "XL Fusion Engine" }, { item: "XL Fusion Engine" }, { item: "TAG" }, { item: "C3 Slave" }],
       },
       [eLocations.leftArm]: {
         location: eLocations.leftArm,
         armour: 10,
         internalStructure: 6,
-        critSlots: [
-          { item: "Shoulder" },
-          { item: "Upper Arm Actuator" },
-          { item: "Large Laser" },
-          { item: "Large Laser" },
-        ],
+        critSlots: [{ item: "Shoulder" }, { item: "Upper Arm Actuator" }, { item: "Large Laser" }, { item: "Large Laser" }],
       },
       [eLocations.rightArm]: {
         location: eLocations.rightArm,
         armour: 10,
         internalStructure: 6,
-        critSlots: [
-          { item: "Shoulder" },
-          { item: "Upper Arm Actuator" },
-          { item: "Medium Laser" },
-          { item: "Medium Laser" },
-        ],
+        critSlots: [{ item: "Shoulder" }, { item: "Upper Arm Actuator" }, { item: "Medium Laser" }, { item: "Medium Laser" }],
       },
       [eLocations.leftLeg]: {
         location: eLocations.leftLeg,
         armour: 15,
         internalStructure: 8,
-        critSlots: [
-          { item: "Hip" },
-          { item: "Upper Leg Actuator" },
-          { item: "Lower Leg Actuator" },
-          { item: "Foot Actuator" },
-        ],
+        critSlots: [{ item: "Hip" }, { item: "Upper Leg Actuator" }, { item: "Lower Leg Actuator" }, { item: "Foot Actuator" }],
       },
       [eLocations.rightLeg]: {
         location: eLocations.rightLeg,
         armour: 15,
         internalStructure: 8,
-        critSlots: [
-          { item: "Hip" },
-          { item: "Upper Leg Actuator" },
-          { item: "Lower Leg Actuator" },
-          { item: "Foot Actuator" },
-        ],
+        critSlots: [{ item: "Hip" }, { item: "Upper Leg Actuator" }, { item: "Lower Leg Actuator" }, { item: "Foot Actuator" }],
       },
     },
   },
