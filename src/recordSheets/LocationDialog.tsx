@@ -59,7 +59,10 @@ export const LocationDialog = ({ onClose, open, unit, location }: ILocationDialo
       <Box padding={1} width={360} display={"flex"} flexDirection={"column"} gap={1}>
         <Box>
           <ButtonGroup>
-            <Button onClick={() => setNewValue({ armour: damageAtLocation.armour + 1 })}>
+            <Button
+              onClick={() => setNewValue({ armour: damageAtLocation.armour + 1 })}
+              color={damageAtLocation.armour >= unitLocation.armour ? "error" : "primary"}
+            >
               Armour: {unitLocation.armour - damageAtLocation.armour}/{unitLocation.armour}
             </Button>
             <Button onClick={() => setNewValue({ armour: damageAtLocation.armour - 1 })}>
@@ -69,7 +72,10 @@ export const LocationDialog = ({ onClose, open, unit, location }: ILocationDialo
         </Box>
         {!!unitLocation.rearArmour && (
           <ButtonGroup>
-            <Button onClick={() => setNewValue({ rearArmour: damageAtLocation.rearArmour + 1 })}>
+            <Button
+              onClick={() => setNewValue({ rearArmour: damageAtLocation.rearArmour + 1 })}
+              color={damageAtLocation.rearArmour >= unitLocation.rearArmour ? "error" : "primary"}
+            >
               Rear Armour: {unitLocation.rearArmour - damageAtLocation.rearArmour}/{unitLocation.rearArmour}
             </Button>
             <Button onClick={() => setNewValue({ rearArmour: damageAtLocation.rearArmour - 1 })}>
@@ -85,6 +91,7 @@ export const LocationDialog = ({ onClose, open, unit, location }: ILocationDialo
                   internalStructure: damageAtLocation.internalStructure + 1,
                 })
               }
+              color={damageAtLocation.internalStructure >= unitLocation.internalStructure ? "error" : "primary"}
             >
               Structure: {unitLocation.internalStructure - damageAtLocation.internalStructure}/{unitLocation.internalStructure}
             </Button>
