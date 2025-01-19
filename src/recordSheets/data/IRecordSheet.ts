@@ -8,7 +8,7 @@ export interface IRecordSheet {
   vehicle: IVehicle;
 }
 
-export interface IVehicle {
+interface IVehicleBase {
   name: string;
   type: eVehicleType;
   tonnage: number;
@@ -23,8 +23,14 @@ export interface IVehicle {
     number: number;
     type: eHeatSinkType;
   };
+  locations: {};
+}
+interface IBattleMech extends IVehicleBase {
+  type: eVehicleType.battlemech;
   locations: Record<eLocations, ILocation>;
 }
+
+export type IVehicle = IBattleMech;
 
 export enum eVehicleType {
   battlemech = "battlemech",
