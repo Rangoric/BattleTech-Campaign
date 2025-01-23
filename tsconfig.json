@@ -32,7 +32,7 @@
     "**/*.tsx",
     "**/*.mdx",
     "**/*.md"
-  ],
+, "vitest.config.mts"  ],
   "exclude": [
     "node_modules"
   ]
