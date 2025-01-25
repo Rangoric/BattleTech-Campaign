@@ -1,5 +1,6 @@
 import { Box, Typography } from "@mui/material";
-import { eIncomingFireDirection, eLocations, eVehicleType, IRecordSheet } from "./data/IRecordSheet";
+import { eLocations, eVehicleType, IRecordSheet } from "./data/IRecordSheet";
+import { eIncomingFireDirection } from "./data/eIncomingFireDirection";
 import { LocationDisplay } from "./LocationDisplay";
 
 export interface ILocationsDisplayProps {
@@ -9,7 +10,7 @@ export interface ILocationsDisplayProps {
 
 export const LocationsDisplay: React.FC<ILocationsDisplayProps> = ({ unit, incomingFireDirection }) => {
   switch (unit.vehicle.type) {
-    case eVehicleType.battlemech:
+    case eVehicleType.BattleMech:
       return <BattleMechLocationsDisplay unit={unit} incomingFireDirection={incomingFireDirection} />;
     default:
       return <Typography>Unsupported Defense Setup</Typography>;

@@ -1,5 +1,6 @@
 import { Box, Card, CardContent, CardHeader, ToggleButton, ToggleButtonGroup } from "@mui/material";
-import { eIncomingFireDirection, IRecordSheet } from "./data/IRecordSheet";
+import { IRecordSheet } from "./data/IRecordSheet";
+import { eIncomingFireDirection } from "./data/eIncomingFireDirection";
 import { useState } from "react";
 import { LocationsDisplay } from "./LocationsDisplay";
 

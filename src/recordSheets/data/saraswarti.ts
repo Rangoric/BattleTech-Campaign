@@ -1,4 +1,4 @@
-import { eHeatSinkType, eLocations, eVehicleType, IRecordSheet } from "./IRecordSheet";
+import { eHeatSinkType, eLocations, eUnitType, IRecordSheet } from "./IRecordSheet";
 
 export const saraswarti: IRecordSheet = {
   pilotData: {
@@ -9,7 +9,7 @@ export const saraswarti: IRecordSheet = {
   },
   vehicle: {
     name: "OW-1C",
-    type: eVehicleType.battlemech,
+    type: eUnitType.BattleMech,
     movement: {
       walk: 8,
       run: 12,

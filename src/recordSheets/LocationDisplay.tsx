@@ -1,10 +1,7 @@
 import { Card, CardActionArea, CardContent, Typography } from "@mui/material";
-import {
-  eIncomingFireDirection,
-  eLocations,
-  HitLocationFromDirection,
-  IRecordSheet,
-} from "./data/IRecordSheet";
+import { eLocations, IRecordSheet } from "./data/IRecordSheet";
+import { eIncomingFireDirection } from "./data/eIncomingFireDirection";
+import { HitLocationFromDirection } from "./data/HitLocationFromDirection";
 import { useState } from "react";
 import { LocationDialog } from "./LocationDialog";
 import { useUnitStatus } from "./data/useUnitStatus";
@@ -15,11 +12,7 @@ export interface ILocationDisplayProps {
   incomingFireDirection: eIncomingFireDirection;
 }
 
-export const LocationDisplay: React.FC<ILocationDisplayProps> = ({
-  unit,
-  location,
-  incomingFireDirection,
-}) => {
+export const LocationDisplay: React.FC<ILocationDisplayProps> = ({ unit, location, incomingFireDirection }) => {
   const ifd = incomingFireDirection ?? eIncomingFireDirection.front;
   const [open, setIsOpen] = useState(false);
   const [unitStatus] = useUnitStatus(unit.pilotData.callSign);
@@ -40,27 +33,16 @@ export const LocationDisplay: React.FC<ILocationDisplayProps> = ({
             </Typography>
             <Typography>
               A: {unitLocation.armour - damageAtLocation.armour}
-              {!!unitLocation.rearArmour && (
-                <>/{unitLocation.rearArmour - damageAtLocation.rearArmour}</>
-              )}
+              {!!unitLocation.rearArmour && <>/{unitLocation.rearArmour - damageAtLocation.rearArmour}</>}
             </Typography>
             <Typography>
-              S:{" "}
-              {unitLocation.internalStructure -
-                damageAtLocation.internalStructure}{" "}
-              C:{" "}
-              {unitLocation.critSlots.length -
-                damageAtLocation.critSlots.filter((t) => t.damaged).length}
+              S: {unitLocation.internalStructure - damageAtLocation.internalStructure} C:{" "}
+              {unitLocation.critSlots.length - damageAtLocation.critSlots.filter((t) => t.damaged).length}
             </Typography>
           </CardContent>
         </CardActionArea>
       </Card>
-      <LocationDialog
-        open={open}
-        onClose={() => setIsOpen(false)}
-        unit={unit}
-        location={location}
-      />
+      <LocationDialog open={open} onClose={() => setIsOpen(false)} unit={unit} location={location} />
     </>
   );
 };
