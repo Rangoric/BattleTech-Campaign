@@ -1,6 +1,6 @@
-import { eUnitType } from "./IRecordSheet";
+import { eUnitType } from "./IRecordSheets";
 import { setupRecordSheet } from "./ActiveSheets";
-import { IBattleMechSheet } from "./RecordSheets";
+import { IBattleMechSheet } from "./IRecordSheets";
 import { Actions } from "./Actions";
 
 const unit: IBattleMechSheet = {
@@ -61,11 +61,13 @@ const unit: IBattleMechSheet = {
 };
 
 const character = {
+  name: "Test",
+  callSign: "TST",
   gunnery: 4,
   piloting: 5,
 };
 
-const activeSheet = setupRecordSheet.BattleMech({ character, unit });
+const activeSheet = setupRecordSheet.BattleMech({ name: "some name", character, unit });
 
 suite("Character", () => {
   test("Damage Starts at 0", () => {

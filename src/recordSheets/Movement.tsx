@@ -1,18 +1,18 @@
 import { Box, Typography } from "@mui/material";
-import { IRecordSheet } from "./data/IRecordSheet";
 import { MovementDisplay } from "./MovementDisplay";
+import { IActiveBattleMechSheet } from "./data/ActiveSheets";
 
 export interface IMovement {
-  units: IRecordSheet[];
+  sheets: IActiveBattleMechSheet[];
 }
 
-export const Movement: React.FC<IMovement> = ({ units }) => {
+export const Movement: React.FC<IMovement> = ({ sheets }) => {
   return (
     <>
-      {units.map((unit) => (
-        <Box key={unit.pilotData.callSign}>
-          <Typography>{unit.pilotData.callSign}</Typography>
-          <MovementDisplay unit={unit} />
+      {sheets.map((sheet) => (
+        <Box key={sheet.character.callSign}>
+          <Typography>{sheet.character.callSign}</Typography>
+          <MovementDisplay sheet={sheet} />
         </Box>
       ))}
     </>

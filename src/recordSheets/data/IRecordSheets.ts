@@ -1,7 +1,11 @@
-import { eUnitType } from "./IRecordSheet";
 import { AllItemNames } from "./items/database";
 
+export enum eUnitType {
+  BattleMech = "BattleMech",
+}
 export interface ICharacterSheet {
+  name: string;
+  callSign: string;
   gunnery: number;
   piloting: number;
 }
@@ -40,6 +44,7 @@ export interface IBattleMechSheet {
 export type IUnitSheet = IBattleMechSheet;
 
 export interface IBaseSheet<P, U> {
+  name: string;
   character: P;
   unit: U;
 }
