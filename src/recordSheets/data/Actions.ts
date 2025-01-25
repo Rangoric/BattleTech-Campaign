@@ -1,9 +1,21 @@
-import { IActiveBattleMechSheet, IBattleMechLocationActiveSheet } from "./ActiveSheets";
-import { eUnitType } from "./IRecordSheet";
-import { IBattleMechLocations } from "./RecordSheets";
+import { eMovementSpeed, IActiveBattleMechSheet, IBattleMechLocationActiveSheet } from "./ActiveSheets";
+import { eUnitType } from "./IRecordSheets";
+import { IBattleMechLocations } from "./IRecordSheets";
 
 export const Actions = {
   [eUnitType.BattleMech]: {
+    move: (sheet: IActiveBattleMechSheet, distance: eMovementSpeed): IActiveBattleMechSheet => {
+      return {
+        ...sheet,
+        unit: {
+          ...sheet.unit,
+          movement: {
+            ...sheet.unit.movement,
+            currentMovement: distance,
+          },
+        },
+      };
+    },
     hitArmor: (location: keyof IBattleMechLocations<any>, damage: number, sheet: IActiveBattleMechSheet): IActiveBattleMechSheet => {
       const baseArmorDamage = sheet.unit.locations[location].armorDamage + damage;
       const armorDamage = Math.min(baseArmorDamage, sheet.unit.locations[location].armor);
@@ -69,18 +81,21 @@ export const Actions = {
       baseCritSlot: number,
       sheet: IActiveBattleMechSheet
     ): IActiveBattleMechSheet => {
+      const workingSheet = JSON.parse(JSON.stringify(sheet)) as IActiveBattleMechSheet;
       const critSlot = baseCritSlot - 1;
-      const hitLocation = sheet.unit.locations[location];
-      console.log(hitLocation);
+      const hitLocation = workingSheet.unit.locations[location];
       const equipment = hitLocation.equipment;
-      const critSlots = equipment.flatMap((item) => {
-        const slots = [];
-        for (let i = 0; i < item.slots; i++) {
-          slots.push(item);
-        }
-        return slots;
-      });
-      console.log(critSlots);
+      const critSlots = doWeirdInitialCritSlotsForEngine(workingSheet, location);
+      critSlots.push(
+        ...equipment.flatMap((item) => {
+          const slots = [];
+          for (let i = 0; i < item.slots; i++) {
+            slots.push(item);
+          }
+          return slots;
+        })
+      );
+      critSlots.push(...doWeirdEndingCritSlotsForEngine(workingSheet, location));
       const foundHit = critSlots[critSlot].hits.find((hit) => hit.location === location && hit.slot === baseCritSlot);
       if (foundHit) {
         critSlots[critSlot].hits.splice(critSlots[critSlot].hits.indexOf(foundHit), 1);
@@ -88,9 +103,33 @@ export const Actions = {
         critSlots[critSlot].hits.push({ location, slot: baseCritSlot });
       }
 
-      console.log(critSlots);
-      console.log(sheet);
-      return sheet;
+      return workingSheet;
     },
   },
+};
+
+const doWeirdInitialCritSlotsForEngine = (sheet: IActiveBattleMechSheet, location: keyof IBattleMechLocations<any>) => {
+  if (location === "rightTorso" || (location === "leftTorso" && sheet.unit.locations["centerTorso"].equipment[0].name === "XL Fusion Engine")) {
+    const item = sheet.unit.locations["centerTorso"].equipment[0];
+    const slots = [];
+    for (let i = 0; i < item.slots; i++) {
+      slots.push(item);
+    }
+    return slots;
+  } else {
+    return [];
+  }
+};
+
+const doWeirdEndingCritSlotsForEngine = (sheet: IActiveBattleMechSheet, location: keyof IBattleMechLocations<any>) => {
+  if (location === "centerTorso" && sheet.unit.locations["centerTorso"].equipment[0].name === "XL Fusion Engine") {
+    const item = sheet.unit.locations["centerTorso"].equipment[0];
+    const slots = [];
+    for (let i = 0; i < item.slots; i++) {
+      slots.push(item);
+    }
+    return slots;
+  } else {
+    return [];
+  }
 };

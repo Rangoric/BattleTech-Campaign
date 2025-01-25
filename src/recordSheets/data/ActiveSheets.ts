@@ -1,6 +1,7 @@
-import { eUnitType } from "./IRecordSheet";
+import { eUnitType } from "./IRecordSheets";
 import { AllItemNames, ItemDatabase } from "./items/database";
-import { IBaseSheet, IBattleMechLocations, IBattleMechLocationSheet, IBattleMechSheet, ICharacterSheet, IRecordBattleMechSheet } from "./RecordSheets";
+import { eEquipmentType } from "./items/itemBase";
+import { IBaseSheet, IBattleMechLocations, IBattleMechLocationSheet, IBattleMechSheet, ICharacterSheet, IRecordBattleMechSheet } from "./IRecordSheets";
 
 export interface ICharacterActiveSheet extends ICharacterSheet {
   damage: number;
@@ -9,14 +10,35 @@ export interface IHits {
   location: string;
   slot: number;
 }
-export interface IEquipmentActiveSheet {
+export interface IEquipmentActiveSheetBase {
+  type: eEquipmentType;
   name: AllItemNames;
   description: string;
   slots: number;
   hits: IHits[];
-  ammo?: number;
-  ammoSpent?: number;
 }
+
+export interface IWeaponActiveSheet extends IEquipmentActiveSheetBase {
+  type: eEquipmentType.Weapon;
+  heat: number;
+  damage: number;
+  effects: string[];
+  minRange: number;
+  shortRange: number;
+  mediumRange: number;
+  longRange: number;
+  extremeRange: number;
+}
+
+export interface IMiscellaneousActiveSheet extends IEquipmentActiveSheetBase {
+  type: eEquipmentType.Miscellaneous;
+}
+
+export interface IAmmoActiveSheet extends IEquipmentActiveSheetBase {
+  type: eEquipmentType.Ammo;
+}
+
+export type IEquipmentActiveSheet = IWeaponActiveSheet | IMiscellaneousActiveSheet | IAmmoActiveSheet;
 
 export interface IBattleMechLocationActiveSheet {
   armor: number;
@@ -28,7 +50,20 @@ export interface IBattleMechLocationActiveSheet {
   equipment: IEquipmentActiveSheet[];
 }
 
+export enum eMovementSpeed {
+  ping = "ping",
+  walk = "walk",
+  run = "run",
+  jump = "jump",
+}
+
 export interface IBattleMechActiveSheet {
+  movement: {
+    walk: number;
+    run: number;
+    jump: number;
+    currentMovement: eMovementSpeed;
+  };
   locations: IBattleMechLocations<IBattleMechLocationActiveSheet>;
 }
 export type IUnitActiveSheet = IBattleMechActiveSheet;
@@ -43,10 +78,10 @@ export const setupCharacter = (character: ICharacterSheet): ICharacterActiveShee
 const setupEquipment = (itemName: AllItemNames): IEquipmentActiveSheet => {
   const item = ItemDatabase[itemName];
   return {
+    ...item,
+    // We do this because it's the easiest way to make sure we have the right type
     name: itemName,
-    description: item.description,
-    slots: item.slots,
-    hits: [],
+    hits: [] as IHits[],
   };
 };
 export const setupLocation = (location: IBattleMechLocationSheet): IBattleMechLocationActiveSheet => {
@@ -60,6 +95,12 @@ export const setupLocation = (location: IBattleMechLocationSheet): IBattleMechLo
 };
 export const setupBattleMech = (battleMech: IBattleMechSheet): IBattleMechActiveSheet => {
   return {
+    movement: {
+      walk: battleMech.movement.walk,
+      run: battleMech.movement.run,
+      jump: battleMech.movement.jump,
+      currentMovement: eMovementSpeed.ping,
+    },
     locations: {
       head: setupLocation(battleMech.locations.head),
       centerTorso: setupLocation(battleMech.locations.centerTorso),
@@ -75,6 +116,7 @@ export const setupBattleMech = (battleMech: IBattleMechSheet): IBattleMechActive
 export const setupRecordSheet = {
   [eUnitType.BattleMech]: (recordSheet: IRecordBattleMechSheet): IActiveBattleMechSheet => {
     return {
+      name: recordSheet.name,
       unit: setupBattleMech(recordSheet.unit),
       character: setupCharacter(recordSheet.character),
     };

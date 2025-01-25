@@ -3,17 +3,19 @@ import { useState } from "react";
 import DirectionsRunIcon from "@mui/icons-material/DirectionsRun";
 import TrackChangesIcon from "@mui/icons-material/TrackChanges";
 import ShieldIcon from "@mui/icons-material/Shield";
-import { allUnits } from "./data/everything";
+import { allRecordSheets } from "./data/recordSheets/allRecordSheets";
 import { Movement } from "./Movement";
 import { Weapons } from "./Weapons";
 import { Defenses } from "./Defenses";
+import { useActiveSheets } from "./data/useActiveSheets";
 
 export interface IRecordSheetsProps {
   units: string[];
 }
 
 export const RecordSheets: React.FC<IRecordSheetsProps> = ({ units }) => {
-  const unitsData = units.map((unit) => allUnits[unit]).filter((t) => t);
+  const unitsData = units.map((unit) => allRecordSheets[unit]).filter((t) => t);
+  const activeSheets = useActiveSheets(unitsData);
 
   const [value, setValue] = useState("Movement");
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
@@ -23,7 +25,7 @@ export const RecordSheets: React.FC<IRecordSheetsProps> = ({ units }) => {
   return (
     <>
       <Box padding={1}>
-        {value === "Movement" && <Movement units={unitsData} />}
+        {value === "Movement" && <Movement sheets={activeSheets} />}
         {value === "Weapons" && <Weapons units={unitsData} />}
         {value === "Defenses" && <Defenses units={unitsData} />}
       </Box>
