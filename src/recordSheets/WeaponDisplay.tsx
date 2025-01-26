@@ -1,68 +1,90 @@
-import { Box, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from "@mui/material";
-import { IRecordSheet } from "./data/IRecordSheet";
-import { useUnitStatus } from "./data/useUnitStatus";
+import {
+  Box,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  Typography,
+} from "@mui/material";
 import { movementShootingModifier } from "./rules/movementShootingModifier";
+import { IActiveBattleMechSheet } from "./data/ActiveSheets";
+import { WeaponDisplayForLocation } from "./WeaponDisplayForLocation";
+import { eLocations } from "./data/eLocations";
 
 export interface IWeaponDisplayProps {
-  unit: IRecordSheet;
+  sheet: IActiveBattleMechSheet;
+  state: [IActiveBattleMechSheet[], (x: IActiveBattleMechSheet) => void];
 }
 
-const columnWidth = "40px";
+export const weaponColumnWidth = "40px";
 
-export const WeaponDisplay: React.FC<IWeaponDisplayProps> = ({ unit }) => {
-  const [unitStatus] = useUnitStatus(unit.pilotData.callSign);
-  const gunnery = unit.pilotData.gunnery + movementShootingModifier(unitStatus.movementSpeed);
+export const WeaponDisplay: React.FC<IWeaponDisplayProps> = ({
+  sheet,
+  state,
+}) => {
+  const gunnery = sheet.character.gunnery;
+  const gunneryGA =
+    sheet.character.gunnery +
+    movementShootingModifier(sheet.unit.movement.currentMovement);
   return (
-    <Box key={unit.pilotData.callSign}>
-      <Typography>{unit.pilotData.callSign}</Typography>
+    <Box key={sheet.character.callSign}>
+      <Typography>{sheet.character.callSign}</Typography>
 
       <TableContainer component={Box}>
         <Table size="small">
           <TableHead>
             <TableCell sx={{ padding: "4px 2px" }}>Weapon</TableCell>
-            <TableCell sx={{ padding: "4px 2px", width: `${columnWidth}` }} align={"center"}></TableCell>
-            <TableCell sx={{ padding: "4px 2px", width: `${columnWidth}` }} align={"center"}>
-              ({gunnery})
+            <TableCell
+              sx={{ padding: "4px 2px", width: `${weaponColumnWidth}` }}
+              align={"center"}
+            ></TableCell>
+            <TableCell
+              sx={{ padding: "4px 2px", width: `${weaponColumnWidth}` }}
+              align={"center"}
+            >
+              ({gunneryGA})
             </TableCell>
-            <TableCell sx={{ padding: "4px 2px", width: `${columnWidth}` }} align={"center"}>
-              ({gunnery + 2})
+            <TableCell
+              sx={{ padding: "4px 2px", width: `${weaponColumnWidth}` }}
+              align={"center"}
+            >
+              ({gunneryGA + 2})
             </TableCell>
-            <TableCell sx={{ padding: "4px 2px", width: `${columnWidth}` }} align={"center"}>
-              ({gunnery + 4})
+            <TableCell
+              sx={{ padding: "4px 2px", width: `${weaponColumnWidth}` }}
+              align={"center"}
+            >
+              ({gunneryGA + 4})
             </TableCell>
-            {unit.pilotData.gunnery <= 2 && (
-              <TableCell sx={{ padding: "4px 2px", width: `${columnWidth}` }} align={"center"}>
-                ({gunnery + 6})
+            {gunnery <= 2 && (
+              <TableCell
+                sx={{ padding: "4px 2px", width: `${weaponColumnWidth}` }}
+                align={"center"}
+              >
+                ({gunneryGA + 6})
               </TableCell>
             )}
           </TableHead>
           <TableBody>
-            {unit.vehicle.weapons.map((weapon, index) => (
-              <TableRow key={weapon.name + index}>
-                <TableCell sx={{ padding: "4px 2px" }}>
-                  <Typography variant={"body2"}>{weapon.name}</Typography>
-                  <Typography variant={"caption"}>
-                    H: {weapon.heat} D: {weapon.damage} E: {weapon.effects.join(",")}
-                  </Typography>
-                </TableCell>
-                <TableCell sx={{ padding: "4px 2px", width: `${columnWidth}` }} align={"center"}>
-                  {!!weapon.minRange && weapon.minRange}
-                </TableCell>
-                <TableCell sx={{ padding: "4px 2px", width: `${columnWidth}` }} align={"center"}>
-                  {!!weapon.shortRange && weapon.shortRange}
-                </TableCell>
-                <TableCell sx={{ padding: "4px 2px", width: `${columnWidth}` }} align={"center"}>
-                  {!!weapon.mediumRange && weapon.mediumRange}
-                </TableCell>
-                <TableCell sx={{ padding: "4px 2px", width: `${columnWidth}` }} align={"center"}>
-                  {!!weapon.longRange && weapon.longRange}
-                </TableCell>
-                {unit.pilotData.gunnery <= 2 && (
-                  <TableCell sx={{ padding: "4px 2px", width: `${columnWidth}` }} align={"center"}>
-                    {!!weapon.extremeRange && weapon.extremeRange}
-                  </TableCell>
-                )}
-              </TableRow>
+            {[
+              eLocations.Head,
+              eLocations.CenterTorso,
+              eLocations.LeftTorso,
+              eLocations.RightTorso,
+              eLocations.LeftArm,
+              eLocations.RightArm,
+              eLocations.LeftLeg,
+              eLocations.RightLeg,
+            ].map((location) => (
+              <WeaponDisplayForLocation
+                key={location}
+                location={sheet.unit.locations[location]}
+                state={state}
+                gunnery={gunnery}
+                gunneryGA={gunneryGA}
+              />
             ))}
           </TableBody>
         </Table>

@@ -1,8 +1,5 @@
 import { Dialog, DialogTitle, Button, Box, ButtonGroup } from "@mui/material";
-import { eLocations, ILocation, IRecordSheet } from "./data/IRecordSheet";
 import HandymanIcon from "@mui/icons-material/Handyman";
-import { useUnitStatus } from "./data/useUnitStatus";
-import { ICritSlotStatus } from "./data/IUnitStatus";
 
 export interface ILocationDialog {
   open: boolean;
@@ -11,7 +8,12 @@ export interface ILocationDialog {
   onClose: () => void;
 }
 
-export const LocationDialog = ({ onClose, open, unit, location }: ILocationDialog) => {
+export const LocationDialog = ({
+  onClose,
+  open,
+  unit,
+  location,
+}: ILocationDialog) => {
   const [unitStatus, setUnitStatus] = useUnitStatus(unit.pilotData.callSign);
   const unitLocation = unit.vehicle.locations[location];
   const damageAtLocation = unitStatus.locations?.[location] ?? {
@@ -33,12 +35,15 @@ export const LocationDialog = ({ onClose, open, unit, location }: ILocationDialo
       },
     });
   };
-  const critSlotAt = (critSlot: number) => damageAtLocation.critSlots.find((t) => t.critSlot === critSlot);
+  const critSlotAt = (critSlot: number) =>
+    damageAtLocation.critSlots.find((t) => t.critSlot === critSlot);
   const setNewCritSlot = (newCritSlot: ICritSlotStatus) => {
     const existingCritSlot = critSlotAt(newCritSlot.critSlot);
     const critSlot = {
       critSlot: newCritSlot.critSlot,
-      damaged: newCritSlot.damaged ? !existingCritSlot?.damaged : existingCritSlot?.damaged ?? false,
+      damaged: newCritSlot.damaged
+        ? !existingCritSlot?.damaged
+        : existingCritSlot?.damaged ?? false,
       spentAmmo: (existingCritSlot?.spentAmmo ?? 0) + newCritSlot.spentAmmo,
     };
     setUnitStatus({
@@ -47,7 +52,12 @@ export const LocationDialog = ({ onClose, open, unit, location }: ILocationDialo
         ...unitStatus.locations,
         [location]: {
           ...damageAtLocation,
-          critSlots: [...damageAtLocation.critSlots.filter((t) => t.critSlot !== newCritSlot.critSlot), critSlot],
+          critSlots: [
+            ...damageAtLocation.critSlots.filter(
+              (t) => t.critSlot !== newCritSlot.critSlot
+            ),
+            critSlot,
+          ],
         },
       },
     });
@@ -56,16 +66,33 @@ export const LocationDialog = ({ onClose, open, unit, location }: ILocationDialo
   return (
     <Dialog onClose={onClose} open={open}>
       <DialogTitle>{location}</DialogTitle>
-      <Box padding={1} width={360} display={"flex"} flexDirection={"column"} gap={1}>
+      <Box
+        padding={1}
+        width={360}
+        display={"flex"}
+        flexDirection={"column"}
+        gap={1}
+      >
         <Box>
           <ButtonGroup>
             <Button
-              onClick={() => setNewValue({ armour: damageAtLocation.armour + 1 })}
-              color={damageAtLocation.armour >= unitLocation.armour ? "error" : "primary"}
+              onClick={() =>
+                setNewValue({ armour: damageAtLocation.armour + 1 })
+              }
+              color={
+                damageAtLocation.armour >= unitLocation.armour
+                  ? "error"
+                  : "primary"
+              }
             >
-              Armour: {unitLocation.armour - damageAtLocation.armour}/{unitLocation.armour}
+              Armour: {unitLocation.armour - damageAtLocation.armour}/
+              {unitLocation.armour}
             </Button>
-            <Button onClick={() => setNewValue({ armour: damageAtLocation.armour - 1 })}>
+            <Button
+              onClick={() =>
+                setNewValue({ armour: damageAtLocation.armour - 1 })
+              }
+            >
               <HandymanIcon />
             </Button>
           </ButtonGroup>
@@ -73,12 +100,24 @@ export const LocationDialog = ({ onClose, open, unit, location }: ILocationDialo
         {!!unitLocation.rearArmour && (
           <ButtonGroup>
             <Button
-              onClick={() => setNewValue({ rearArmour: damageAtLocation.rearArmour + 1 })}
-              color={damageAtLocation.rearArmour >= unitLocation.rearArmour ? "error" : "primary"}
+              onClick={() =>
+                setNewValue({ rearArmour: damageAtLocation.rearArmour + 1 })
+              }
+              color={
+                damageAtLocation.rearArmour >= unitLocation.rearArmour
+                  ? "error"
+                  : "primary"
+              }
             >
-              Rear Armour: {unitLocation.rearArmour - damageAtLocation.rearArmour}/{unitLocation.rearArmour}
+              Rear Armour:{" "}
+              {unitLocation.rearArmour - damageAtLocation.rearArmour}/
+              {unitLocation.rearArmour}
             </Button>
-            <Button onClick={() => setNewValue({ rearArmour: damageAtLocation.rearArmour - 1 })}>
+            <Button
+              onClick={() =>
+                setNewValue({ rearArmour: damageAtLocation.rearArmour - 1 })
+              }
+            >
               <HandymanIcon />
             </Button>
           </ButtonGroup>
@@ -91,9 +130,17 @@ export const LocationDialog = ({ onClose, open, unit, location }: ILocationDialo
                   internalStructure: damageAtLocation.internalStructure + 1,
                 })
               }
-              color={damageAtLocation.internalStructure >= unitLocation.internalStructure ? "error" : "primary"}
+              color={
+                damageAtLocation.internalStructure >=
+                unitLocation.internalStructure
+                  ? "error"
+                  : "primary"
+              }
             >
-              Structure: {unitLocation.internalStructure - damageAtLocation.internalStructure}/{unitLocation.internalStructure}
+              Structure:{" "}
+              {unitLocation.internalStructure -
+                damageAtLocation.internalStructure}
+              /{unitLocation.internalStructure}
             </Button>
             <Button
               onClick={() =>
@@ -122,7 +169,8 @@ export const LocationDialog = ({ onClose, open, unit, location }: ILocationDialo
                 {(index % 6) + 1}: {slot.item}{" "}
                 {slot.ammoCount && (
                   <>
-                    {slot.ammoCount - (critSlotAt(index)?.spentAmmo ?? 0)}/{slot.ammoCount}
+                    {slot.ammoCount - (critSlotAt(index)?.spentAmmo ?? 0)}/
+                    {slot.ammoCount}
                   </>
                 )}
               </Button>

@@ -1,3 +1,4 @@
+import { eLocations } from "./eLocations";
 import { AllItemNames } from "./items/database";
 
 export enum eUnitType {
@@ -17,14 +18,14 @@ export interface IBattleMechLocationSheet {
   equipment: AllItemNames[];
 }
 export interface IBattleMechLocations<T> {
-  head: T;
-  centerTorso: T;
-  leftTorso: T;
-  leftArm: T;
-  leftLeg: T;
-  rightTorso: T;
-  rightArm: T;
-  rightLeg: T;
+  [eLocations.Head]: T;
+  [eLocations.CenterTorso]: T;
+  [eLocations.LeftTorso]: T;
+  [eLocations.LeftArm]: T;
+  [eLocations.LeftLeg]: T;
+  [eLocations.RightTorso]: T;
+  [eLocations.RightArm]: T;
+  [eLocations.RightLeg]: T;
 }
 export interface IBattleMechSheet {
   type: eUnitType.BattleMech;
@@ -48,4 +49,7 @@ export interface IBaseSheet<P, U> {
   character: P;
   unit: U;
 }
-export type IRecordBattleMechSheet = IBaseSheet<ICharacterSheet, IBattleMechSheet>;
+export type IRecordBattleMechSheet = IBaseSheet<
+  ICharacterSheet,
+  IBattleMechSheet
+>;

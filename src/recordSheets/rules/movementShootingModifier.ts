@@ -1,4 +1,4 @@
-import { eMovementSpeed } from "./eMovementSpeed";
+import { eMovementSpeed } from "../data/ActiveSheets";
 
 export const movementShootingModifier = (movementSpeed: eMovementSpeed) => {
   switch (movementSpeed) {

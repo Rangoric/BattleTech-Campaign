@@ -1,16 +1,21 @@
 import { Box } from "@mui/material";
-import { IRecordSheet } from "./data/IRecordSheet";
 import { DefenseDisplay } from "./DefenseDisplay";
+import { IActiveBattleMechSheet } from "./data/ActiveSheets";
 
 export interface IDefensesProps {
-  units: IRecordSheet[];
+  state: [IActiveBattleMechSheet[], (x: IActiveBattleMechSheet) => void];
 }
 
-export const Defenses: React.FC<IDefensesProps> = ({ units }) => {
+export const Defenses: React.FC<IDefensesProps> = ({ state }) => {
+  const [data] = state;
   return (
     <Box display={"flex"} flexDirection={"row"} gap={1} flexWrap={"wrap"}>
-      {units.map((unit) => (
-        <DefenseDisplay key={unit.pilotData.callSign} unit={unit} />
+      {data.map((unit) => (
+        <DefenseDisplay
+          key={unit.character.callSign}
+          unit={unit}
+          state={state}
+        />
       ))}
     </Box>
   );

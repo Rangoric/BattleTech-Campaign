@@ -3,16 +3,17 @@ import { MovementDisplay } from "./MovementDisplay";
 import { IActiveBattleMechSheet } from "./data/ActiveSheets";
 
 export interface IMovement {
-  sheets: IActiveBattleMechSheet[];
+  state: [IActiveBattleMechSheet[], (x: IActiveBattleMechSheet) => void];
 }
 
-export const Movement: React.FC<IMovement> = ({ sheets }) => {
+export const Movement: React.FC<IMovement> = ({ state }) => {
+  const [data] = state;
   return (
     <>
-      {sheets.map((sheet) => (
+      {data.map((sheet) => (
         <Box key={sheet.character.callSign}>
           <Typography>{sheet.character.callSign}</Typography>
-          <MovementDisplay sheet={sheet} />
+          <MovementDisplay sheet={sheet} state={state} />
         </Box>
       ))}
     </>

@@ -1,19 +1,32 @@
 import { Box, ToggleButton, ToggleButtonGroup } from "@mui/material";
-import { eMovementSpeed } from "./rules/eMovementSpeed";
-import { IRecordBattleMechSheet } from "./data/IRecordSheets";
-import { IActiveBattleMechSheet } from "./data/ActiveSheets";
+import { eMovementSpeed, IActiveBattleMechSheet } from "./data/ActiveSheets";
+import { Actions } from "./data/Actions";
 
 export interface IMovementDisplay {
   sheet: IActiveBattleMechSheet;
+  state: [IActiveBattleMechSheet[], (x: IActiveBattleMechSheet) => void];
 }
 
-export const MovementDisplay: React.FC<IMovementDisplay> = ({ sheet }) => {
-  const handleChange = (_event: React.MouseEvent<HTMLElement>, movementSpeed: eMovementSpeed) => {
-    setUnitStatus({ ...unitStatus, movementSpeed });
+export const MovementDisplay: React.FC<IMovementDisplay> = ({
+  sheet,
+  state,
+}) => {
+  const [data, dispatch] = state;
+  const handleChange = (
+    _event: React.MouseEvent<HTMLElement>,
+    movementSpeed: eMovementSpeed
+  ) => {
+    dispatch(Actions.BattleMech.move(sheet, movementSpeed));
   };
   return (
     <Box>
-      <ToggleButtonGroup color={"primary"} value={unitStatus.movementSpeed} onChange={handleChange} exclusive fullWidth>
+      <ToggleButtonGroup
+        color={"primary"}
+        value={sheet.unit.movement.currentMovement}
+        onChange={handleChange}
+        exclusive
+        fullWidth
+      >
         <ToggleButton value={eMovementSpeed.ping} color={"standard"}>
           Ping
         </ToggleButton>
@@ -23,7 +36,11 @@ export const MovementDisplay: React.FC<IMovementDisplay> = ({ sheet }) => {
         <ToggleButton value={eMovementSpeed.run} color={"error"}>
           Run {sheet.unit.movement.run}
         </ToggleButton>
-        <ToggleButton value={eMovementSpeed.jump} color={"warning"} disabled={sheet.unit.movement.jump === 0}>
+        <ToggleButton
+          value={eMovementSpeed.jump}
+          color={"warning"}
+          disabled={sheet.unit.movement.jump === 0}
+        >
           Jump {!!sheet.unit.movement.jump && sheet.unit.movement.jump}
         </ToggleButton>
       </ToggleButtonGroup>
