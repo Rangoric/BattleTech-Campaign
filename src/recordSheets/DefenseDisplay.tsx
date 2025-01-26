@@ -12,12 +12,12 @@ import { LocationsDisplay } from "./LocationsDisplay";
 import { IActiveBattleMechSheet } from "./data/ActiveSheets";
 
 export interface IDefenseDisplayProps {
-  unit: IActiveBattleMechSheet;
+  sheet: IActiveBattleMechSheet;
   state: [IActiveBattleMechSheet[], (x: IActiveBattleMechSheet) => void];
 }
 
 export const DefenseDisplay: React.FC<IDefenseDisplayProps> = ({
-  unit,
+  sheet,
   state,
 }) => {
   const [incomingFireDirection, setIncomingFireDirection] = useState(
@@ -33,7 +33,7 @@ export const DefenseDisplay: React.FC<IDefenseDisplayProps> = ({
             gap={1}
             justifyContent={"space-between"}
           >
-            {unit.character.callSign}{" "}
+            {sheet.character.callSign}{" "}
             <ToggleButtonGroup
               value={incomingFireDirection}
               onChange={(_e: unknown, v: eIncomingFireDirection) =>
@@ -75,7 +75,8 @@ export const DefenseDisplay: React.FC<IDefenseDisplayProps> = ({
           justifyContent={"center"}
         >
           <LocationsDisplay
-            unit={unit}
+            sheet={sheet}
+            state={state}
             incomingFireDirection={incomingFireDirection}
           />
         </Box>

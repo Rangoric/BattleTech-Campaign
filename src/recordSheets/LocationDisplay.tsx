@@ -4,22 +4,25 @@ import { HitLocationFromDirection } from "./data/HitLocationFromDirection";
 import { useState } from "react";
 import { IActiveBattleMechSheet } from "./data/ActiveSheets";
 import { getCritSlots } from "./data/Actions";
+import { LocationDialog } from "./LocationDialog";
 
 export interface ILocationDisplayProps {
-  unit: IActiveBattleMechSheet;
+  sheet: IActiveBattleMechSheet;
+  state: [IActiveBattleMechSheet[], (x: IActiveBattleMechSheet) => void];
   location: keyof IActiveBattleMechSheet["unit"]["locations"];
   incomingFireDirection: eIncomingFireDirection;
 }
 
 export const LocationDisplay: React.FC<ILocationDisplayProps> = ({
-  unit,
+  sheet,
+  state,
   location,
   incomingFireDirection,
 }) => {
   const ifd = incomingFireDirection ?? eIncomingFireDirection.front;
   const [open, setIsOpen] = useState(false);
-  const unitLocation = unit.unit.locations[location];
-  const critSlots = getCritSlots(unit, location);
+  const unitLocation = sheet.unit.locations[location];
+  const critSlots = getCritSlots(sheet, location);
   const slotCount = critSlots.length;
   const slotsDamaged = critSlots.filter((t) =>
     t.hits.find((h) => h.location === location)
@@ -48,12 +51,13 @@ export const LocationDisplay: React.FC<ILocationDisplayProps> = ({
           </CardContent>
         </CardActionArea>
       </Card>
-      {/* <LocationDialog
+      <LocationDialog
         open={open}
         onClose={() => setIsOpen(false)}
-        unit={unit}
+        sheet={sheet}
+        state={state}
         location={location}
-      /> */}
+      />
     </>
   );
 };

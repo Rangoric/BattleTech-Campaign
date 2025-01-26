@@ -6,19 +6,22 @@ import { eUnitType } from "./data/IRecordSheets";
 import { eLocations } from "./data/eLocations";
 
 export interface ILocationsDisplayProps {
-  unit: IActiveBattleMechSheet;
+  sheet: IActiveBattleMechSheet;
+  state: [IActiveBattleMechSheet[], (x: IActiveBattleMechSheet) => void];
   incomingFireDirection: eIncomingFireDirection;
 }
 
 export const LocationsDisplay: React.FC<ILocationsDisplayProps> = ({
-  unit,
+  sheet,
+  state,
   incomingFireDirection,
 }) => {
-  switch (unit.unit.type) {
+  switch (sheet.unit.type) {
     case eUnitType.BattleMech:
       return (
         <BattleMechLocationsDisplay
-          unit={unit}
+          sheet={sheet}
+          state={state}
           incomingFireDirection={incomingFireDirection}
         />
       );
@@ -28,7 +31,8 @@ export const LocationsDisplay: React.FC<ILocationsDisplayProps> = ({
 };
 
 const BattleMechLocationsDisplay: React.FC<ILocationsDisplayProps> = ({
-  unit,
+  sheet,
+  state,
   incomingFireDirection,
 }) => {
   return (
@@ -40,17 +44,20 @@ const BattleMechLocationsDisplay: React.FC<ILocationsDisplayProps> = ({
         justifyContent={"center"}
       >
         <LocationDisplay
-          unit={unit}
+          sheet={sheet}
+          state={state}
           location={eLocations.LeftArm}
           incomingFireDirection={incomingFireDirection}
         />
         <LocationDisplay
-          unit={unit}
+          sheet={sheet}
+          state={state}
           location={eLocations.Head}
           incomingFireDirection={incomingFireDirection}
         />
         <LocationDisplay
-          unit={unit}
+          sheet={sheet}
+          state={state}
           location={eLocations.RightArm}
           incomingFireDirection={incomingFireDirection}
         />
@@ -62,17 +69,20 @@ const BattleMechLocationsDisplay: React.FC<ILocationsDisplayProps> = ({
         justifyContent={"center"}
       >
         <LocationDisplay
-          unit={unit}
+          sheet={sheet}
+          state={state}
           location={eLocations.LeftTorso}
           incomingFireDirection={incomingFireDirection}
         />
         <LocationDisplay
-          unit={unit}
+          sheet={sheet}
+          state={state}
           location={eLocations.CenterTorso}
           incomingFireDirection={incomingFireDirection}
         />
         <LocationDisplay
-          unit={unit}
+          sheet={sheet}
+          state={state}
           location={eLocations.RightTorso}
           incomingFireDirection={incomingFireDirection}
         />
@@ -84,12 +94,14 @@ const BattleMechLocationsDisplay: React.FC<ILocationsDisplayProps> = ({
         justifyContent={"center"}
       >
         <LocationDisplay
-          unit={unit}
+          sheet={sheet}
+          state={state}
           location={eLocations.LeftLeg}
           incomingFireDirection={incomingFireDirection}
         />
         <LocationDisplay
-          unit={unit}
+          sheet={sheet}
+          state={state}
           location={eLocations.RightLeg}
           incomingFireDirection={incomingFireDirection}
         />

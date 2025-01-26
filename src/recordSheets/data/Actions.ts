@@ -53,11 +53,29 @@ export const Actions = {
         },
       };
     },
+    repairArmor: (
+      location: keyof IBattleMechLocations<any>,
+      sheet: IActiveBattleMechSheet
+    ): IActiveBattleMechSheet => {
+      return {
+        ...sheet,
+        unit: {
+          ...sheet.unit,
+          locations: {
+            ...sheet.unit.locations,
+            [location]: {
+              ...sheet.unit.locations[location],
+              armorDamage: Math.max(
+                0,
+                sheet.unit.locations[location].armorDamage - 1
+              ),
+            },
+          },
+        },
+      };
+    },
     hitRearArmor: (
-      location: keyof Pick<
-        IBattleMechLocations<any>,
-        eLocations.CenterTorso | eLocations.LeftTorso | eLocations.RightTorso
-      >,
+      location: keyof Pick<IBattleMechLocations<any>, eLocations>,
       damage: number,
       sheet: IActiveBattleMechSheet
     ): IActiveBattleMechSheet => {
@@ -88,6 +106,27 @@ export const Actions = {
         },
       };
     },
+    repairRearArmor: (
+      location: keyof IBattleMechLocations<any>,
+      sheet: IActiveBattleMechSheet
+    ) => {
+      return {
+        ...sheet,
+        unit: {
+          ...sheet.unit,
+          locations: {
+            ...sheet.unit.locations,
+            [location]: {
+              ...sheet.unit.locations[location],
+              rearArmorDamage: Math.max(
+                0,
+                (sheet.unit.locations[location].rearArmorDamage ?? 0) - 1
+              ),
+            },
+          },
+        },
+      };
+    },
     hitStructure: (
       location: keyof IBattleMechLocations<any>,
       damage: number,
@@ -104,6 +143,27 @@ export const Actions = {
             [location]: {
               ...sheet.unit.locations[location],
               structureDamage: structureDamage,
+            },
+          },
+        },
+      };
+    },
+    repairStructure: (
+      location: keyof IBattleMechLocations<any>,
+      sheet: IActiveBattleMechSheet
+    ) => {
+      return {
+        ...sheet,
+        unit: {
+          ...sheet.unit,
+          locations: {
+            ...sheet.unit.locations,
+            [location]: {
+              ...sheet.unit.locations[location],
+              structureDamage: Math.max(
+                0,
+                sheet.unit.locations[location].structureDamage - 1
+              ),
             },
           },
         },

@@ -1,67 +1,28 @@
 import { Dialog, DialogTitle, Button, Box, ButtonGroup } from "@mui/material";
 import HandymanIcon from "@mui/icons-material/Handyman";
+import { eLocations } from "./data/eLocations";
+import { IActiveBattleMechSheet } from "./data/ActiveSheets";
+import { Actions, getCritSlots } from "./data/Actions";
 
 export interface ILocationDialog {
   open: boolean;
   location: eLocations;
-  unit: IRecordSheet;
+  sheet: IActiveBattleMechSheet;
+  state: [IActiveBattleMechSheet[], (x: IActiveBattleMechSheet) => void];
   onClose: () => void;
 }
 
 export const LocationDialog = ({
   onClose,
   open,
-  unit,
+  sheet,
+  state,
   location,
 }: ILocationDialog) => {
-  const [unitStatus, setUnitStatus] = useUnitStatus(unit.pilotData.callSign);
-  const unitLocation = unit.vehicle.locations[location];
-  const damageAtLocation = unitStatus.locations?.[location] ?? {
-    armour: 0,
-    rearArmour: 0,
-    internalStructure: 0,
-    critSlots: [],
-  };
+  const unitLocation = sheet.unit.locations[location];
 
-  const setNewValue = (newDamage: Partial<ILocation>) => {
-    setUnitStatus({
-      ...unitStatus,
-      locations: {
-        ...unitStatus.locations,
-        [location]: {
-          ...damageAtLocation,
-          ...newDamage,
-        },
-      },
-    });
-  };
-  const critSlotAt = (critSlot: number) =>
-    damageAtLocation.critSlots.find((t) => t.critSlot === critSlot);
-  const setNewCritSlot = (newCritSlot: ICritSlotStatus) => {
-    const existingCritSlot = critSlotAt(newCritSlot.critSlot);
-    const critSlot = {
-      critSlot: newCritSlot.critSlot,
-      damaged: newCritSlot.damaged
-        ? !existingCritSlot?.damaged
-        : existingCritSlot?.damaged ?? false,
-      spentAmmo: (existingCritSlot?.spentAmmo ?? 0) + newCritSlot.spentAmmo,
-    };
-    setUnitStatus({
-      ...unitStatus,
-      locations: {
-        ...unitStatus.locations,
-        [location]: {
-          ...damageAtLocation,
-          critSlots: [
-            ...damageAtLocation.critSlots.filter(
-              (t) => t.critSlot !== newCritSlot.critSlot
-            ),
-            critSlot,
-          ],
-        },
-      },
-    });
-  };
+  const critSlots = getCritSlots(sheet, location);
+  const [, dispatch] = state;
 
   return (
     <Dialog onClose={onClose} open={open}>
@@ -77,45 +38,45 @@ export const LocationDialog = ({
           <ButtonGroup>
             <Button
               onClick={() =>
-                setNewValue({ armour: damageAtLocation.armour + 1 })
+                dispatch(Actions.BattleMech.hitArmor(location, 1, sheet))
               }
               color={
-                damageAtLocation.armour >= unitLocation.armour
+                unitLocation.armorDamage >= unitLocation.armor
                   ? "error"
                   : "primary"
               }
             >
-              Armour: {unitLocation.armour - damageAtLocation.armour}/
-              {unitLocation.armour}
+              Armour: {unitLocation.armor - unitLocation.armorDamage}/
+              {unitLocation.armor}
             </Button>
             <Button
               onClick={() =>
-                setNewValue({ armour: damageAtLocation.armour - 1 })
+                dispatch(Actions.BattleMech.repairArmor(location, sheet))
               }
             >
               <HandymanIcon />
             </Button>
           </ButtonGroup>
         </Box>
-        {!!unitLocation.rearArmour && (
+        {!!unitLocation.rearArmor && (
           <ButtonGroup>
             <Button
               onClick={() =>
-                setNewValue({ rearArmour: damageAtLocation.rearArmour + 1 })
+                dispatch(Actions.BattleMech.hitRearArmor(location, 1, sheet))
               }
               color={
-                damageAtLocation.rearArmour >= unitLocation.rearArmour
+                unitLocation.rearArmorDamage ?? 0 >= unitLocation.rearArmor
                   ? "error"
                   : "primary"
               }
             >
               Rear Armour:{" "}
-              {unitLocation.rearArmour - damageAtLocation.rearArmour}/
-              {unitLocation.rearArmour}
+              {unitLocation.rearArmor - (unitLocation.rearArmorDamage ?? 0)}/
+              {unitLocation.rearArmor}
             </Button>
             <Button
               onClick={() =>
-                setNewValue({ rearArmour: damageAtLocation.rearArmour - 1 })
+                dispatch(Actions.BattleMech.repairRearArmor(location, sheet))
               }
             >
               <HandymanIcon />
@@ -125,82 +86,43 @@ export const LocationDialog = ({
         <Box>
           <ButtonGroup>
             <Button
-              onClick={() =>
-                setNewValue({
-                  internalStructure: damageAtLocation.internalStructure + 1,
-                })
-              }
+              onClick={() => {}}
               color={
-                damageAtLocation.internalStructure >=
-                unitLocation.internalStructure
+                unitLocation.structureDamage >= unitLocation.structure
                   ? "error"
                   : "primary"
               }
             >
-              Structure:{" "}
-              {unitLocation.internalStructure -
-                damageAtLocation.internalStructure}
-              /{unitLocation.internalStructure}
+              Structure: {unitLocation.structure - unitLocation.structureDamage}
+              /{unitLocation.structure}
             </Button>
             <Button
               onClick={() =>
-                setNewValue({
-                  internalStructure: damageAtLocation.internalStructure - 1,
-                })
+                dispatch(Actions.BattleMech.repairStructure(location, sheet))
               }
             >
               <HandymanIcon />
             </Button>
           </ButtonGroup>
         </Box>
-        <Box>
-          {unitLocation.critSlots.map((slot, index) => (
-            <ButtonGroup key={slot.item + index} sx={{ width: "100%" }}>
-              <Button
-                onClick={() =>
-                  setNewCritSlot({
-                    critSlot: index,
-                    damaged: true,
-                    spentAmmo: 0,
-                  })
-                }
-                color={critSlotAt(index)?.damaged ? "error" : "primary"}
-              >
-                {(index % 6) + 1}: {slot.item}{" "}
-                {slot.ammoCount && (
-                  <>
-                    {slot.ammoCount - (critSlotAt(index)?.spentAmmo ?? 0)}/
-                    {slot.ammoCount}
-                  </>
-                )}
-              </Button>
-              {slot.ammoCount !== undefined && (
-                <>
-                  <Button
-                    onClick={() =>
-                      setNewCritSlot({
-                        critSlot: index,
-                        damaged: false,
-                        spentAmmo: 1,
-                      })
-                    }
-                  >
-                    Spend
-                  </Button>
-                  <Button
-                    onClick={() =>
-                      setNewCritSlot({
-                        critSlot: index,
-                        damaged: false,
-                        spentAmmo: -1,
-                      })
-                    }
-                  >
-                    Add
-                  </Button>
-                </>
-              )}
-            </ButtonGroup>
+        <Box display={"flex"} flexDirection={"column"} gap={1}>
+          {critSlots.map((slot, index) => (
+            <Button
+              key={slot.name + index}
+              onClick={() =>
+                dispatch(Actions.BattleMech.crit(location, index + 1, sheet))
+              }
+              variant={"outlined"}
+              color={
+                slot.hits.find(
+                  (t) => t.location === location && t.slot === index + 1
+                )
+                  ? "error"
+                  : "primary"
+              }
+            >
+              {slot.name}
+            </Button>
           ))}
         </Box>
       </Box>

@@ -10,10 +10,10 @@ export const Defenses: React.FC<IDefensesProps> = ({ state }) => {
   const [data] = state;
   return (
     <Box display={"flex"} flexDirection={"row"} gap={1} flexWrap={"wrap"}>
-      {data.map((unit) => (
+      {data.map((sheet) => (
         <DefenseDisplay
-          key={unit.character.callSign}
-          unit={unit}
+          key={sheet.character.callSign}
+          sheet={sheet}
           state={state}
         />
       ))}
