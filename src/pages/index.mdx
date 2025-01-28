@@ -1,6 +1,7 @@
-import {Framework} from '../layout/Framework';
-export default function MDXPage({children})  {
-  return <Framework>{children}</Framework>
+import { Framework } from "../layout/Framework";
+import { Button } from "@mui/material";
+export default function MDXPage({ children }) {
+  return <Framework>{children}</Framework>;
 }
 
 #### What You Can Find Here
@@ -27,3 +28,4 @@ This has a summary of the Infantry PLatoon and their direct supports
 
 This is a list of supplies we have on hand.
 
+<Button onClick={() => localStorage.clear()}>Clear Local Storage</Button>

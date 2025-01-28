@@ -1,4 +1,11 @@
-import { Dialog, DialogTitle, Button, Box, ButtonGroup } from "@mui/material";
+import {
+  Dialog,
+  DialogTitle,
+  Button,
+  Box,
+  ButtonGroup,
+  Typography,
+} from "@mui/material";
 import HandymanIcon from "@mui/icons-material/Handyman";
 import { eLocations } from "./data/eLocations";
 import { IActiveBattleMechSheet } from "./data/ActiveSheets";
@@ -35,7 +42,7 @@ export const LocationDialog = ({
         gap={1}
       >
         <Box>
-          <ButtonGroup>
+          <ButtonGroup variant={"outlined"} fullWidth>
             <Button
               onClick={() =>
                 dispatch(Actions.BattleMech.hitArmor(location, 1, sheet))
@@ -50,6 +57,7 @@ export const LocationDialog = ({
               {unitLocation.armor}
             </Button>
             <Button
+              sx={{ width: "min-content" }}
               onClick={() =>
                 dispatch(Actions.BattleMech.repairArmor(location, sheet))
               }
@@ -59,7 +67,7 @@ export const LocationDialog = ({
           </ButtonGroup>
         </Box>
         {!!unitLocation.rearArmor && (
-          <ButtonGroup>
+          <ButtonGroup variant={"outlined"} fullWidth>
             <Button
               onClick={() =>
                 dispatch(Actions.BattleMech.hitRearArmor(location, 1, sheet))
@@ -75,6 +83,7 @@ export const LocationDialog = ({
               {unitLocation.rearArmor}
             </Button>
             <Button
+              sx={{ width: "min-content" }}
               onClick={() =>
                 dispatch(Actions.BattleMech.repairRearArmor(location, sheet))
               }
@@ -84,7 +93,7 @@ export const LocationDialog = ({
           </ButtonGroup>
         )}
         <Box>
-          <ButtonGroup>
+          <ButtonGroup variant={"outlined"} fullWidth>
             <Button
               onClick={() => {}}
               color={
@@ -100,6 +109,7 @@ export const LocationDialog = ({
               onClick={() =>
                 dispatch(Actions.BattleMech.repairStructure(location, sheet))
               }
+              sx={{ width: "min-content" }}
             >
               <HandymanIcon />
             </Button>
@@ -121,7 +131,22 @@ export const LocationDialog = ({
                   : "primary"
               }
             >
-              {slot.name}
+              <Box
+                display={"flex"}
+                flexDirection={"row"}
+                justifyContent={"space-between"}
+                width={"100%"}
+              >
+                <Box>
+                  {
+                    <>
+                      {critSlots.length > 6 ? `${index > 5 ? 2 : 1},` : ""}
+                      {(index % 6) + 1}
+                    </>
+                  }
+                </Box>
+                <Box>{slot.name}</Box>
+              </Box>
             </Button>
           ))}
         </Box>
