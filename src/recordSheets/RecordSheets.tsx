@@ -1,14 +1,9 @@
-import {
-  BottomNavigation,
-  BottomNavigationAction,
-  Box,
-  Paper,
-} from "@mui/material";
+import { BottomNavigation, BottomNavigationAction, Box, Paper } from "@mui/material";
 import { useReducer, useState } from "react";
 import DirectionsRunIcon from "@mui/icons-material/DirectionsRun";
 import TrackChangesIcon from "@mui/icons-material/TrackChanges";
 import ShieldIcon from "@mui/icons-material/Shield";
-import { allRecordSheets } from "./data/recordSheets/allRecordSheets";
+import { allRecordSheets, AllSheetNames } from "./data/recordSheets/allRecordSheets";
 import { Movement } from "./Movement";
 import { Weapons } from "./Weapons";
 import { getActiveSheet, getActiveSheets } from "./data/getActiveSheets";
@@ -16,13 +11,10 @@ import { IActiveBattleMechSheet } from "./data/ActiveSheets";
 import { Defenses } from "./Defenses";
 
 export interface IRecordSheetsProps {
-  units: string[];
+  units: AllSheetNames[];
 }
 
-const reducer = (
-  state: IActiveBattleMechSheet[],
-  action: IActiveBattleMechSheet
-) => {
+const reducer = (state: IActiveBattleMechSheet[], action: IActiveBattleMechSheet) => {
   localStorage.setItem(action.name, JSON.stringify(action));
 
   return state.map((sheet) => getActiveSheet(sheet.name));
@@ -45,26 +37,11 @@ export const RecordSheets: React.FC<IRecordSheetsProps> = ({ units }) => {
         {value === "Weapons" && <Weapons state={state} />}
         {value === "Defenses" && <Defenses state={state} />}
       </Box>
-      <Paper
-        sx={{ position: "fixed", bottom: 0, left: 0, right: 0 }}
-        elevation={3}
-      >
+      <Paper sx={{ position: "fixed", bottom: 0, left: 0, right: 0 }} elevation={3}>
         <BottomNavigation value={value} onChange={handleChange}>
-          <BottomNavigationAction
-            label={"Movement"}
-            value={"Movement"}
-            icon={<DirectionsRunIcon />}
-          />
-          <BottomNavigationAction
-            label={"Weapons"}
-            value={"Weapons"}
-            icon={<TrackChangesIcon />}
-          />
-          <BottomNavigationAction
-            label={"Defenses"}
-            value={"Defenses"}
-            icon={<ShieldIcon />}
-          />
+          <BottomNavigationAction label={"Movement"} value={"Movement"} icon={<DirectionsRunIcon />} />
+          <BottomNavigationAction label={"Weapons"} value={"Weapons"} icon={<TrackChangesIcon />} />
+          <BottomNavigationAction label={"Defenses"} value={"Defenses"} icon={<ShieldIcon />} />
         </BottomNavigation>
       </Paper>
     </>

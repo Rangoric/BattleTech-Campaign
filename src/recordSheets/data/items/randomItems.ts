@@ -3,8 +3,7 @@ import { eEquipmentType, IMiscellaneous } from "./itemBase";
 const beagleActiveProbe: IMiscellaneous = {
   type: eEquipmentType.Miscellaneous,
   name: "Beagle Active Probe",
-  description:
-    "This item provides the pilot with information about hidden units.",
+  description: "This item provides the pilot with information about hidden units.",
   slots: 2,
 };
 const c3Slave: IMiscellaneous = {
@@ -56,6 +55,13 @@ const footActuator: IMiscellaneous = {
   slots: 1,
 };
 
+const CASE: IMiscellaneous = {
+  type: eEquipmentType.Miscellaneous,
+  name: "CASE",
+  description: "This item is a CASE.",
+  slots: 1,
+};
+
 export const randomItems = {
   "Beagle Active Probe": beagleActiveProbe,
   "C3 Slave": c3Slave,
@@ -66,4 +72,5 @@ export const randomItems = {
   "Upper Leg Actuator": upperLegActuator,
   "Lower Leg Actuator": lowerLegActuator,
   "Foot Actuator": footActuator,
+  CASE: CASE,
 };

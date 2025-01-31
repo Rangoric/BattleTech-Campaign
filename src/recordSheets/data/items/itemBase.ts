@@ -4,6 +4,7 @@ export enum eEquipmentType {
   Weapon,
   Miscellaneous,
   Ammo,
+  HeatSink,
 }
 
 const empty: IMiscellaneous = {
@@ -43,4 +44,9 @@ export interface IAmmo extends IEquipmentBase {
   count: number;
 }
 
-export type IEquipment = IWeapon | IMiscellaneous | IAmmo;
+export interface IHeatSink extends IEquipmentBase {
+  type: eEquipmentType.HeatSink;
+  rating: number;
+}
+
+export type IEquipment = IWeapon | IMiscellaneous | IAmmo | IHeatSink;
