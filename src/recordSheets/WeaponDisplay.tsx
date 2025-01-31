@@ -11,7 +11,7 @@ interface IWeaponDisplayProps {
 export const WeaponDisplay: React.FC<IWeaponDisplayProps> = ({ weapon, gunnery, gunneryGA }) => {
   const slots = weapon.slots;
   const crits = weapon.hits.length;
-  const color = crits === 0 ? "white" : crits < slots ? "yellow" : "red";
+  const color = crits === 0 ? "white" : "red";
   return (
     <TableRow>
       <TableCell sx={{ padding: "4px 2px", color }}>
