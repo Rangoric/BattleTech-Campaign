@@ -1,4 +1,4 @@
-import { Dialog, DialogTitle, Button, Box, ButtonGroup } from "@mui/material";
+import { Dialog, DialogTitle, Button, Box, ButtonGroup, Typography } from "@mui/material";
 import HandymanIcon from "@mui/icons-material/Handyman";
 import { eLocations } from "./data/eLocations";
 import { IActiveBattleMechSheet } from "./data/ActiveSheets";
@@ -23,40 +23,40 @@ export const LocationDialog = ({ onClose, open, sheet, state, location }: ILocat
       <DialogTitle>{location}</DialogTitle>
       <Box padding={1} width={360} display={"flex"} flexDirection={"column"} gap={1}>
         <Box>
-          <ButtonGroup>
+          <ButtonGroup variant={"outlined"} fullWidth>
             <Button
               onClick={() => dispatch(Actions.BattleMech.hitArmor(location, 1, sheet))}
               color={unitLocation.armorDamage >= unitLocation.armor ? "error" : "primary"}
             >
               Armour: {unitLocation.armor - unitLocation.armorDamage}/{unitLocation.armor}
             </Button>
-            <Button onClick={() => dispatch(Actions.BattleMech.repairArmor(location, sheet))}>
+            <Button sx={{ width: "min-content" }} onClick={() => dispatch(Actions.BattleMech.repairArmor(location, sheet))}>
               <HandymanIcon />
             </Button>
           </ButtonGroup>
         </Box>
         {!!unitLocation.rearArmor && (
-          <ButtonGroup>
+          <ButtonGroup variant={"outlined"} fullWidth>
             <Button
               onClick={() => dispatch(Actions.BattleMech.hitRearArmor(location, 1, sheet))}
               color={unitLocation.rearArmorDamage ?? 0 >= unitLocation.rearArmor ? "error" : "primary"}
             >
               Rear Armour: {unitLocation.rearArmor - (unitLocation.rearArmorDamage ?? 0)}/{unitLocation.rearArmor}
             </Button>
-            <Button onClick={() => dispatch(Actions.BattleMech.repairRearArmor(location, sheet))}>
+            <Button sx={{ width: "min-content" }} onClick={() => dispatch(Actions.BattleMech.repairRearArmor(location, sheet))}>
               <HandymanIcon />
             </Button>
           </ButtonGroup>
         )}
         <Box>
-          <ButtonGroup>
+          <ButtonGroup variant={"outlined"} fullWidth>
             <Button
               onClick={() => dispatch(Actions.BattleMech.hitStructure(location, 1, sheet))}
               color={unitLocation.structureDamage >= unitLocation.structure ? "error" : "primary"}
             >
               Structure: {unitLocation.structure - unitLocation.structureDamage}/{unitLocation.structure}
             </Button>
-            <Button onClick={() => dispatch(Actions.BattleMech.repairStructure(location, sheet))}>
+            <Button onClick={() => dispatch(Actions.BattleMech.repairStructure(location, sheet))} sx={{ width: "min-content" }}>
               <HandymanIcon />
             </Button>
           </ButtonGroup>
@@ -69,7 +69,17 @@ export const LocationDialog = ({ onClose, open, sheet, state, location }: ILocat
               variant={"outlined"}
               color={slot.hits.find((t) => t.location === location && t.slot === index + 1) ? "error" : "primary"}
             >
-              {slot.name}
+              <Box display={"flex"} flexDirection={"row"} justifyContent={"space-between"} width={"100%"}>
+                <Box>
+                  {
+                    <>
+                      {critSlots.length > 6 ? `${index > 5 ? 2 : 1},` : ""}
+                      {(index % 6) + 1}
+                    </>
+                  }
+                </Box>
+                <Box>{slot.name}</Box>
+              </Box>
             </Button>
           ))}
         </Box>

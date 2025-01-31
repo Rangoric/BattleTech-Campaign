@@ -6,7 +6,12 @@ export enum eEquipmentType {
   Ammo,
 }
 
-const empty: IMiscellaneous = { type: eEquipmentType.Miscellaneous, name: "Empty", description: "User when an empty crit slot is needed", slots: 1 };
+const empty: IMiscellaneous = {
+  type: eEquipmentType.Miscellaneous,
+  name: "Empty",
+  description: "User when an empty crit slot is needed",
+  slots: 1,
+};
 export const Items = { Empty: empty };
 
 export interface IEquipmentBase {
@@ -26,6 +31,7 @@ export interface IWeapon extends IEquipmentBase {
   mediumRange: number;
   longRange: number;
   extremeRange: number;
+  ammoItems?: AllItemNames[];
 }
 
 export interface IMiscellaneous extends IEquipmentBase {
@@ -34,6 +40,7 @@ export interface IMiscellaneous extends IEquipmentBase {
 
 export interface IAmmo extends IEquipmentBase {
   type: eEquipmentType.Ammo;
+  count: number;
 }
 
 export type IEquipment = IWeapon | IMiscellaneous | IAmmo;

@@ -1,4 +1,5 @@
 import { engines } from "./engines";
+import { gaussWeapons } from "./gaussWeapons";
 import { headItems } from "./headItems";
 import { helperWeapons } from "./helperWeapons";
 import { Items } from "./itemBase";
@@ -12,6 +13,7 @@ export const ItemDatabase = {
   ...randomItems,
   ...helperWeapons,
   ...LaserWeapons,
+  ...gaussWeapons,
 };
 
 export type AllItemNames = keyof typeof ItemDatabase;
