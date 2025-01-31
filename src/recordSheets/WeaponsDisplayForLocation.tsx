@@ -1,7 +1,5 @@
-import { TableCell, TableRow, Typography } from "@mui/material";
 import { IActiveBattleMechSheet, IBattleMechLocationActiveSheet } from "./data/ActiveSheets";
 import { eEquipmentType } from "./data/items/itemBase";
-import { weaponColumnWidth } from "./WeaponsDisplay";
 import { WeaponDisplay } from "./WeaponDisplay";
 
 export interface IWeaponDisplayForLocationProps {
