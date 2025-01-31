@@ -1,5 +1,5 @@
 import { Box } from "@mui/material";
-import { WeaponDisplay } from "./WeaponDisplay";
+import { WeaponsDisplay } from "./WeaponsDisplay";
 import { IActiveBattleMechSheet } from "./data/ActiveSheets";
 
 export interface IWeapons {
@@ -11,11 +11,7 @@ export const Weapons: React.FC<IWeapons> = ({ state }) => {
   return (
     <Box>
       {data.map((unit) => (
-        <WeaponDisplay
-          sheet={unit}
-          state={state}
-          key={unit.character.callSign}
-        />
+        <WeaponsDisplay sheet={unit} state={state} key={unit.character.callSign} />
       ))}
     </Box>
   );
