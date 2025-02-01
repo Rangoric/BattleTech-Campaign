@@ -8,7 +8,7 @@ import { Movement } from "./Movement";
 import { Weapons } from "./Weapons";
 import { getActiveSheet, getActiveSheets } from "./data/getActiveSheets";
 import { IActiveBattleMechSheet } from "./data/ActiveSheets";
-import { Defenses } from "./Defenses";
+import { Defenses } from "./defenses/Defenses";
 
 export interface IRecordSheetsProps {
   units: AllSheetNames[];
@@ -32,7 +32,7 @@ export const RecordSheets: React.FC<IRecordSheetsProps> = ({ units }) => {
 
   return (
     <>
-      <Box padding={1}>
+      <Box padding={1} paddingBottom={8}>
         {value === "Movement" && <Movement state={state} />}
         {value === "Weapons" && <Weapons state={state} />}
         {value === "Defenses" && <Defenses state={state} />}

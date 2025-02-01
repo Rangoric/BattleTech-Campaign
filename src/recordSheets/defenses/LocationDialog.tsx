@@ -1,8 +1,8 @@
 import { Dialog, DialogTitle, Button, Box, ButtonGroup } from "@mui/material";
 import HandymanIcon from "@mui/icons-material/Handyman";
-import { eLocations } from "./data/eLocations";
-import { IActiveBattleMechSheet } from "./data/ActiveSheets";
-import { Actions, getCritSlots } from "./data/Actions";
+import { eLocations } from "../data/eLocations";
+import { IActiveBattleMechSheet } from "../data/ActiveSheets";
+import { Actions, getCritSlots } from "../data/Actions";
 
 export interface ILocationDialog {
   open: boolean;
