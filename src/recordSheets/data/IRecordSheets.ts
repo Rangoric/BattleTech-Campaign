@@ -38,7 +38,9 @@ export interface IBattleMechSheet {
     run: number;
     jump: number;
   };
-
+  heat: {
+    extraHeatSinks: AllItemNames[];
+  };
   locations: IBattleMechLocations<IBattleMechLocationSheet>;
 }
 

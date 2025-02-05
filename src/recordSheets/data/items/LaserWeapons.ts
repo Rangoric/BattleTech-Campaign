@@ -49,7 +49,7 @@ const mediumPulseLaser: IWeapon = {
   slots: 2,
   heat: 4,
   damage: 5,
-  effects: ["DE"],
+  effects: ["DE", "PL"],
   minRange: 0,
   shortRange: 2,
   mediumRange: 4,

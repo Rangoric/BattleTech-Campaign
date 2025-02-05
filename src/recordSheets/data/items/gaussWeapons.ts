@@ -14,6 +14,7 @@ const gaussRifle: IWeapon = {
   longRange: 22,
   extremeRange: 30,
   ammoItems: ["Gauss Ammo (8)"],
+  ammoUsed: 1,
 };
 const gaussAmmo8: IAmmo = {
   name: "Gauss Ammo (8)",

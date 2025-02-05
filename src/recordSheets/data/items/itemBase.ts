@@ -33,6 +33,7 @@ export interface IWeapon extends IEquipmentBase {
   longRange: number;
   extremeRange: number;
   ammoItems?: AllItemNames[];
+  ammoUsed?: number;
 }
 
 export interface IMiscellaneous extends IEquipmentBase {

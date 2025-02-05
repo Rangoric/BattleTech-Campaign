@@ -12,6 +12,20 @@ export const ow1c: IBattleMechSheet = {
     run: 12,
     jump: 0,
   },
+  heat: {
+    extraHeatSinks: [
+      "Single Heat Sink",
+      "Single Heat Sink",
+      "Single Heat Sink",
+      "Single Heat Sink",
+      "Single Heat Sink",
+      "Single Heat Sink",
+      "Single Heat Sink",
+      "Single Heat Sink",
+      "Single Heat Sink",
+      "Single Heat Sink",
+    ],
+  },
   locations: {
     [eLocations.Head]: {
       armor: 9,

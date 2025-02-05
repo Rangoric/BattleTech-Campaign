@@ -11,6 +11,20 @@ export const mad5s: IBattleMechSheet = {
     run: 6,
     jump: 0,
   },
+  heat: {
+    extraHeatSinks: [
+      "Double Heat Sink",
+      "Double Heat Sink",
+      "Double Heat Sink",
+      "Double Heat Sink",
+      "Double Heat Sink",
+      "Double Heat Sink",
+      "Double Heat Sink",
+      "Double Heat Sink",
+      "Double Heat Sink",
+      "Double Heat Sink",
+    ],
+  },
   locations: {
     [eLocations.Head]: {
       armor: 9,
