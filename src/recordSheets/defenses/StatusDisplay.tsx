@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import { IActiveBattleMechSheet } from "../data/ActiveSheets";
 
 interface IStatusDisplayProps {
@@ -17,6 +17,8 @@ export const StatusDisplay: React.FC<IStatusDisplayProps> = ({ sheet }) => {
   const lifeSupportCrits = sheet.unit.locations["Head"].equipment
     .filter((e) => e.name === "Life Support")
     .flatMap((t) => t.hits).length;
+
+  const onTurnEnd = () => {};
   return (
     <Box flexGrow={1}>
       <Typography>Engine Crits: {engineCrits}/3</Typography>
@@ -24,6 +26,9 @@ export const StatusDisplay: React.FC<IStatusDisplayProps> = ({ sheet }) => {
       <Typography>Sensor Crits: {sensorCrits}/2</Typography>
       <Typography>Life Support: {lifeSupportCrits}/1</Typography>
       <Typography>Heat: {sheet.unit.heat.currentHeat}</Typography>
+      <Button variant={"contained"} onClick={onTurnEnd}>
+        End The Turn
+      </Button>
     </Box>
   );
 };
