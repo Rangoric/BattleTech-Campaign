@@ -92,7 +92,7 @@ export const ValkyriesOfHanakotoba: IGroup = {
       ],
     },
     {
-      name: "Armia Kazutomo",
+      name: "Arima Kazutomo",
       age: "40",
       languages: ["Japanese"],
       description: [
