@@ -1,7 +1,4 @@
-import { eDetailType } from "@/nejiro/IDetails";
-import { IEvent } from "../../IEvents";
-
-export const vohEvents: IEvent[] = [
+export const vohEvents = [
   {
     time: "3069 August",
     title: "C3 Discussion with Everett Franks",
@@ -337,7 +334,6 @@ export const vohEvents: IEvent[] = [
     mentionedPeople: ["Ambrosia Or'lient", "Kem Icetoff"],
     details: [
       {
-        type: eDetailType.QuoteBlock,
         title: "Jasmine's Memo",
         text: `So welcome to what could be our new home. I'm working with other senior staff to build out a repository of information about everything from what you can get the best Gyro, to where you can have a nice relaxing weekend.
 The official language on this planet is Japanese, and so as of today we will also be taking this as our shared language instead of Swedish. I am recommending that if you don't know Japanese, that you start learning, because that nice relaxing weekend? Won't be so relaxing when you can't talk to anyone. Any lessons on Japanese or planetary etiquette are available and can be taken as part of your training.
