@@ -1,6 +1,6 @@
-import { configureStore, createSlice, ThunkAction } from "@reduxjs/toolkit";
+import { configureStore, ThunkAction } from "@reduxjs/toolkit";
 import { Action } from "redux";
-import { createWrapper, HYDRATE } from "next-redux-wrapper";
+import { createWrapper } from "next-redux-wrapper";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 import { databaseSlice } from "./database/databaseSlice";
 

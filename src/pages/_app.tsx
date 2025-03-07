@@ -1,5 +1,5 @@
 // import { Framework } from "@/layout/Framework";
-import { makeStore, wrapper } from "@/recordSheets/store";
+import { makeStore } from "@/recordSheets/store";
 import "./index.css";
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";

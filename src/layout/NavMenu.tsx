@@ -1,4 +1,4 @@
-import { Menu, MenuItem, Typography } from "@mui/material";
+import { MenuItem, Typography } from "@mui/material";
 import Link from "next/link";
 
 export const NavMenu = () => (

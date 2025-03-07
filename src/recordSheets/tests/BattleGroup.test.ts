@@ -17,10 +17,10 @@ suite("Battle Group Data Testing", () => {
 
 suite("Battle Group Movement Testing", () => {
   test("Given a member of a battle group, when walking, then the participants move modifier is 1", () => {
-    const battleGroup = BattleGroup(
-      { character: "rangoric", unit: "mad5s" },
-      { character: "inanna", unit: "bj2ob" },
-    );
+    // const battleGroup = BattleGroup(
+    //   { character: "rangoric", unit: "mad5s" },
+    //   { character: "inanna", unit: "bj2ob" },
+    // );
   });
   test("Given a member of a battle group, when running, then the participants move modifier is 2", () => {});
   test("Given a member of a battle group, when jumping, then the participants move modifier is 3", () => {});
