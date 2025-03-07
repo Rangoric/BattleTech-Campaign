@@ -1,11 +1,11 @@
-import { mad5s } from "./units/mad5s";
-import { rangoric } from "./characters/rangoric";
+import { characters } from "./characters";
+import { units } from "./units";
 
 export const RecordSheetDatabase = {
-  characters: {
-    [rangoric.key]: rangoric,
-  },
-  units: {
-    [mad5s.key]: mad5s,
-  },
+  characters,
+  units,
 };
+
+export type AllCharacterCallSigns =
+  keyof (typeof RecordSheetDatabase)["characters"];
+export type AllUnitDesignations = keyof (typeof RecordSheetDatabase)["units"];

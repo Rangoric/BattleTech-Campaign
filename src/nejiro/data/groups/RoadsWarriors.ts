@@ -1,6 +1,4 @@
-import { IGroup } from "@/nejiro/IGroup";
-
-export const RoadsWarriors: IGroup = {
+export const RoadsWarriors = {
   name: "Road's Warriors",
   owner: "(Player)",
   people: [

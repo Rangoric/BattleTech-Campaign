@@ -1,4 +1,4 @@
-import { MenuItem, Typography } from "@mui/material";
+import { Menu, MenuItem, Typography } from "@mui/material";
 import Link from "next/link";
 
 export const NavMenu = () => (
@@ -20,6 +20,9 @@ export const NavMenu = () => (
     </MenuItem>
     <MenuItem component={Link} href="/monthly-report-3069-06">
       <Typography>End of June 3069</Typography>
+    </MenuItem>
+    <MenuItem component={Link} href="/battle-group">
+      <Typography>Battle Group</Typography>
     </MenuItem>
   </>
 );

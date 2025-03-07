@@ -1,6 +1,4 @@
-import { IGroup } from "@/nejiro/IGroup";
-
-export const WintersDream: IGroup = {
+export const WintersDream = {
   name: `Winter's Dream`,
   owner: "(Player)",
   people: [

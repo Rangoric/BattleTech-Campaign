@@ -1,15 +1,28 @@
+import {
+  AllCharacterCallSigns,
+  AllUnitDesignations,
+  RecordSheetDatabase,
+} from "../database";
+
 export interface IParticipant {
-  character: string;
-  unit: string;
+  character: AllCharacterCallSigns;
+  unit: AllUnitDesignations;
 }
 
-export const BattleGroup = (...participants: IParticipant[]) => {
-  const participantsMap: { [key: string]: IParticipant } = {};
-  participants.forEach((participant) => {
-    participantsMap[participant.character] = participant;
-  });
+export interface IBattleGroup {
+  participants: {
+    character: (typeof RecordSheetDatabase)["characters"][AllCharacterCallSigns];
+    unit: (typeof RecordSheetDatabase)["units"][AllUnitDesignations];
+  }[];
+}
 
+export const BattleGroup = (...participants: IParticipant[]): IBattleGroup => {
   return {
-    participants: participantsMap,
+    participants: participants.map(({ character, unit }) => {
+      return {
+        character: RecordSheetDatabase.characters[character],
+        unit: RecordSheetDatabase.units[unit],
+      };
+    }),
   };
 };

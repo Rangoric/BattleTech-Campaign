@@ -1,3 +1,3 @@
 export interface ICharacter {
-  key: string;
+  callSign: string;
 }

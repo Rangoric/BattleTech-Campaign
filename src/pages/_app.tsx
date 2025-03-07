@@ -1,4 +1,5 @@
 // import { Framework } from "@/layout/Framework";
+import { makeStore, wrapper } from "@/recordSheets/store";
 import "./index.css";
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
@@ -7,6 +8,8 @@ import "@fontsource/roboto/700.css";
 import { createTheme, CssBaseline, ThemeProvider } from "@mui/material";
 
 import type { AppProps } from "next/app";
+import { Provider } from "react-redux";
+import { useMemo } from "react";
 
 const theme = createTheme({
   colorSchemes: {
@@ -38,12 +41,13 @@ const theme = createTheme({
 });
 
 export default function App({ Component, pageProps }: AppProps) {
+  const store = useMemo(() => makeStore(), []);
   return (
-    <>
+    <Provider store={store}>
       <ThemeProvider theme={theme}>
         <CssBaseline enableColorScheme />
         <Component {...pageProps} />
       </ThemeProvider>
-    </>
+    </Provider>
   );
 }

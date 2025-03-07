@@ -1,6 +1,4 @@
-import { IGroup } from "@/nejiro/IGroup";
-
-export const GSF: IGroup = {
+export const GSF = {
   name: "GSF",
   owner: "(NPC)",
   people: [

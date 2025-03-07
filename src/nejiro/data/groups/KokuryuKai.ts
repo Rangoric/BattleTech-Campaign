@@ -1,6 +1,4 @@
-import { IGroup } from "@/nejiro/IGroup";
-
-export const KokuryuKai: IGroup = {
+export const KokuryuKai = {
   name: "Kokuryu-Kai",
   owner: "(NPC)",
   people: [
