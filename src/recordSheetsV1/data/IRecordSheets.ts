@@ -1,5 +1,5 @@
 import { eLocations } from "./eLocations";
-import { AllItemNames } from "./items/database";
+import { AllItemNames } from "../../recordSheets/database/equipment/database";
 
 export enum eUnitType {
   BattleMech = "BattleMech",
@@ -51,7 +51,4 @@ export interface IBaseSheet<P, U> {
   character: P;
   unit: U;
 }
-export type IRecordBattleMechSheet = IBaseSheet<
-  ICharacterSheet,
-  IBattleMechSheet
->;
+export type IRecordBattleMechSheet = IBaseSheet<ICharacterSheet, IBattleMechSheet>;

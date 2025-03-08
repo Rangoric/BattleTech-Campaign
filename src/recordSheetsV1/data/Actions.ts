@@ -3,18 +3,15 @@ import {
   IActiveBattleMechSheet,
   IAmmoActiveSheet,
   IBattleMechLocationActiveSheet,
-} from "./ActiveSheets";
+} from "../../recordSheets/database/equipment/ActiveSheets";
 import { eLocations } from "./eLocations";
 import { eUnitType } from "./IRecordSheets";
 import { IBattleMechLocations } from "./IRecordSheets";
-import { eEquipmentType } from "./items/itemBase";
+import { eEquipmentType } from "../../recordSheets/database/equipment/itemBase";
 
 export const Actions = {
   [eUnitType.BattleMech]: {
-    gainHeat: (
-      sheet: IActiveBattleMechSheet,
-      heat: number
-    ): IActiveBattleMechSheet => {
+    gainHeat: (sheet: IActiveBattleMechSheet, heat: number): IActiveBattleMechSheet => {
       return {
         ...sheet,
         unit: {
@@ -30,7 +27,7 @@ export const Actions = {
       sheet: IActiveBattleMechSheet,
       location: keyof IBattleMechLocations<object>,
       ammo: IAmmoActiveSheet,
-      used: number
+      used: number,
     ): IActiveBattleMechSheet => {
       return {
         ...sheet,
@@ -55,10 +52,7 @@ export const Actions = {
         },
       };
     },
-    move: (
-      sheet: IActiveBattleMechSheet,
-      distance: eMovementSpeed
-    ): IActiveBattleMechSheet => {
+    move: (sheet: IActiveBattleMechSheet, distance: eMovementSpeed): IActiveBattleMechSheet => {
       return {
         ...sheet,
         unit: {
@@ -73,14 +67,10 @@ export const Actions = {
     hitArmor: (
       location: keyof IBattleMechLocations<object>,
       damage: number,
-      sheet: IActiveBattleMechSheet
+      sheet: IActiveBattleMechSheet,
     ): IActiveBattleMechSheet => {
-      const baseArmorDamage =
-        sheet.unit.locations[location].armorDamage + damage;
-      const armorDamage = Math.min(
-        baseArmorDamage,
-        sheet.unit.locations[location].armor
-      );
+      const baseArmorDamage = sheet.unit.locations[location].armorDamage + damage;
+      const armorDamage = Math.min(baseArmorDamage, sheet.unit.locations[location].armor);
       const structureDamage =
         sheet.unit.locations[location].structureDamage +
         Math.max(0, baseArmorDamage - sheet.unit.locations[location].armor);
@@ -101,7 +91,7 @@ export const Actions = {
     },
     repairArmor: (
       location: keyof IBattleMechLocations<object>,
-      sheet: IActiveBattleMechSheet
+      sheet: IActiveBattleMechSheet,
     ): IActiveBattleMechSheet => {
       return {
         ...sheet,
@@ -111,10 +101,7 @@ export const Actions = {
             ...sheet.unit.locations,
             [location]: {
               ...sheet.unit.locations[location],
-              armorDamage: Math.max(
-                0,
-                sheet.unit.locations[location].armorDamage - 1
-              ),
+              armorDamage: Math.max(0, sheet.unit.locations[location].armorDamage - 1),
             },
           },
         },
@@ -123,20 +110,13 @@ export const Actions = {
     hitRearArmor: (
       location: keyof Pick<IBattleMechLocations<object>, eLocations>,
       damage: number,
-      sheet: IActiveBattleMechSheet
+      sheet: IActiveBattleMechSheet,
     ): IActiveBattleMechSheet => {
-      const baseRearArmorDamage =
-        (sheet.unit.locations[location].rearArmorDamage ?? 0) + damage;
-      const rearArmorDamage = Math.min(
-        baseRearArmorDamage,
-        sheet.unit.locations[location].rearArmor ?? 0
-      );
+      const baseRearArmorDamage = (sheet.unit.locations[location].rearArmorDamage ?? 0) + damage;
+      const rearArmorDamage = Math.min(baseRearArmorDamage, sheet.unit.locations[location].rearArmor ?? 0);
       const structureDamage =
         sheet.unit.locations[location].structureDamage +
-        Math.max(
-          0,
-          baseRearArmorDamage - (sheet.unit.locations[location].rearArmor ?? 0)
-        );
+        Math.max(0, baseRearArmorDamage - (sheet.unit.locations[location].rearArmor ?? 0));
       return {
         ...sheet,
         unit: {
@@ -152,10 +132,7 @@ export const Actions = {
         },
       };
     },
-    repairRearArmor: (
-      location: keyof IBattleMechLocations<object>,
-      sheet: IActiveBattleMechSheet
-    ) => {
+    repairRearArmor: (location: keyof IBattleMechLocations<object>, sheet: IActiveBattleMechSheet) => {
       return {
         ...sheet,
         unit: {
@@ -164,10 +141,7 @@ export const Actions = {
             ...sheet.unit.locations,
             [location]: {
               ...sheet.unit.locations[location],
-              rearArmorDamage: Math.max(
-                0,
-                (sheet.unit.locations[location].rearArmorDamage ?? 0) - 1
-              ),
+              rearArmorDamage: Math.max(0, (sheet.unit.locations[location].rearArmorDamage ?? 0) - 1),
             },
           },
         },
@@ -176,10 +150,9 @@ export const Actions = {
     hitStructure: (
       location: keyof IBattleMechLocations<object>,
       damage: number,
-      sheet: IActiveBattleMechSheet
+      sheet: IActiveBattleMechSheet,
     ): IActiveBattleMechSheet => {
-      const structureDamage =
-        sheet.unit.locations[location].structureDamage + damage;
+      const structureDamage = sheet.unit.locations[location].structureDamage + damage;
       return {
         ...sheet,
         unit: {
@@ -194,10 +167,7 @@ export const Actions = {
         },
       };
     },
-    repairStructure: (
-      location: keyof IBattleMechLocations<object>,
-      sheet: IActiveBattleMechSheet
-    ) => {
+    repairStructure: (location: keyof IBattleMechLocations<object>, sheet: IActiveBattleMechSheet) => {
       return {
         ...sheet,
         unit: {
@@ -206,10 +176,7 @@ export const Actions = {
             ...sheet.unit.locations,
             [location]: {
               ...sheet.unit.locations[location],
-              structureDamage: Math.max(
-                0,
-                sheet.unit.locations[location].structureDamage - 1
-              ),
+              structureDamage: Math.max(0, sheet.unit.locations[location].structureDamage - 1),
             },
           },
         },
@@ -219,21 +186,14 @@ export const Actions = {
     crit: (
       location: keyof IBattleMechLocations<IBattleMechLocationActiveSheet>,
       baseCritSlot: number,
-      sheet: IActiveBattleMechSheet
+      sheet: IActiveBattleMechSheet,
     ): IActiveBattleMechSheet => {
-      const workingSheet = JSON.parse(
-        JSON.stringify(sheet)
-      ) as IActiveBattleMechSheet;
+      const workingSheet = JSON.parse(JSON.stringify(sheet)) as IActiveBattleMechSheet;
       const critSlot = baseCritSlot - 1;
       const critSlots = getCritSlots(workingSheet, location);
-      const foundHit = critSlots[critSlot].hits.find(
-        (hit) => hit.location === location && hit.slot === baseCritSlot
-      );
+      const foundHit = critSlots[critSlot].hits.find((hit) => hit.location === location && hit.slot === baseCritSlot);
       if (foundHit) {
-        critSlots[critSlot].hits.splice(
-          critSlots[critSlot].hits.indexOf(foundHit),
-          1
-        );
+        critSlots[critSlot].hits.splice(critSlots[critSlot].hits.indexOf(foundHit), 1);
       } else {
         critSlots[critSlot].hits.push({ location, slot: baseCritSlot });
       }
@@ -245,13 +205,12 @@ export const Actions = {
 
 const doWeirdInitialCritSlotsForEngine = (
   sheet: IActiveBattleMechSheet,
-  location: keyof IBattleMechLocations<object>
+  location: keyof IBattleMechLocations<object>,
 ) => {
   if (
     location === eLocations.RightTorso ||
     (location === eLocations.LeftTorso &&
-      sheet.unit.locations[eLocations.CenterTorso].equipment[0].name ===
-        "XL Fusion Engine")
+      sheet.unit.locations[eLocations.CenterTorso].equipment[0].name === "XL Fusion Engine")
   ) {
     const item = sheet.unit.locations[eLocations.CenterTorso].equipment[0];
     const slots = [];
@@ -266,12 +225,11 @@ const doWeirdInitialCritSlotsForEngine = (
 
 const doWeirdEndingCritSlotsForEngine = (
   sheet: IActiveBattleMechSheet,
-  location: keyof IBattleMechLocations<object>
+  location: keyof IBattleMechLocations<object>,
 ) => {
   if (
     location === eLocations.CenterTorso &&
-    sheet.unit.locations[eLocations.CenterTorso].equipment[0].name ===
-      "XL Fusion Engine"
+    sheet.unit.locations[eLocations.CenterTorso].equipment[0].name === "XL Fusion Engine"
   ) {
     const item = sheet.unit.locations[eLocations.CenterTorso].equipment[0];
     const slots = [];
@@ -284,10 +242,7 @@ const doWeirdEndingCritSlotsForEngine = (
   }
 };
 
-export const getCritSlots = (
-  sheet: IActiveBattleMechSheet,
-  location: keyof IBattleMechLocations<object>
-) => {
+export const getCritSlots = (sheet: IActiveBattleMechSheet, location: keyof IBattleMechLocations<object>) => {
   const hitLocation = sheet.unit.locations[location];
   const equipment = hitLocation.equipment;
   const critSlots = doWeirdInitialCritSlotsForEngine(sheet, location);
@@ -298,7 +253,7 @@ export const getCritSlots = (
         slots.push(item);
       }
       return slots;
-    })
+    }),
   );
   critSlots.push(...doWeirdEndingCritSlotsForEngine(sheet, location));
   return critSlots;

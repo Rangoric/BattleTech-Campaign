@@ -1,21 +1,21 @@
 import { IBattleGroupParticipant } from "@/recordSheets/battleGroups/IBattleGroupParticipant";
-import { eMovementMode } from "../units/IUnit";
+import { eMovementSpeed } from "../units/IUnit";
 
 export const MovementRules = {
   AttackerMovementGATORModifier: (battleGroupParticipant: IBattleGroupParticipant) => {
-    switch (battleGroupParticipant.unit.movement.currentMode) {
-      case eMovementMode.stationary:
+    switch (battleGroupParticipant.unit.movement.currentSpeed) {
+      case eMovementSpeed.stationary:
         return 0;
-      case eMovementMode.walking:
+      case eMovementSpeed.walking:
         return 1;
-      case eMovementMode.running:
+      case eMovementSpeed.running:
         return 2;
-      case eMovementMode.jumping:
+      case eMovementSpeed.jumping:
         if (battleGroupParticipant.unit.movement.jumpSpeed === undefined) {
           return undefined;
         }
         return 3;
-      case eMovementMode.prone:
+      case eMovementSpeed.prone:
         return 2;
     }
   },

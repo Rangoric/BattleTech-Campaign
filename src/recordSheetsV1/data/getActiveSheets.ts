@@ -1,4 +1,4 @@
-import { IActiveBattleMechSheet, setupRecordSheet } from "./ActiveSheets";
+import { IActiveBattleMechSheet, setupRecordSheet } from "../../recordSheets/database/equipment/ActiveSheets";
 import { IRecordBattleMechSheet } from "./IRecordSheets";
 
 export const getActiveSheets = (sheets: IRecordBattleMechSheet[]): IActiveBattleMechSheet[] => {

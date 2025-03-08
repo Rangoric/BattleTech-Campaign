@@ -1,5 +1,5 @@
 import { eUnitType } from "./IRecordSheets";
-import { setupRecordSheet } from "./ActiveSheets";
+import { setupRecordSheet } from "../../recordSheets/database/equipment/ActiveSheets";
 import { IBattleMechSheet } from "./IRecordSheets";
 import { Actions } from "./Actions";
 import { eLocations } from "./eLocations";
@@ -21,14 +21,7 @@ const unit: IBattleMechSheet = {
     [eLocations.Head]: {
       armor: 9,
       structure: 3,
-      equipment: [
-        "Life Support",
-        "Sensors",
-        "Cockpit",
-        "Empty",
-        "Sensors",
-        "Life Support",
-      ],
+      equipment: ["Life Support", "Sensors", "Cockpit", "Empty", "Sensors", "Life Support"],
     },
     [eLocations.CenterTorso]: {
       armor: 16,
@@ -56,32 +49,17 @@ const unit: IBattleMechSheet = {
     [eLocations.RightArm]: {
       armor: 10,
       structure: 6,
-      equipment: [
-        "Shoulder",
-        "Upper Arm Actuator",
-        "Medium Laser",
-        "Medium Laser",
-      ],
+      equipment: ["Shoulder", "Upper Arm Actuator", "Medium Laser", "Medium Laser"],
     },
     [eLocations.LeftLeg]: {
       armor: 15,
       structure: 8,
-      equipment: [
-        "Hip",
-        "Upper Leg Actuator",
-        "Lower Leg Actuator",
-        "Foot Actuator",
-      ],
+      equipment: ["Hip", "Upper Leg Actuator", "Lower Leg Actuator", "Foot Actuator"],
     },
     [eLocations.RightLeg]: {
       armor: 15,
       structure: 8,
-      equipment: [
-        "Hip",
-        "Upper Leg Actuator",
-        "Lower Leg Actuator",
-        "Foot Actuator",
-      ],
+      equipment: ["Hip", "Upper Leg Actuator", "Lower Leg Actuator", "Foot Actuator"],
     },
   },
 };
@@ -111,171 +89,85 @@ suite("Character", () => {
 
 suite("Unit", () => {
   test("Head Armor Starts at 9", () => {
-    expect(activeSheet.unit.locations[eLocations.Head].armor).to.equal(
-      unit.locations[eLocations.Head].armor
-    );
+    expect(activeSheet.unit.locations[eLocations.Head].armor).to.equal(unit.locations[eLocations.Head].armor);
   });
   test("Head has no rear armor", () => {
-    expect(activeSheet.unit.locations[eLocations.Head].rearArmor).to.equal(
-      unit.locations[eLocations.Head].rearArmor
-    );
-    expect(activeSheet.unit.locations[eLocations.Head].rearArmor).to.equal(
-      undefined
-    );
+    expect(activeSheet.unit.locations[eLocations.Head].rearArmor).to.equal(unit.locations[eLocations.Head].rearArmor);
+    expect(activeSheet.unit.locations[eLocations.Head].rearArmor).to.equal(undefined);
   });
   test("Head Structure Starts at 3", () => {
-    expect(activeSheet.unit.locations[eLocations.Head].structure).to.equal(
-      unit.locations[eLocations.Head].structure
-    );
+    expect(activeSheet.unit.locations[eLocations.Head].structure).to.equal(unit.locations[eLocations.Head].structure);
   });
 });
 
 suite("Hitting", () => {
   test("Given a head attack, when we deal the damage, the head armor damage increases", () => {
-    const damagedUnit = Actions.BattleMech.hitArmor(
-      eLocations.Head,
-      3,
-      activeSheet
-    );
+    const damagedUnit = Actions.BattleMech.hitArmor(eLocations.Head, 3, activeSheet);
     expect(damagedUnit.unit.locations[eLocations.Head].armorDamage).to.equal(3);
   });
   test("Given an arm attack, when we deal the damage, the arm damage increases", () => {
-    const damagedUnit = Actions.BattleMech.hitArmor(
-      eLocations.LeftArm,
-      2,
-      activeSheet
-    );
-    expect(damagedUnit.unit.locations[eLocations.LeftArm].armorDamage).to.equal(
-      2
-    );
+    const damagedUnit = Actions.BattleMech.hitArmor(eLocations.LeftArm, 2, activeSheet);
+    expect(damagedUnit.unit.locations[eLocations.LeftArm].armorDamage).to.equal(2);
   });
   test("Given an arm attack, when we deal more than the armor, the structure damage increases also.", () => {
-    const damagedUnit = Actions.BattleMech.hitArmor(
-      eLocations.LeftArm,
-      20,
-      activeSheet
-    );
-    expect(damagedUnit.unit.locations[eLocations.LeftArm].armorDamage).to.equal(
-      10
-    );
-    expect(
-      damagedUnit.unit.locations[eLocations.LeftArm].structureDamage
-    ).to.equal(10);
+    const damagedUnit = Actions.BattleMech.hitArmor(eLocations.LeftArm, 20, activeSheet);
+    expect(damagedUnit.unit.locations[eLocations.LeftArm].armorDamage).to.equal(10);
+    expect(damagedUnit.unit.locations[eLocations.LeftArm].structureDamage).to.equal(10);
   });
   test("Given an attack in the rear, when we deal damage, the rear armor damage increases", () => {
-    const damagedUnit = Actions.BattleMech.hitRearArmor(
-      eLocations.CenterTorso,
-      3,
-      activeSheet
-    );
-    expect(
-      damagedUnit.unit.locations[eLocations.CenterTorso].rearArmorDamage
-    ).to.equal(3);
+    const damagedUnit = Actions.BattleMech.hitRearArmor(eLocations.CenterTorso, 3, activeSheet);
+    expect(damagedUnit.unit.locations[eLocations.CenterTorso].rearArmorDamage).to.equal(3);
   });
   test("Given an attack in the rear, when we deal more than the rear armor, the structure damage increases also", () => {
-    const damagedUnit = Actions.BattleMech.hitRearArmor(
-      eLocations.CenterTorso,
-      20,
-      activeSheet
-    );
-    expect(
-      damagedUnit.unit.locations[eLocations.CenterTorso].rearArmorDamage
-    ).to.equal(5);
-    expect(
-      damagedUnit.unit.locations[eLocations.CenterTorso].structureDamage
-    ).to.equal(15);
+    const damagedUnit = Actions.BattleMech.hitRearArmor(eLocations.CenterTorso, 20, activeSheet);
+    expect(damagedUnit.unit.locations[eLocations.CenterTorso].rearArmorDamage).to.equal(5);
+    expect(damagedUnit.unit.locations[eLocations.CenterTorso].structureDamage).to.equal(15);
   });
   test("Given a hit to structure, when we deal damage, the structure damage increases", () => {
-    const damagedUnit = Actions.BattleMech.hitStructure(
-      eLocations.LeftArm,
-      20,
-      activeSheet
-    );
-    expect(
-      damagedUnit.unit.locations[eLocations.LeftArm].structureDamage
-    ).to.equal(20);
+    const damagedUnit = Actions.BattleMech.hitStructure(eLocations.LeftArm, 20, activeSheet);
+    expect(damagedUnit.unit.locations[eLocations.LeftArm].structureDamage).to.equal(20);
   });
 });
 
 suite("Crits", () => {
   test("Given an undamaged mech, when we deal a crit to the head at spot 1, the first item takes a crit", () => {
-    const damagedUnit = Actions.BattleMech.crit(
-      eLocations.Head,
-      1,
-      activeSheet
-    );
+    const damagedUnit = Actions.BattleMech.crit(eLocations.Head, 1, activeSheet);
 
-    expect(
-      damagedUnit.unit.locations[eLocations.Head].equipment[0].hits[0].location
-    ).to.equal(eLocations.Head);
-    expect(
-      damagedUnit.unit.locations[eLocations.Head].equipment[0].hits[0].slot
-    ).to.equal(1);
+    expect(damagedUnit.unit.locations[eLocations.Head].equipment[0].hits[0].location).to.equal(eLocations.Head);
+    expect(damagedUnit.unit.locations[eLocations.Head].equipment[0].hits[0].slot).to.equal(1);
   });
   test("Given an undamaged mech, when we deal a crit to the center torso gyro, the gyro takes the crit", () => {
-    const damagedUnit = Actions.BattleMech.crit(
-      eLocations.CenterTorso,
-      4,
-      activeSheet
-    );
+    const damagedUnit = Actions.BattleMech.crit(eLocations.CenterTorso, 4, activeSheet);
 
-    expect(
-      damagedUnit.unit.locations[eLocations.CenterTorso].equipment[1].hits[0]
-        .location
-    ).to.equal(eLocations.CenterTorso);
-    expect(
-      damagedUnit.unit.locations[eLocations.CenterTorso].equipment[1].hits[0]
-        .slot
-    ).to.equal(4);
+    expect(damagedUnit.unit.locations[eLocations.CenterTorso].equipment[1].hits[0].location).to.equal(
+      eLocations.CenterTorso,
+    );
+    expect(damagedUnit.unit.locations[eLocations.CenterTorso].equipment[1].hits[0].slot).to.equal(4);
   });
   suite("XL Engine nonsense", () => {
     test("Given an undamaged mech, when we deal a crit to the center torso second XL engine spot, then the XL engine gets the crit", () => {
-      const damagedUnit = Actions.BattleMech.crit(
-        eLocations.CenterTorso,
-        8,
-        activeSheet
-      );
+      const damagedUnit = Actions.BattleMech.crit(eLocations.CenterTorso, 8, activeSheet);
 
-      expect(
-        damagedUnit.unit.locations[eLocations.CenterTorso].equipment[0].hits[0]
-          .location
-      ).to.equal(eLocations.CenterTorso);
-      expect(
-        damagedUnit.unit.locations[eLocations.CenterTorso].equipment[0].hits[0]
-          .slot
-      ).to.equal(8);
+      expect(damagedUnit.unit.locations[eLocations.CenterTorso].equipment[0].hits[0].location).to.equal(
+        eLocations.CenterTorso,
+      );
+      expect(damagedUnit.unit.locations[eLocations.CenterTorso].equipment[0].hits[0].slot).to.equal(8);
     });
     test("Given a damaged mech, when we deal a crit to the right torso XL engine spot, then the XL engine gets the crit", () => {
-      const damagedUnit = Actions.BattleMech.crit(
-        eLocations.RightTorso,
-        1,
-        activeSheet
-      );
+      const damagedUnit = Actions.BattleMech.crit(eLocations.RightTorso, 1, activeSheet);
 
-      expect(
-        damagedUnit.unit.locations[eLocations.CenterTorso].equipment[0].hits[0]
-          .location
-      ).to.equal(eLocations.RightTorso);
-      expect(
-        damagedUnit.unit.locations[eLocations.CenterTorso].equipment[0].hits[0]
-          .slot
-      ).to.equal(1);
+      expect(damagedUnit.unit.locations[eLocations.CenterTorso].equipment[0].hits[0].location).to.equal(
+        eLocations.RightTorso,
+      );
+      expect(damagedUnit.unit.locations[eLocations.CenterTorso].equipment[0].hits[0].slot).to.equal(1);
     });
     test("Given an undamaged mech, when we deal a crit to the left torso beagle, then the beagle gets the crit", () => {
-      const damagedUnit = Actions.BattleMech.crit(
-        eLocations.LeftTorso,
-        4,
-        activeSheet
-      );
+      const damagedUnit = Actions.BattleMech.crit(eLocations.LeftTorso, 4, activeSheet);
 
-      expect(
-        damagedUnit.unit.locations[eLocations.LeftTorso].equipment[0].hits[0]
-          .location
-      ).to.equal(eLocations.LeftTorso);
-      expect(
-        damagedUnit.unit.locations[eLocations.LeftTorso].equipment[0].hits[0]
-          .slot
-      ).to.equal(4);
+      expect(damagedUnit.unit.locations[eLocations.LeftTorso].equipment[0].hits[0].location).to.equal(
+        eLocations.LeftTorso,
+      );
+      expect(damagedUnit.unit.locations[eLocations.LeftTorso].equipment[0].hits[0].slot).to.equal(4);
     });
   });
 });

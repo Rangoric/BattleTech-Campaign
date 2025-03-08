@@ -2,7 +2,7 @@ import { addParticipant } from "../battleGroups/battleGroupSlice";
 import { selectParticipants } from "../battleGroups/selectParticipants";
 import { setMovementMode } from "../database/databaseSlice";
 import { MovementRules } from "../database/rules/movementRules";
-import { eMovementMode } from "../database/units/IUnit";
+import { eMovementSpeed } from "../database/units/IUnit";
 import { makeStore } from "../store";
 
 suite("Battle Group Data Testing", () => {
@@ -32,47 +32,47 @@ suite("Battle Group Movement Testing", () => {
 
   test("Given a member of the battle group, when stationary, then the participants move modifier is 0", () => {
     const battleGroup = selectParticipants(store.getState());
-    expect(battleGroup[0].unit.movement.currentMode).toBe(eMovementMode.stationary);
-    expect(battleGroup[1].unit.movement.currentMode).toBe(eMovementMode.stationary);
+    expect(battleGroup[0].unit.movement.currentSpeed).toBe(eMovementSpeed.stationary);
+    expect(battleGroup[1].unit.movement.currentSpeed).toBe(eMovementSpeed.stationary);
     expect(MovementRules.AttackerMovementGATORModifier(battleGroup[0])).toBe(0);
     expect(MovementRules.AttackerMovementGATORModifier(battleGroup[1])).toBe(0);
   });
   test("Given a member of a battle group, when walking, then the participants move modifier is 1", () => {
-    dispatch(setMovementMode({ unit: "mad5s", mode: eMovementMode.walking }));
-    dispatch(setMovementMode({ unit: "bj2ob", mode: eMovementMode.walking }));
+    dispatch(setMovementMode({ unit: "mad5s", movementMode: eMovementSpeed.walking }));
+    dispatch(setMovementMode({ unit: "bj2ob", movementMode: eMovementSpeed.walking }));
     const battleGroup = selectParticipants(store.getState());
-    expect(battleGroup[0].unit.movement.currentMode).toBe(eMovementMode.walking);
-    expect(battleGroup[1].unit.movement.currentMode).toBe(eMovementMode.walking);
+    expect(battleGroup[0].unit.movement.currentSpeed).toBe(eMovementSpeed.walking);
+    expect(battleGroup[1].unit.movement.currentSpeed).toBe(eMovementSpeed.walking);
     expect(MovementRules.AttackerMovementGATORModifier(battleGroup[0])).toBe(1);
     expect(MovementRules.AttackerMovementGATORModifier(battleGroup[1])).toBe(1);
   });
   test("Given a member of a battle group, when running, then the participants move modifier is 2", () => {
-    dispatch(setMovementMode({ unit: "mad5s", mode: eMovementMode.running }));
-    dispatch(setMovementMode({ unit: "bj2ob", mode: eMovementMode.running }));
+    dispatch(setMovementMode({ unit: "mad5s", movementMode: eMovementSpeed.running }));
+    dispatch(setMovementMode({ unit: "bj2ob", movementMode: eMovementSpeed.running }));
     const battleGroup = selectParticipants(store.getState());
-    expect(battleGroup[0].unit.movement.currentMode).toBe(eMovementMode.running);
-    expect(battleGroup[1].unit.movement.currentMode).toBe(eMovementMode.running);
+    expect(battleGroup[0].unit.movement.currentSpeed).toBe(eMovementSpeed.running);
+    expect(battleGroup[1].unit.movement.currentSpeed).toBe(eMovementSpeed.running);
     expect(MovementRules.AttackerMovementGATORModifier(battleGroup[0])).toBe(2);
     expect(MovementRules.AttackerMovementGATORModifier(battleGroup[1])).toBe(2);
   });
   test("Given a member of a battle group, when jumping, then the participants move modifier is 3", () => {
-    dispatch(setMovementMode({ unit: "bj2ob", mode: eMovementMode.jumping }));
+    dispatch(setMovementMode({ unit: "bj2ob", movementMode: eMovementSpeed.jumping }));
     const battleGroup = selectParticipants(store.getState());
-    expect(battleGroup[1].unit.movement.currentMode).toBe(eMovementMode.jumping);
+    expect(battleGroup[1].unit.movement.currentSpeed).toBe(eMovementSpeed.jumping);
     expect(MovementRules.AttackerMovementGATORModifier(battleGroup[1])).toBe(3);
   });
   test("Given a member of a battle group without a jump speed, when jumping, then the participants move modifier is undefined", () => {
-    dispatch(setMovementMode({ unit: "mad5s", mode: eMovementMode.jumping }));
+    dispatch(setMovementMode({ unit: "mad5s", movementMode: eMovementSpeed.jumping }));
     const battleGroup = selectParticipants(store.getState());
-    expect(battleGroup[0].unit.movement.currentMode).toBe(eMovementMode.jumping);
+    expect(battleGroup[0].unit.movement.currentSpeed).toBe(eMovementSpeed.jumping);
     expect(MovementRules.AttackerMovementGATORModifier(battleGroup[0])).toBe(undefined);
   });
   test("Given a member of a battle group, when prone, then the participants move modifier is 2", () => {
-    dispatch(setMovementMode({ unit: "mad5s", mode: eMovementMode.prone }));
-    dispatch(setMovementMode({ unit: "bj2ob", mode: eMovementMode.prone }));
+    dispatch(setMovementMode({ unit: "mad5s", movementMode: eMovementSpeed.prone }));
+    dispatch(setMovementMode({ unit: "bj2ob", movementMode: eMovementSpeed.prone }));
     const battleGroup = selectParticipants(store.getState());
-    expect(battleGroup[0].unit.movement.currentMode).toBe(eMovementMode.prone);
-    expect(battleGroup[1].unit.movement.currentMode).toBe(eMovementMode.prone);
+    expect(battleGroup[0].unit.movement.currentSpeed).toBe(eMovementSpeed.prone);
+    expect(battleGroup[1].unit.movement.currentSpeed).toBe(eMovementSpeed.prone);
     expect(MovementRules.AttackerMovementGATORModifier(battleGroup[0])).toBe(2);
     expect(MovementRules.AttackerMovementGATORModifier(battleGroup[1])).toBe(2);
   });

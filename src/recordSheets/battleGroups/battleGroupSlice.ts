@@ -9,14 +9,23 @@ export interface IParticipant {
 interface IInitialState {
   participants: IParticipant[];
 }
-const initialState: IInitialState = {
-  participants: [],
+const getInitialState = () => {
+  if (typeof window !== "undefined") {
+    const database = localStorage.getItem("battleGroup");
+    if (database) {
+      return JSON.parse(database) as IInitialState;
+    }
+  }
+  return { participants: [] } as IInitialState;
 };
 
 export const battleGroupSlice = createSlice({
   name: "battleGroup",
-  initialState,
+  initialState: getInitialState(),
   reducers: {
+    resetBattleGroup: (state) => {
+      state.participants = [];
+    },
     addParticipant: (state, action: PayloadAction<IParticipant>) => {
       state.participants.push(action.payload);
     },
@@ -28,4 +37,4 @@ export const battleGroupSlice = createSlice({
   },
 });
 
-export const { addParticipant, removeParticipant } = battleGroupSlice.actions;
+export const { addParticipant, removeParticipant, resetBattleGroup } = battleGroupSlice.actions;

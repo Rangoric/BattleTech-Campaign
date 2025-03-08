@@ -11,6 +11,7 @@ export const selectParticipants = createSelector(
   (participants, characters, units): IBattleGroupParticipant[] => {
     return participants.map((participant) => {
       return {
+        keys: participant,
         character: characters[participant.character],
         unit: units[participant.unit],
       };

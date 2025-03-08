@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { AllUnitDesignations, RecordSheetDatabase } from ".";
-import { eMovementMode } from "./units/IUnit";
+import { eMovementSpeed } from "./units/IUnit";
 
 const getInitialState = () => {
   if (typeof window !== "undefined") {
@@ -21,8 +21,8 @@ export const databaseSlice = createSlice({
         ...RecordSheetDatabase,
       };
     },
-    setMovementMode: (state, action: PayloadAction<{ unit: AllUnitDesignations; mode: eMovementMode }>) => {
-      state.units[action.payload.unit].movement.currentMode = action.payload.mode;
+    setMovementMode: (state, action: PayloadAction<{ unit: AllUnitDesignations; movementMode: eMovementSpeed }>) => {
+      state.units[action.payload.unit].movement.currentSpeed = action.payload.movementMode;
     },
   },
 });

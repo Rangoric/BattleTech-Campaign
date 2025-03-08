@@ -1,6 +1,6 @@
-import { eUnitType } from "./IRecordSheets";
-import { AllItemNames, ItemDatabase } from "./items/database";
-import { eEquipmentType } from "./items/itemBase";
+import { eUnitType } from "../../../recordSheetsV1/data/IRecordSheets";
+import { AllItemNames, ItemDatabase } from "./database";
+import { eEquipmentType } from "./itemBase";
 import {
   IBaseSheet,
   IBattleMechLocations,
@@ -8,8 +8,8 @@ import {
   IBattleMechSheet,
   ICharacterSheet,
   IRecordBattleMechSheet,
-} from "./IRecordSheets";
-import { eLocations } from "./eLocations";
+} from "../../../recordSheetsV1/data/IRecordSheets";
+import { eLocations } from "../../../recordSheetsV1/data/eLocations";
 
 export interface ICharacterActiveSheet extends ICharacterSheet {
   damage: number;
@@ -93,13 +93,8 @@ export interface IBattleMechActiveSheet {
   locations: IBattleMechLocations<IBattleMechLocationActiveSheet>;
 }
 export type IUnitActiveSheet = IBattleMechActiveSheet;
-export type IActiveBattleMechSheet = IBaseSheet<
-  ICharacterActiveSheet,
-  IBattleMechActiveSheet
->;
-export const setupCharacter = (
-  character: ICharacterSheet
-): ICharacterActiveSheet => {
+export type IActiveBattleMechSheet = IBaseSheet<ICharacterActiveSheet, IBattleMechActiveSheet>;
+export const setupCharacter = (character: ICharacterSheet): ICharacterActiveSheet => {
   return {
     ...character,
     damage: 0,
@@ -115,9 +110,7 @@ const setupEquipment = (itemName: AllItemNames): IEquipmentActiveSheet => {
     hits: [] as IHits[],
   };
 };
-export const setupLocation = (
-  location: IBattleMechLocationSheet
-): IBattleMechLocationActiveSheet => {
+export const setupLocation = (location: IBattleMechLocationSheet): IBattleMechLocationActiveSheet => {
   return {
     ...location,
     armorDamage: 0,
@@ -126,9 +119,7 @@ export const setupLocation = (
     equipment: location.equipment.map(setupEquipment),
   };
 };
-export const setupBattleMech = (
-  battleMech: IBattleMechSheet
-): IBattleMechActiveSheet => {
+export const setupBattleMech = (battleMech: IBattleMechSheet): IBattleMechActiveSheet => {
   return {
     ...battleMech,
     movement: {
@@ -139,40 +130,22 @@ export const setupBattleMech = (
     },
     heat: {
       currentHeat: 0,
-      extraHeatSinks: battleMech.heat.extraHeatSinks
-        .map(setupEquipment)
-        .map((t) => t as IHeatSinkActiveSheet),
+      extraHeatSinks: battleMech.heat.extraHeatSinks.map(setupEquipment).map((t) => t as IHeatSinkActiveSheet),
     },
     locations: {
       [eLocations.Head]: setupLocation(battleMech.locations[eLocations.Head]),
-      [eLocations.CenterTorso]: setupLocation(
-        battleMech.locations[eLocations.CenterTorso]
-      ),
-      [eLocations.LeftTorso]: setupLocation(
-        battleMech.locations[eLocations.LeftTorso]
-      ),
-      [eLocations.RightTorso]: setupLocation(
-        battleMech.locations[eLocations.RightTorso]
-      ),
-      [eLocations.LeftArm]: setupLocation(
-        battleMech.locations[eLocations.LeftArm]
-      ),
-      [eLocations.RightArm]: setupLocation(
-        battleMech.locations[eLocations.RightArm]
-      ),
-      [eLocations.LeftLeg]: setupLocation(
-        battleMech.locations[eLocations.LeftLeg]
-      ),
-      [eLocations.RightLeg]: setupLocation(
-        battleMech.locations[eLocations.RightLeg]
-      ),
+      [eLocations.CenterTorso]: setupLocation(battleMech.locations[eLocations.CenterTorso]),
+      [eLocations.LeftTorso]: setupLocation(battleMech.locations[eLocations.LeftTorso]),
+      [eLocations.RightTorso]: setupLocation(battleMech.locations[eLocations.RightTorso]),
+      [eLocations.LeftArm]: setupLocation(battleMech.locations[eLocations.LeftArm]),
+      [eLocations.RightArm]: setupLocation(battleMech.locations[eLocations.RightArm]),
+      [eLocations.LeftLeg]: setupLocation(battleMech.locations[eLocations.LeftLeg]),
+      [eLocations.RightLeg]: setupLocation(battleMech.locations[eLocations.RightLeg]),
     },
   };
 };
 export const setupRecordSheet = {
-  [eUnitType.BattleMech]: (
-    recordSheet: IRecordBattleMechSheet
-  ): IActiveBattleMechSheet => {
+  [eUnitType.BattleMech]: (recordSheet: IRecordBattleMechSheet): IActiveBattleMechSheet => {
     return {
       name: recordSheet.name,
       unit: setupBattleMech(recordSheet.unit),
