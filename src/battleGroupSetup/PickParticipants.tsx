@@ -21,6 +21,7 @@ export const PickParticipants: React.FC = () => {
       <Box display={"flex"} flexDirection={"row"} flexWrap={"wrap"} gap={1}>
         {participants.map((t) => (
           <ParticipantQuickCard
+            key={t.keys.character}
             participant={t}
             onRemove={() => {
               dispatch(removeParticipant(t.keys));

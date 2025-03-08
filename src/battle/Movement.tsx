@@ -3,8 +3,7 @@ import { useAppSelector } from "@/recordSheets/store";
 import { Box } from "@mui/material";
 import { ParticipantMovement } from "./ParticipantMovement";
 
-interface IMovementProps {}
-export const Movement: React.FC<IMovementProps> = () => {
+export const Movement: React.FC = () => {
   const participants = useAppSelector(selectParticipants);
   return (
     <Box>

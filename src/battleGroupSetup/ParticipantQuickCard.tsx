@@ -1,6 +1,5 @@
-import { IParticipant } from "@/recordSheets/battleGroups/battleGroupSlice";
 import { IBattleGroupParticipant } from "@/recordSheets/battleGroups/IBattleGroupParticipant";
-import { Box, Button, Card, Typography } from "@mui/material";
+import { Button, Card, Typography } from "@mui/material";
 
 export const ParticipantQuickCard: React.FC<{
   participant: IBattleGroupParticipant;
