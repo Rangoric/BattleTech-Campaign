@@ -3,11 +3,13 @@ import { Action } from "redux";
 import { createWrapper } from "next-redux-wrapper";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 import { databaseSlice } from "./database/databaseSlice";
+import { battleGroupSlice } from "./battleGroups/battleGroupSlice";
 
 export const makeStore = () =>
   configureStore({
     reducer: {
       database: databaseSlice.reducer,
+      battleGroup: battleGroupSlice.reducer,
     },
     devTools: true,
   });

@@ -1,5 +1,6 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { RecordSheetDatabase } from ".";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { AllUnitDesignations, RecordSheetDatabase } from ".";
+import { eMovementMode } from "./units/IUnit";
 
 const getInitialState = () => {
   if (typeof window !== "undefined") {
@@ -20,7 +21,10 @@ export const databaseSlice = createSlice({
         ...RecordSheetDatabase,
       };
     },
+    setMovementMode: (state, action: PayloadAction<{ unit: AllUnitDesignations; mode: eMovementMode }>) => {
+      state.units[action.payload.unit].movement.currentMode = action.payload.mode;
+    },
   },
 });
 
-export const { reset } = databaseSlice.actions;
+export const { reset, setMovementMode } = databaseSlice.actions;
