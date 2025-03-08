@@ -6,9 +6,6 @@ export const NavMenu = () => (
     <MenuItem component={Link} href="/shopping-list">
       <Typography>Shopping List</Typography>
     </MenuItem>
-    <MenuItem component={Link} href="/family-history">
-      <Typography>Or&apos;lient Family History</Typography>
-    </MenuItem>
     <MenuItem component={Link} href="/training">
       <Typography>Training Chart</Typography>
     </MenuItem>
