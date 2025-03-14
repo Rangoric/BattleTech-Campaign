@@ -1,5 +1,5 @@
 import { addParticipant } from "../battleGroups/battleGroupSlice";
-import { IBattleGroupParticipant } from "../battleGroups/IBattleGroupParticipant";
+import { selectParticipants } from "../battleGroups/selectParticipants";
 import { ICharacter } from "../database/characters/ICharacter";
 import { setMovementMode } from "../database/databaseSlice";
 import { ItemDatabase } from "../database/equipment/database";
