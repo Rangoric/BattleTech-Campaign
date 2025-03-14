@@ -1,9 +1,8 @@
 import { useState, useMemo } from "react";
 import { IBattleGroupParticipant } from "@/recordSheets/battleGroups/IBattleGroupParticipant";
 import { Box, Slider, Typography } from "@mui/material";
-import { eEquipmentType, IWeapon } from "@/recordSheets/database/equipment/itemBase";
+import { eEquipmentType } from "@/recordSheets/database/equipment/itemBase";
 import { eLocations } from "@/recordSheetsV1/data/eLocations";
-import { GATORRules } from "@/recordSheets/database/rules/GATOR";
 import { WeaponDisplay } from "./WeaponDisplay";
 
 interface IParticipantWeapons {
@@ -60,23 +59,5 @@ export const ParticipantWeapons: React.FC<IParticipantWeapons> = ({ participant 
         ))}
       </Box>
     </Box>
-  );
-};
-
-const RangeToShow = (range: number, weapon: IWeapon, participant: IBattleGroupParticipant) => {
-  if (range === undefined) {
-    return "Out of Range";
-  }
-  const extremeApplies = (participant.character.gunnery ?? 100) <= 2;
-  return (
-    <>
-      {[weapon.shortRange, weapon.mediumRange, weapon.longRange].map((r) => (
-        <Box flexBasis={"42px"} display={"flex"} justifyContent={"right"} key={r}>
-          {r}&ldquo;/{GATORRules.All(participant, r, weapon)}+
-        </Box>
-      ))}
-
-      {extremeApplies && <Box flexBasis={"46px"}>{weapon.extremeRange}</Box>}
-    </>
   );
 };

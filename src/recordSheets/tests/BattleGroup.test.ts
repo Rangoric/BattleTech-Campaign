@@ -135,3 +135,45 @@ suite("GATOR Rules: R: Range to Target", () => {
     expect(GATORRules.R(weapon.extremeRange + 1, weapon)[1]).toBeUndefined();
   });
 });
+
+suite("GATOR Rules: All", () => {
+  const store = makeStore();
+
+  const dispatch = store.dispatch;
+  dispatch(addParticipant({ character: "rangoric", unit: "mad5s" }));
+  dispatch(addParticipant({ character: "inanna", unit: "bj2ob" }));
+
+  test("Given a participant with stationary movement and short range, when calculating GATOR, then the total modifier is correct", () => {
+    const battleGroup = selectParticipants(store.getState());
+    const weapon = ItemDatabase["Medium Laser"];
+    expect(GATORRules.All(battleGroup[0], weapon.shortRange, weapon)).toBe(3); // gunnery 3 + attacker's movement 0 + range 0
+  });
+
+  test("Given a participant with walking movement and medium range, when calculating GATOR, then the total modifier is correct", () => {
+    dispatch(setMovementMode({ unit: "mad5s", movementMode: eMovementSpeed.walking }));
+    const battleGroup = selectParticipants(store.getState());
+    const weapon = ItemDatabase["Medium Laser"];
+    expect(GATORRules.All(battleGroup[0], weapon.mediumRange, weapon)).toBe(6); // gunnery 3 + attacker's movement 1 + range 2
+  });
+
+  test("Given a participant with running movement and long range, when calculating GATOR, then the total modifier is correct", () => {
+    dispatch(setMovementMode({ unit: "mad5s", movementMode: eMovementSpeed.running }));
+    const battleGroup = selectParticipants(store.getState());
+    const weapon = ItemDatabase["Medium Laser"];
+    expect(GATORRules.All(battleGroup[0], weapon.longRange, weapon)).toBe(9); // gunnery 3 + attacker's movement 2 + range 4
+  });
+
+  test("Given a participant with jumping movement and extreme range, when calculating GATOR, then the total modifier is correct", () => {
+    dispatch(setMovementMode({ unit: "mad5s", movementMode: eMovementSpeed.jumping }));
+    const battleGroup = selectParticipants(store.getState());
+    const weapon = ItemDatabase["Medium Laser"];
+    expect(GATORRules.All(battleGroup[0], weapon.extremeRange, weapon)).toBe(12); // gunnery 3 + attacker's movement 3 + range 6
+  });
+
+  test("Given a participant with prone movement and out of range, when calculating GATOR, then the total modifier is correct", () => {
+    dispatch(setMovementMode({ unit: "mad5s", movementMode: eMovementSpeed.prone }));
+    const battleGroup = selectParticipants(store.getState());
+    const weapon = ItemDatabase["Medium Laser"];
+    expect(GATORRules.All(battleGroup[0], weapon.extremeRange + 1, weapon)).toBe(5); // gunnery 3 + attacker's movement 2 + range undefined (0)
+  });
+});
