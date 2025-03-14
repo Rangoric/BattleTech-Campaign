@@ -23,8 +23,14 @@ const getRangeDisplay = (range: number, weapon: IWeaponActiveSheet, participant:
 
   return (
     <>
-      {[weapon.shortRange, weapon.mediumRange, weapon.longRange].map((r) => (
-        <Box flexBasis={"42px"} display={"flex"} justifyContent={"right"} key={r}>
+      {[weapon.shortRange, weapon.mediumRange, weapon.longRange].map((r, i, arr) => (
+        <Box
+          flexBasis={"42px"}
+          display={"flex"}
+          justifyContent={"right"}
+          key={r}
+          color={range > (arr[i - 1] || 0) && range <= r ? "red" : "inherit"}
+        >
           {r}&ldquo;/{GATORRules.All(participant, r, weapon)}+
         </Box>
       ))}

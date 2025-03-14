@@ -1,8 +1,8 @@
 import { useState, useMemo } from "react";
 import { IBattleGroupParticipant } from "@/recordSheets/battleGroups/IBattleGroupParticipant";
-import { Box, Card, CardContent, Slider, Typography } from "@mui/material";
+import { Box, Slider, Typography } from "@mui/material";
 import { eEquipmentType, IWeapon } from "@/recordSheets/database/equipment/itemBase";
-import { eLocations, ShortLocationNames } from "@/recordSheetsV1/data/eLocations";
+import { eLocations } from "@/recordSheetsV1/data/eLocations";
 import { GATORRules } from "@/recordSheets/database/rules/GATOR";
 import { WeaponDisplay } from "./WeaponDisplay";
 
