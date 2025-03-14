@@ -5,6 +5,6 @@ interface IWeaponDisplayProps {
   weapon: IWeaponActiveSheet;
   accuracyGA: number;
 }
-export const WeaponDisplay: React.FC<IWeaponDisplayProps> = ({ range, weapon, accuracyGA }) => {
+export const WeaponDisplay: React.FC<IWeaponDisplayProps> = ({ range }) => {
   return <div>{range}</div>;
 };

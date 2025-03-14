@@ -40,4 +40,10 @@ export const GATORRules = {
       return ["Out of Range", undefined]; // Out of range
     }
   },
+  All: (participant: IBattleGroupParticipant, range: number, weapon: IWeapon): number => {
+    const g = GATORRules.G(participant);
+    const a = GATORRules.A(participant);
+    const r = GATORRules.R(range, weapon);
+    return g + a + (r[1] ?? 0);
+  },
 };

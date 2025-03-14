@@ -1,6 +1,6 @@
 import { useState, useMemo } from "react";
 import { IBattleGroupParticipant } from "@/recordSheets/battleGroups/IBattleGroupParticipant";
-import { Box, Slider, Typography } from "@mui/material";
+import { Box, Card, CardContent, Slider, Typography } from "@mui/material";
 import { eEquipmentType, IWeapon } from "@/recordSheets/database/equipment/itemBase";
 import { eLocations, ShortLocationNames } from "@/recordSheetsV1/data/eLocations";
 import { GATORRules } from "@/recordSheets/database/rules/GATOR";
@@ -37,7 +37,7 @@ export const ParticipantWeapons: React.FC<IParticipantWeapons> = ({ participant 
 
   return (
     <Box>
-      <Box display={"flex"} flexDirection={"row"} alignItems={"center"} gap={2}>
+      <Box display={"flex"} flexDirection={"row"} alignItems={"center"} gap={2} paddingRight={1}>
         <Typography variant={"h6"}>{participant.character.callSign}</Typography>
         <Slider
           aria-label={`${participant.character.callSign}'s Range to Target`}
@@ -48,14 +48,30 @@ export const ParticipantWeapons: React.FC<IParticipantWeapons> = ({ participant 
           onChange={(_event, value) => setRange(value as number)}
         />
       </Box>
-      {weaponsInLocation.map((weapon) => (
-        <Box display={"flex"} flexDirection={"row"} gap={1} justifyContent={"space-between"} key={weapon.weapon.name}>
-          <Typography>
-            {ShortLocationNames[weapon.location]} - {weapon.weapon.name}
-          </Typography>
-          <Typography>{RangeToShow(range, weapon.weapon, participant)}</Typography>
-        </Box>
-      ))}
+      <Box display={"flex"} flexWrap={"wrap"} gap={1}>
+        {weaponsInLocation.map((weapon, index) => (
+          <Card sx={{ flexBasis: "calc(50% - 8px)" }} key={weapon.location + weapon.weapon.name + index}>
+            <CardContent>
+              <Typography
+                display={"flex"}
+                flexDirection={"column"}
+                gap={0}
+                key={weapon.location + weapon.weapon.name + index}
+                variant={"caption"}
+              >
+                <Box flexGrow={1}>
+                  {ShortLocationNames[weapon.location]}: {weapon.weapon.name}
+                  <br />
+                  D: {weapon.weapon.damage} | H: {weapon.weapon.heat}
+                </Box>
+                <Box display={"flex"} flexDirection={"row"} justifyContent={"right"}>
+                  {RangeToShow(range, weapon.weapon, participant)}
+                </Box>
+              </Typography>
+            </CardContent>
+          </Card>
+        ))}
+      </Box>
     </Box>
   );
 };
@@ -64,10 +80,16 @@ const RangeToShow = (range: number, weapon: IWeapon, participant: IBattleGroupPa
   if (range === undefined) {
     return "Out of Range";
   }
-  const [rangeString, modifier] = GATORRules.R(range, weapon);
-  if (modifier === undefined) {
-    return rangeString;
-  }
-  const GAR = GATORRules.G(participant) + GATORRules.A(participant) + modifier;
-  return `${rangeString} GAR:${GAR}`;
+  const extremeApplies = (participant.character.gunnery ?? 100) <= 2;
+  return (
+    <>
+      {[weapon.shortRange, weapon.mediumRange, weapon.longRange].map((r) => (
+        <Box flexBasis={"42px"} display={"flex"} justifyContent={"right"} key={r}>
+          {r}&ldquo;/{GATORRules.All(participant, r, weapon)}+
+        </Box>
+      ))}
+
+      {extremeApplies && <Box flexBasis={"46px"}>{weapon.extremeRange}</Box>}
+    </>
+  );
 };
