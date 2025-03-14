@@ -3,7 +3,7 @@ import { selectParticipants } from "../battleGroups/selectParticipants";
 import { setMovementMode } from "../database/databaseSlice";
 import { IWeaponActiveSheet } from "../database/equipment/ActiveSheets";
 import { ItemDatabase } from "../database/equipment/database";
-import { GATORRules } from "../database/rules/gatorRules";
+import { GATORRules } from "../database/rules/GATOR";
 import { eMovementSpeed } from "../database/units/IUnit";
 import { makeStore } from "../store";
 

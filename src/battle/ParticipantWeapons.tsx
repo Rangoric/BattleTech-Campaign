@@ -40,7 +40,11 @@ export const ParticipantWeapons: React.FC<IParticipantWeapons> = ({ participant 
           onChange={(_event, value) => setRange(value as number)}
         />
       </Box>
-      <Typography variant={"body1"}>Max Range: {maxExtremeRange}</Typography>
+      {weapons.map((weapon) => (
+        <Box display={"flex"} flexDirection={"row"} gap={1}>
+          {weapon.name}
+        </Box>
+      ))}
     </Box>
   );
 };

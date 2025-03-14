@@ -1,14 +1,12 @@
+import { IBattleGroupParticipant } from "@/recordSheets/battleGroups/IBattleGroupParticipant";
+import { eMovementSpeed } from "../units/IUnit";
+import { IWeapon } from "../equipment/itemBase";
+
 // GATOR:
 // - G -> Gunnery of Firing Character
 // - A -> Attacker's Movement Modifier
 // - T -> Target's Movement Modifier
 // - O -> Obstructions
-
-import { IBattleGroupParticipant } from "@/recordSheets/battleGroups/IBattleGroupParticipant";
-import { eMovementSpeed } from "../units/IUnit";
-import { IWeaponActiveSheet } from "../equipment/ActiveSheets";
-import { IWeapon } from "../equipment/itemBase";
-
 // - R -> Range to Target
 export const GATORRules = {
   G: (participant: IBattleGroupParticipant) => {
