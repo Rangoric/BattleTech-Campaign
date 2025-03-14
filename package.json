@@ -42,7 +42,6 @@
     "react-leaflet": "^5.0.0",
     "react-redux": "^9.2.0",
     "remark-gfm": "^4.0.1",
-    "vite": "^6.2.1",
     "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^3.0.8"
   },

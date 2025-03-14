@@ -4,6 +4,7 @@ import { Box, Card, CardContent, Slider, Typography } from "@mui/material";
 import { eEquipmentType, IWeapon } from "@/recordSheets/database/equipment/itemBase";
 import { eLocations, ShortLocationNames } from "@/recordSheetsV1/data/eLocations";
 import { GATORRules } from "@/recordSheets/database/rules/GATOR";
+import { WeaponDisplay } from "./WeaponDisplay";
 
 interface IParticipantWeapons {
   participant: IBattleGroupParticipant;
@@ -50,26 +51,12 @@ export const ParticipantWeapons: React.FC<IParticipantWeapons> = ({ participant 
       </Box>
       <Box display={"flex"} flexWrap={"wrap"} gap={1}>
         {weaponsInLocation.map((weapon, index) => (
-          <Card sx={{ flexBasis: "calc(50% - 8px)" }} key={weapon.location + weapon.weapon.name + index}>
-            <CardContent>
-              <Typography
-                display={"flex"}
-                flexDirection={"column"}
-                gap={0}
-                key={weapon.location + weapon.weapon.name + index}
-                variant={"caption"}
-              >
-                <Box flexGrow={1}>
-                  {ShortLocationNames[weapon.location]}: {weapon.weapon.name}
-                  <br />
-                  D: {weapon.weapon.damage} | H: {weapon.weapon.heat}
-                </Box>
-                <Box display={"flex"} flexDirection={"row"} justifyContent={"right"}>
-                  {RangeToShow(range, weapon.weapon, participant)}
-                </Box>
-              </Typography>
-            </CardContent>
-          </Card>
+          <WeaponDisplay
+            key={weapon.location + weapon.weapon.name + index}
+            range={range}
+            weaponWithLocation={weapon}
+            participant={participant}
+          />
         ))}
       </Box>
     </Box>
