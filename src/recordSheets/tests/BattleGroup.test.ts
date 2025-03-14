@@ -107,18 +107,22 @@ suite("GATOR Rules, G: Gunnery", () => {
 suite("GATOR Rules: R: Range to Target", () => {
   test("Given short range on a weapon, when we get the range modifier, then it is 0", () => {
     const weapon = ItemDatabase["Medium Laser"];
-    expect(GATORRules.R(weapon.shortRange, weapon)).toBe(0);
+    expect(GATORRules.R(weapon.shortRange, weapon)[0]).toBe("Short");
+    expect(GATORRules.R(weapon.shortRange, weapon)[1]).toBe(0);
   });
   test("Given medium range on a weapon, when we get the range modifier, then it is 2", () => {
     const weapon = ItemDatabase["Medium Laser"];
-    expect(GATORRules.R(weapon.mediumRange, weapon)).toBe(2);
+    expect(GATORRules.R(weapon.mediumRange, weapon)[0]).toBe("Medium");
+    expect(GATORRules.R(weapon.mediumRange, weapon)[1]).toBe(2);
   });
   test("Given long range on a weapon, when we get the range modifier, then it is 4", () => {
     const weapon = ItemDatabase["Medium Laser"];
-    expect(GATORRules.R(weapon.longRange, weapon)).toBe(4);
+    expect(GATORRules.R(weapon.longRange, weapon)[0]).toBe("Long");
+    expect(GATORRules.R(weapon.longRange, weapon)[1]).toBe(4);
   });
   test("Given extreme range on a weapon, when we get the range modifier, then it is 6", () => {
     const weapon = ItemDatabase["Medium Laser"];
-    expect(GATORRules.R(weapon.extremeRange, weapon)).toBe(6);
+    expect(GATORRules.R(weapon.extremeRange, weapon)[0]).toBe("Extreme");
+    expect(GATORRules.R(weapon.extremeRange, weapon)[1]).toBe(6);
   });
 });

@@ -11,7 +11,7 @@ import { IWeapon } from "../equipment/itemBase";
 export const GATORRules = {
   G: (participant: IBattleGroupParticipant) => {
     // When they don't have gunnery, infantry skill covers it
-    return participant.character.gunnery ?? participant.character.infantrySkill;
+    return participant.character.gunnery ?? participant.character.infantrySkill ?? 5;
   },
   A: (participant: IBattleGroupParticipant) => {
     switch (participant.unit.movement.currentSpeed) {
@@ -22,25 +22,22 @@ export const GATORRules = {
       case eMovementSpeed.running:
         return 2;
       case eMovementSpeed.jumping:
-        if (participant.unit.movement.jumpSpeed === undefined) {
-          return undefined;
-        }
         return 3;
       case eMovementSpeed.prone:
         return 2;
     }
   },
-  R: (range: number, weapon: IWeapon) => {
+  R: (range: number, weapon: IWeapon): [string, number | undefined] => {
     if (range <= weapon.shortRange) {
-      return 0;
+      return ["Short", 0];
     } else if (range <= weapon.mediumRange) {
-      return 2;
+      return ["Medium", 2];
     } else if (range <= weapon.longRange) {
-      return 4;
+      return ["Long", 4];
     } else if (range <= weapon.extremeRange) {
-      return 6;
+      return ["Extreme", 6];
     } else {
-      return undefined; // Out of range
+      return ["Out of Range", undefined]; // Out of range
     }
   },
 };
