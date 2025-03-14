@@ -15,7 +15,8 @@ interface IWeaponDisplayProps {
 
 const getRangeDisplay = (range: number, weapon: IWeaponActiveSheet, participant: IBattleGroupParticipant) => {
   const accuracyG = GATORRules.G(participant.character);
-  const extremeApplies = accuracyG <= 2;
+  const hasExtremeRange = accuracyG <= 2;
+  const hasMinimumRange = weapon.minRange !== undefined;
 
   if (range === undefined) {
     return "Out of Range";
@@ -23,18 +24,28 @@ const getRangeDisplay = (range: number, weapon: IWeaponActiveSheet, participant:
 
   return (
     <>
+      {hasMinimumRange && (
+        <Box flexBasis={"42px"}>
+          {weapon.minRange}&ldquo;/{GATORRules.All(participant, weapon.minRange, weapon)}+
+        </Box>
+      )}
       {[weapon.shortRange, weapon.mediumRange, weapon.longRange].map((r, i, arr) => (
-        <Box
+        <Typography
           flexBasis={"42px"}
           display={"flex"}
           justifyContent={"right"}
           key={r}
-          color={range > (arr[i - 1] || 0) && range <= r ? "red" : "inherit"}
+          color={(range > (arr[i - 1] || 0) && range <= r) || (range === 0 && i === 0) ? "inherit" : "red"}
+          variant={"caption"}
         >
           {r}&ldquo;/{GATORRules.All(participant, r, weapon)}+
-        </Box>
+        </Typography>
       ))}
-      {extremeApplies && <Box flexBasis={"46px"}>{weapon.extremeRange}</Box>}
+      {hasExtremeRange && (
+        <Box flexBasis={"42px"}>
+          {weapon.extremeRange}&ldquo;/{GATORRules.All(participant, weapon.extremeRange, weapon)}+
+        </Box>
+      )}
     </>
   );
 };

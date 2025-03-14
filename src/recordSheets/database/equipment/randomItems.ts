@@ -62,9 +62,17 @@ const CASE: IMiscellaneous = {
   slots: 1,
 };
 
+const endoSteel: IMiscellaneous = {
+  type: eEquipmentType.Miscellaneous,
+  name: "Endo Steel",
+  description: "This item is an Endo Steel structure.",
+  slots: 14,
+};
+
 export const randomItems = {
   "Beagle Active Probe": beagleActiveProbe,
   "C3 Slave": c3Slave,
+  "Endo Steel": endoSteel,
   Shoulder: shoulder,
   "Upper Arm Actuator": upperArmActuator,
   "Lower Arm Actuator": lowerArmActuator,
