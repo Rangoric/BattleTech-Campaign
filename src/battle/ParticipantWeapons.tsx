@@ -4,6 +4,7 @@ import { Box, Slider, Typography } from "@mui/material";
 import { eEquipmentType } from "@/recordSheets/database/equipment/itemBase";
 import { eLocations } from "@/recordSheetsV1/data/eLocations";
 import { WeaponDisplay } from "./WeaponDisplay";
+import { GATORRules } from "@/recordSheets/database/rules/GATOR";
 
 interface IParticipantWeapons {
   participant: IBattleGroupParticipant;
@@ -35,6 +36,20 @@ export const ParticipantWeapons: React.FC<IParticipantWeapons> = ({ participant 
     }, 0);
   }, [weapons, participant.character.gunnery]);
 
+  const marks = useMemo(() => {
+    const ranges = new Set<number>();
+    weapons.forEach((weapon) => {
+      weapon.minRange !== undefined && ranges.add(weapon.minRange);
+      ranges.add(weapon.shortRange);
+      ranges.add(weapon.mediumRange);
+      ranges.add(weapon.longRange);
+      GATORRules.G(participant.character) <= 2 && ranges.add(weapon.extremeRange);
+    });
+
+    const sortedRanges = [...ranges].toSorted();
+    return sortedRanges.map((r) => ({ value: r, label: <Typography variant={"caption"}>{r}"</Typography> }));
+  }, [weapons]);
+
   return (
     <Box>
       <Box display={"flex"} flexDirection={"row"} alignItems={"center"} gap={2} paddingRight={1}>
@@ -46,6 +61,7 @@ export const ParticipantWeapons: React.FC<IParticipantWeapons> = ({ participant 
           max={maxExtremeRange}
           valueLabelDisplay={"on"}
           onChange={(_event, value) => setRange(value as number)}
+          marks={marks}
         />
       </Box>
       <Box display={"flex"} flexWrap={"wrap"} gap={1}>

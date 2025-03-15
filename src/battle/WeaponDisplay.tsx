@@ -22,22 +22,23 @@ const getRangeDisplay = (range: number, weapon: IWeaponActiveSheet, participant:
     return "Out of Range";
   }
 
+  const MinRangeDisplay = () => {
+    if (!hasMinimumRange) return null;
+    return <>{weapon.minRange}"-</>;
+  };
+
   return (
     <>
-      {hasMinimumRange && (
-        <Box flexBasis={"42px"}>
-          {weapon.minRange}&ldquo;/{GATORRules.All(participant, weapon.minRange, weapon)}+
-        </Box>
-      )}
       {[weapon.shortRange, weapon.mediumRange, weapon.longRange].map((r, i, arr) => (
         <Typography
-          flexBasis={"42px"}
+          flexBasis={"max-content"}
           display={"flex"}
           justifyContent={"right"}
           key={r}
           color={(range > (arr[i - 1] || 0) && range <= r) || (range === 0 && i === 0) ? "inherit" : "red"}
           variant={"caption"}
         >
+          {i === 0 && <MinRangeDisplay />}
           {r}&ldquo;/{GATORRules.All(participant, r, weapon)}+
         </Typography>
       ))}
@@ -62,7 +63,7 @@ export const WeaponDisplay: React.FC<IWeaponDisplayProps> = ({ range, weaponWith
             <br />
             D: {weapon.damage} | H: {weapon.heat}
           </Box>
-          <Box display={"flex"} flexDirection={"row"} justifyContent={"right"}>
+          <Box display={"flex"} flexDirection={"row"} justifyContent={"right"} gap={1}>
             {getRangeDisplay(range, weapon, participant)}
           </Box>
         </Typography>

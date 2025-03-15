@@ -27,7 +27,7 @@ export interface IWeapon extends IEquipmentBase {
   heat: number;
   damage: number;
   effects: string[];
-  minRange: number;
+  minRange?: number;
   shortRange: number;
   mediumRange: number;
   longRange: number;
