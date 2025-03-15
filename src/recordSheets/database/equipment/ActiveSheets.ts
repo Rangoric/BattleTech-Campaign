@@ -31,7 +31,7 @@ export interface IWeaponActiveSheet extends IEquipmentActiveSheetBase {
   heat: number;
   damage: number;
   effects: string[];
-  minRange: number;
+  minRange?: number;
   shortRange: number;
   mediumRange: number;
   longRange: number;
