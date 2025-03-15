@@ -51,7 +51,7 @@ export const ParticipantWeapons: React.FC<IParticipantWeapons> = ({ participant 
     });
 
     const sortedRanges = [...ranges].toSorted();
-    return sortedRanges.map((r) => ({ value: r, label: <Typography variant={"caption"}>{r}&ldquo;</Typography> }));
+    return sortedRanges.map((r) => ({ value: r, label: undefined }));
   }, [weapons, participant.character]);
 
   return (
