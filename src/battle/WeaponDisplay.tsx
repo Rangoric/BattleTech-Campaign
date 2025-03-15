@@ -61,7 +61,7 @@ export const WeaponDisplay: React.FC<IWeaponDisplayProps> = ({ range, weaponWith
           <Box flexGrow={1}>
             {ShortLocationNames[location]}: {weapon.name}
             <br />
-            D: {weapon.damage} | H: {weapon.heat}
+            H: {weapon.heat} D: {weapon.damage} E: {weapon.effects.join(", ")}
           </Box>
           <Box display={"flex"} flexDirection={"row"} justifyContent={"right"} gap={1}>
             {getRangeDisplay(range, weapon, participant)}

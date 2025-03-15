@@ -9,7 +9,7 @@ const LRM10: IWeapon = {
   damage: 1,
   effects: ["M", "C", "S"],
   minRange: 6,
-  shortRange: 6,
+  shortRange: 7,
   mediumRange: 14,
   longRange: 21,
   extremeRange: 28,
