@@ -1,4 +1,4 @@
-import { eEquipmentType, IAmmo, IEquipment, IMiscellaneous, IWeapon } from "./itemBase";
+import { eEquipmentType, IAmmo, IMiscellaneous, IWeapon } from "./itemBase";
 
 const LRM10: IWeapon = {
   name: "LRM 10",
