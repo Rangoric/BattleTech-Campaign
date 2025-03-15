@@ -2,7 +2,7 @@ import { eLocations } from "@/recordSheetsV1/data/eLocations";
 import { Equipment } from "../equipment/equipmentTools";
 import { eMovementSpeed, eMovementType, eUnitType, IUnit } from "./IUnit";
 
-export const bj2ob: IUnit = {
+export const bj2od: IUnit = {
   type: eUnitType.Mech,
   designation: "BJ2-OB",
   tonnage: 50,
@@ -39,15 +39,16 @@ export const bj2ob: IUnit = {
       armor: 22,
       rearArmor: 9,
       structure: 16,
-      equipment: Equipment.equipItems("XL Fusion Engine", "Gyro", "C3 Slave", "Endo Steel"),
+      equipment: Equipment.equipItems("XL Fusion Engine", "Gyro", "Small Laser", "Endo Steel"),
     },
     [eLocations.LeftTorso]: {
       armor: 18,
       rearArmor: 6,
       structure: 12,
       equipment: Equipment.equipItems(
-        "Gauss Ammo (8)",
-        "Gauss Ammo (8)",
+        "Medium Pulse Laser",
+        "Medium Laser",
+        "Medium Laser",
         "Endo Steel",
         "Endo Steel",
         "Endo Steel",
@@ -61,7 +62,7 @@ export const bj2ob: IUnit = {
       rearArmor: 6,
       structure: 12,
       equipment: Equipment.equipItems(
-        "Small Laser",
+        "Double Heat Sink",
         "Endo Steel",
         "Endo Steel",
         "Endo Steel",
@@ -73,7 +74,14 @@ export const bj2ob: IUnit = {
     [eLocations.LeftArm]: {
       armor: 14,
       structure: 8,
-      equipment: Equipment.equipItems("Shoulder", "Upper Arm Actuator", "Double Heat Sink", "Gauss Rifle"),
+      equipment: Equipment.equipItems(
+        "Shoulder",
+        "Upper Arm Actuator",
+        "Double Heat Sink",
+        "Double Heat Sink",
+        "PPC",
+        "Medium Pulse Laser",
+      ),
     },
     [eLocations.RightArm]: {
       armor: 14,
@@ -82,10 +90,9 @@ export const bj2ob: IUnit = {
         "Shoulder",
         "Upper Arm Actuator",
         "Double Heat Sink",
-        "LRM 10",
-        "Artemis IV FCS",
-        "LRM Artemis Ammo (120)",
-        "LRM Artemis Ammo (120)",
+        "Double Heat Sink",
+        "Large Laser",
+        "Large Laser",
       ),
     },
     [eLocations.LeftLeg]: {

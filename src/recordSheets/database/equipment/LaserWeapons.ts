@@ -52,6 +52,20 @@ const erPPC: IWeapon = {
   longRange: 23,
   extremeRange: 20,
 };
+const PPC: IWeapon = {
+  type: eEquipmentType.Weapon,
+  name: "PPC",
+  description: "This item is a PPC.",
+  slots: 3,
+  heat: 10,
+  damage: 10,
+  effects: ["DE"],
+  shortRange: 6,
+  mediumRange: 12,
+  longRange: 18,
+  extremeRange: 24,
+};
+
 const mediumPulseLaser: IWeapon = {
   type: eEquipmentType.Weapon,
   name: "Medium Pulse Laser",
@@ -70,5 +84,6 @@ export const LaserWeapons = {
   "Medium Laser": mediumLaser,
   "Small Laser": smallLaser,
   "ER PPC": erPPC,
+  PPC: PPC,
   "Medium Pulse Laser": mediumPulseLaser,
 };

@@ -69,6 +69,13 @@ const endoSteel: IMiscellaneous = {
   slots: 14,
 };
 
+const jumpJet: IMiscellaneous = {
+  type: eEquipmentType.Miscellaneous,
+  name: "Jump Jet",
+  description: "This item is a jump jet.",
+  slots: 1,
+};
+
 export const randomItems = {
   "Beagle Active Probe": beagleActiveProbe,
   "C3 Slave": c3Slave,
@@ -81,4 +88,5 @@ export const randomItems = {
   "Lower Leg Actuator": lowerLegActuator,
   "Foot Actuator": footActuator,
   CASE: CASE,
+  "Jump Jet": jumpJet,
 };

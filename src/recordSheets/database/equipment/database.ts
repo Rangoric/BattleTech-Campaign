@@ -5,6 +5,7 @@ import { heatSinks } from "./heatSinks";
 import { helperWeapons } from "./helperWeapons";
 import { Items } from "./itemBase";
 import { LaserWeapons } from "./LaserWeapons";
+import { LRMWeapons } from "./lrmWeapons";
 import { randomItems } from "./randomItems";
 
 export const ItemDatabase = {
@@ -15,6 +16,7 @@ export const ItemDatabase = {
   ...helperWeapons,
   ...LaserWeapons,
   ...gaussWeapons,
+  ...LRMWeapons,
   ...heatSinks,
 };
 
