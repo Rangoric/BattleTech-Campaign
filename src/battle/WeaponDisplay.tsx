@@ -24,7 +24,7 @@ const getRangeDisplay = (range: number, weapon: IWeaponActiveSheet, participant:
 
   const MinRangeDisplay = () => {
     if (!hasMinimumRange) return null;
-    return <>{weapon.minRange}"-</>;
+    return <>{weapon.minRange}&ldquo;-</>;
   };
 
   return (

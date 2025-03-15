@@ -39,16 +39,20 @@ export const ParticipantWeapons: React.FC<IParticipantWeapons> = ({ participant 
   const marks = useMemo(() => {
     const ranges = new Set<number>();
     weapons.forEach((weapon) => {
-      weapon.minRange !== undefined && ranges.add(weapon.minRange);
+      if (weapon.minRange !== undefined) {
+        ranges.add(weapon.minRange);
+      }
       ranges.add(weapon.shortRange);
       ranges.add(weapon.mediumRange);
       ranges.add(weapon.longRange);
-      GATORRules.G(participant.character) <= 2 && ranges.add(weapon.extremeRange);
+      if (GATORRules.G(participant.character) <= 2) {
+        ranges.add(weapon.extremeRange);
+      }
     });
 
     const sortedRanges = [...ranges].toSorted();
-    return sortedRanges.map((r) => ({ value: r, label: <Typography variant={"caption"}>{r}"</Typography> }));
-  }, [weapons]);
+    return sortedRanges.map((r) => ({ value: r, label: <Typography variant={"caption"}>{r}&ldquo;</Typography> }));
+  }, [weapons, participant.character]);
 
   return (
     <Box>
