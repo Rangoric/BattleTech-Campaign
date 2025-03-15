@@ -1,5 +1,5 @@
 import { IActiveBattleMechSheet, IAmmoActiveSheet } from "../../recordSheets/database/equipment/ActiveSheets";
-import { eLocations } from "./eLocations";
+import { eLocations } from "../../recordSheets/database/units/eLocations";
 import { eEquipmentType } from "../../recordSheets/database/equipment/itemBase";
 
 export interface IAmmoWithLocation {

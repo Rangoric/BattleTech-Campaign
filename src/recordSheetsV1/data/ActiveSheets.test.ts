@@ -2,7 +2,7 @@ import { eUnitType } from "./IRecordSheets";
 import { setupRecordSheet } from "../../recordSheets/database/equipment/ActiveSheets";
 import { IBattleMechSheet } from "./IRecordSheets";
 import { Actions } from "./Actions";
-import { eLocations } from "./eLocations";
+import { eLocations } from "../../recordSheets/database/units/eLocations";
 
 const unit: IBattleMechSheet = {
   type: eUnitType.BattleMech,

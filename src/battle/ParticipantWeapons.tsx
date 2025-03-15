@@ -2,7 +2,7 @@ import { useState, useMemo } from "react";
 import { IBattleGroupParticipant } from "@/recordSheets/battleGroups/IBattleGroupParticipant";
 import { Box, Slider, Typography } from "@mui/material";
 import { eEquipmentType } from "@/recordSheets/database/equipment/itemBase";
-import { eLocations } from "@/recordSheetsV1/data/eLocations";
+import { eLocations } from "@/recordSheets/database/units/eLocations";
 import { WeaponDisplay } from "./WeaponDisplay";
 import { GATORRules } from "@/recordSheets/database/rules/GATOR";
 

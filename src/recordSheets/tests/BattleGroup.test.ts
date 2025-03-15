@@ -100,6 +100,7 @@ suite("GATOR Rules, G: Gunnery", () => {
   test("Given a member of the battle group undefined gunnery and infantry skill, when we get the G from GATOR, then the gunnery modifier is 5 as a default", () => {
     const participant: ICharacter = {
       callSign: "WHATEVER",
+      name: "",
       gunnery: undefined,
       infantrySkill: undefined,
       usuallyPilots: [],

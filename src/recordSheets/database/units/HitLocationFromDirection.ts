@@ -1,8 +1,11 @@
-import { IBattleMechLocations } from "./IRecordSheets";
+import { IBattleMechLocations } from "../../../recordSheetsV1/data/IRecordSheets";
 import { eIncomingFireDirection } from "./eIncomingFireDirection";
 import { eLocations } from "./eLocations";
 
-export const HitLocationFromDirection: Record<eIncomingFireDirection, Record<keyof IBattleMechLocations<object>, number[]>> = {
+export const HitLocationFromDirection: Record<
+  eIncomingFireDirection,
+  Record<keyof IBattleMechLocations<object>, number[]>
+> = {
   [eIncomingFireDirection.front]: {
     [eLocations.CenterTorso]: [2, 7],
     [eLocations.RightArm]: [3, 4],

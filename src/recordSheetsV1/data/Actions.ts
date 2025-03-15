@@ -4,7 +4,7 @@ import {
   IAmmoActiveSheet,
   IBattleMechLocationActiveSheet,
 } from "../../recordSheets/database/equipment/ActiveSheets";
-import { eLocations } from "./eLocations";
+import { eLocations } from "../../recordSheets/database/units/eLocations";
 import { eUnitType } from "./IRecordSheets";
 import { IBattleMechLocations } from "./IRecordSheets";
 import { eEquipmentType } from "../../recordSheets/database/equipment/itemBase";

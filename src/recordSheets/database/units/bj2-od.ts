@@ -1,9 +1,10 @@
-import { eLocations } from "@/recordSheetsV1/data/eLocations";
+import { eLocations } from "@/recordSheets/database/units/eLocations";
 import { Equipment } from "../equipment/equipmentTools";
 import { eMovementSpeed, eMovementType, eUnitType, IUnit } from "./IUnit";
 
 export const bj2od: IUnit = {
   type: eUnitType.Mech,
+  name: "Blackjack 2",
   designation: "BJ2-OB",
   tonnage: 50,
   movement: {

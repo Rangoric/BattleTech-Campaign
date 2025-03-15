@@ -1,9 +1,10 @@
-import { eLocations } from "@/recordSheetsV1/data/eLocations";
+import { eLocations } from "@/recordSheets/database/units/eLocations";
 import { Equipment } from "../equipment/equipmentTools";
 import { eMovementSpeed, eMovementType, eUnitType, IUnit } from "./IUnit";
 
 export const mad5s: IUnit = {
   type: eUnitType.Mech,
+  name: "Marauder",
   designation: "MAD-5S",
   tonnage: 75,
   movement: {

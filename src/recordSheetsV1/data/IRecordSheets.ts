@@ -1,4 +1,4 @@
-import { eLocations } from "./eLocations";
+import { eLocations } from "../../recordSheets/database/units/eLocations";
 import { AllItemNames } from "../../recordSheets/database/equipment/database";
 
 export enum eUnitType {

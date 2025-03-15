@@ -1,4 +1,4 @@
-import { eLocations } from "@/recordSheetsV1/data/eLocations";
+import { eLocations } from "@/recordSheets/database/units/eLocations";
 import { IEquipmentActiveSheet } from "../equipment/ActiveSheets";
 
 export enum eUnitType {
@@ -28,6 +28,7 @@ export enum eMovementType {
 
 export interface IUnit {
   type: eUnitType;
+  name: string;
   designation: string;
   tonnage: number;
   movement: {

@@ -1,6 +1,6 @@
 import { IWeaponActiveSheet } from "@/recordSheets/database/equipment/ActiveSheets";
 import { Box, Card, CardContent, Typography } from "@mui/material";
-import { eLocations, ShortLocationNames } from "@/recordSheetsV1/data/eLocations";
+import { eLocations, ShortLocationNames } from "@/recordSheets/database/units/eLocations";
 import { GATORRules } from "@/recordSheets/database/rules/GATOR";
 import { IBattleGroupParticipant } from "@/recordSheets/battleGroups/IBattleGroupParticipant";
 

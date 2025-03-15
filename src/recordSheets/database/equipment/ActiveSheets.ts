@@ -9,7 +9,7 @@ import {
   ICharacterSheet,
   IRecordBattleMechSheet,
 } from "../../../recordSheetsV1/data/IRecordSheets";
-import { eLocations } from "../../../recordSheetsV1/data/eLocations";
+import { eLocations } from "../units/eLocations";
 
 export interface ICharacterActiveSheet extends ICharacterSheet {
   damage: number;
