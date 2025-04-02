@@ -5,7 +5,7 @@ import remarkGfm from "remark-gfm";
 const nextConfig = {
   output: "export",
   reactStrictMode: true,
-  basePath: "/",
+  basePath: "",
   pageExtensions: ["md", "mdx", "ts", "tsx"],
   images: {
     loader: "custom",
