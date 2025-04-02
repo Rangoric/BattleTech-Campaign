@@ -6,8 +6,6 @@ import "@fontsource/roboto/700.css";
 import { createTheme, CssBaseline, ThemeProvider } from "@mui/material";
 
 import type { AppProps } from "next/app";
-import { Provider } from "react-redux";
-import { useMemo } from "react";
 
 const theme = createTheme({
   colorSchemes: {
