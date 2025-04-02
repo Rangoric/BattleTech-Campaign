@@ -18,8 +18,8 @@ export const NavMenu = () => (
     <MenuItem component={Link} href="/monthly-report-3069-06">
       <Typography>End of June 3069</Typography>
     </MenuItem>
-    <MenuItem component={Link} href="/battle-group">
-      <Typography>Battle Group</Typography>
+    <MenuItem component={Link} href="/rule-book">
+      <Typography>Rule Book</Typography>
     </MenuItem>
   </>
 );

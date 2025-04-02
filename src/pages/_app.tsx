@@ -1,5 +1,3 @@
-// import { Framework } from "@/layout/Framework";
-import { makeStore } from "@/recordSheets/store";
 import "./index.css";
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
@@ -41,13 +39,10 @@ const theme = createTheme({
 });
 
 export default function App({ Component, pageProps }: AppProps) {
-  const store = useMemo(() => makeStore(), []);
   return (
-    <Provider store={store}>
-      <ThemeProvider theme={theme}>
-        <CssBaseline enableColorScheme />
-        <Component {...pageProps} />
-      </ThemeProvider>
-    </Provider>
+    <ThemeProvider theme={theme}>
+      <CssBaseline enableColorScheme />
+      <Component {...pageProps} />
+    </ThemeProvider>
   );
 }
