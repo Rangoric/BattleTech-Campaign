@@ -1,12 +1,14 @@
 import { RuleBookFramework } from "@/rule-book/RuleBookFramework";
+import { Box, Typography } from "@mui/material";
 
 const TrackedVehiclesPage = () => {
   return (
     <RuleBookFramework>
-      <div className="flex flex-col items-center justify-center h-screen">
-        <h1 className="text-4xl font-bold">Tracked Vehicle Rules</h1>
-        <p className="mt-4 text-lg">Coming soon...</p>
-      </div>
+      <Box className="flex flex-col items-center justify-center h-screen">
+        <Typography variant="h4" component="h1" gutterBottom>
+          Tracked Vehicle Rules
+        </Typography>
+      </Box>
     </RuleBookFramework>
   );
 };

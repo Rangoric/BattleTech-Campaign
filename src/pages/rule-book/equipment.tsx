@@ -1,16 +1,16 @@
 import { RuleBookFramework } from "@/rule-book/RuleBookFramework";
 import { Box, Typography } from "@mui/material";
 
-const WheeledVehiclesPage = () => {
+const EquipmentPage = () => {
   return (
     <RuleBookFramework>
-      <Box className="flex flex-col items-center justify-center h-screen">
+      <Box>
         <Typography variant="h4" component="h1" gutterBottom>
-          Wheeled Vehicle Rules
+          Equipment Rules
         </Typography>
       </Box>
     </RuleBookFramework>
   );
 };
 
-export default WheeledVehiclesPage;
+export default EquipmentPage;

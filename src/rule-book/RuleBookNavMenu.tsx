@@ -4,7 +4,7 @@ import Link from "next/link";
 const RuleBookNavMenu = () => {
   return (
     <>
-      <MenuItem component={Link} href="/">
+      <MenuItem component={Link} href="/shopping-list">
         <Typography>Home</Typography>
       </MenuItem>
       <MenuItem component={Link} href="/rule-book/vtol">
@@ -24,6 +24,12 @@ const RuleBookNavMenu = () => {
       </MenuItem>
       <MenuItem component={Link} href="/rule-book/hover-vehicles">
         <Typography>Hover Vehicle Rules</Typography>
+      </MenuItem>
+      <MenuItem component={Link} href="/rule-book/weapons">
+        <Typography>Weapons Rules</Typography>
+      </MenuItem>
+      <MenuItem component={Link} href="/rule-book/equipment">
+        <Typography>Equipment Rules</Typography>
       </MenuItem>
     </>
   );
