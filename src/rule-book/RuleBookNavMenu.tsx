@@ -31,6 +31,9 @@ const RuleBookNavMenu = () => {
       <MenuItem component={Link} href="/rule-book/equipment">
         <Typography>Equipment Rules</Typography>
       </MenuItem>
+      <MenuItem component={Link} href="/rule-book/movement">
+        <Typography>Movement Rules</Typography>
+      </MenuItem>
     </>
   );
 };

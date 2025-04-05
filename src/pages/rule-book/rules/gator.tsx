@@ -1,0 +1,79 @@
+import { Box, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material";
+
+export const GatorAttackerModifier = () => {
+  return (
+    <Box>
+      <TableContainer>
+        <TableHead>
+          <TableRow>
+            <TableCell>Movement</TableCell>
+            <TableCell>Modifier</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          <TableRow>
+            <TableCell>Stationary</TableCell>
+            <TableCell>+0</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell>Walking</TableCell>
+            <TableCell>+1</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell>Running</TableCell>
+            <TableCell>+2</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell>Jumping</TableCell>
+            <TableCell>+3</TableCell>
+          </TableRow>
+        </TableBody>
+      </TableContainer>
+    </Box>
+  );
+};
+
+export const GatorDefenderModifier = () => {
+  return (
+    <Box>
+      <TableContainer>
+        <TableHead>
+          <TableRow>
+            <TableCell>Movement</TableCell>
+            <TableCell>Modifier</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          <TableRow>
+            <TableCell>0-2</TableCell>
+            <TableCell>+0</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell>3-4</TableCell>
+            <TableCell>+1</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell>5-6</TableCell>
+            <TableCell>+2</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell>7-9</TableCell>
+            <TableCell>+3</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell>10-17</TableCell>
+            <TableCell>+4</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell>18-24</TableCell>
+            <TableCell>+5</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell>25+</TableCell>
+            <TableCell>+6</TableCell>
+          </TableRow>
+        </TableBody>
+      </TableContainer>
+    </Box>
+  );
+};
